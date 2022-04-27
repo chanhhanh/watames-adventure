@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public GameObject player;
     public Text playerLevel;
     public Slider healthSlider;
+    public Text gem;
     public Slider experienceSlider;
     
 
@@ -19,7 +20,6 @@ public class PlayerStats : MonoBehaviour
     public float experience;
     public float maxExperience;
     private int level = 1;
-
     //Upgrades
     const string MagicWand = "MagicWand";
     const string Whip = "Whip";
@@ -35,7 +35,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        gem.text = experience.ToString();
     }
 
     public void DealDamage(float damage)
@@ -48,8 +48,8 @@ public class PlayerStats : MonoBehaviour
     public void IncreaseExp(float exp)
     {
         experience += exp;
-        CheckLevelUp();
-        experienceSlider.value = CalculateExpPercentage();
+        //CheckLevelUp();
+        //experienceSlider.value = CalculateExpPercentage();
     }
 
     private void CheckLevelUp()

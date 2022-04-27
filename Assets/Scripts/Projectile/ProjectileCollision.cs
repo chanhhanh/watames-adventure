@@ -8,13 +8,14 @@ public class ProjectileCollision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        if (collision.name != "Player")
         {
-            if(collision.GetComponent<EnemyReceiveDamage>() != null)
+            if (collision.GetComponent<EnemyReceiveDamage>() != null && collision.GetComponent<EnemyMovement>() != null)
             {
                 collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
+                collision.GetComponent<EnemyMovement>().PushBack(GetComponent<Rigidbody2D>().velocity);
             }
-            Destroy(gameObject);
+            if (collision.tag == "Debris" || collision.tag =="Enemy") Destroy(gameObject);
         }
     }
 }

@@ -14,6 +14,7 @@ public class CollisionNonDestruct : MonoBehaviour
             if (collision.GetComponent<EnemyReceiveDamage>() != null)
             {
                 collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
+                collision.GetComponent<EnemyMovement>().PushBack(GetComponent<Rigidbody2D>().velocity);
             }
             numOfCollisions += 1;
             CheckCollisionCount();

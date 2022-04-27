@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -603058287563123412}
   - component: {fileID: 6898085540286154167}
   - component: {fileID: -134740092762746943}
-  - component: {fileID: -6277944098992007546}
-  m_Layer: 0
+  - component: {fileID: 5952808987889307088}
+  - component: {fileID: -6982220298453858293}
+  m_Layer: 3
   m_Name: Runechaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4063295180217184869, guid: 80854a5be0c0ab04b98609ab14a9c85f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -115,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  maxCollisionCount: -1
 --- !u!114 &-134740092762746943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,8 +129,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a43519700fa79a4ba5ec4a74606599b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decayTime: 10
---- !u!50 &-6277944098992007546
+  decayTime: 2
+--- !u!114 &5952808987889307088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199295705926394544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae55882166bba348a97f054f9d841ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &-6982220298453858293
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -140,7 +154,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

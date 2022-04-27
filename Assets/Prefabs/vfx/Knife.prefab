@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3538734622676180431}
   - component: {fileID: 5537215482294871451}
   - component: {fileID: -3856698561789523915}
-  - component: {fileID: 7203837053710111697}
+  - component: {fileID: -1807173832482720802}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -74,8 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -3916932125158577639, guid: 8daec5ff23af371418ccc956bfb42dc8, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -3916932125158577639, guid: 8daec5ff23af371418ccc956bfb42dc8,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decayTime: 5
---- !u!114 &7203837053710111697
+--- !u!114 &-1807173832482720802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,8 +146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393928581870883615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a60666507f298a499b0bf8cc028dd43, type: 3}
+  m_Script: {fileID: 11500000, guid: 43912e2e742350d4fb31b0ab05b644d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  maxCollisionCount: 1

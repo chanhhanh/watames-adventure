@@ -28,11 +28,6 @@ public class Cross : MonoBehaviour
         StartCoroutine(ShootEnemy());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     IEnumerator ShootEnemy()
     {
         yield return new WaitForSeconds(cooldown);

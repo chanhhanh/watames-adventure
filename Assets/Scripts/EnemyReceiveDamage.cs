@@ -18,7 +18,15 @@ public class EnemyReceiveDamage : MonoBehaviour
     public void DealDamage(float damage)
     {
         health -= damage;
+        StartCoroutine(FlashDamage());
         CheckDeath();
+    }
+    
+    IEnumerator FlashDamage()
+    {
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     //checkOverheal is not really useful for now
@@ -51,6 +59,7 @@ public class EnemyReceiveDamage : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         Destroy(gameObject);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Spawner>().enemyCount -= 1;
         SpawnDrop();
     }
 }

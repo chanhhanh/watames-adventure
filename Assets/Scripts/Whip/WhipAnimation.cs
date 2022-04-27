@@ -8,16 +8,22 @@ public class WhipAnimation : MonoBehaviour
     public float sizeMultiplier = 1f;
     public float growFactor = 1.2f;
     public float shrinkFactor = 0.6f;
+    private float inputHorizontal;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(ScaleWhip());
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.name != "Player")
+        {
+            if (collision.GetComponent<EnemyMovement>() != null)
+            {
+                collision.GetComponent<EnemyMovement>().PushBack(collision.transform.position - transform.position);
+            }
+        }
     }
     IEnumerator ScaleWhip()
     {

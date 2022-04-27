@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
+    private bool knockedBack = false;
 
     void Start()
     {
@@ -61,5 +62,22 @@ public class EnemyMovement : MonoBehaviour
 
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+    }
+
+    public void PushBack(Vector2 force)
+    {
+        if(!knockedBack)
+        {
+            GetComponent<Rigidbody2D>().AddForce(force);
+            StartCoroutine(StartKnockBack());
+        }
+        
+    }
+
+    IEnumerator StartKnockBack()
+    {
+        knockedBack = true;
+        yield return new WaitForSeconds(1f);
+        knockedBack = false;
     }
 }

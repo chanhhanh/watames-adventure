@@ -9,8 +9,9 @@ public class MagicWand : MonoBehaviour
     
     private float minDamage = 9;
     private float maxDamage = 12;
-    public float projectileForce = 5;
-    private float cooldown = 1.5f;
+    public float projectileForce = 7f;
+    private bool offCooldown = true;
+    public float cooldown = 0.5f;
     public float spellLevel = 0;
     private Vector2 direction;
     private float angle;
@@ -18,18 +19,28 @@ public class MagicWand : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ShootEnemy());
+        //StartCoroutine(ShootEnemy());
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
+        {
+          StartCoroutine(ShootEnemy());
+        }
     }
 
+    IEnumerator startCooldown()
+    {
+        offCooldown = false;
+        yield return new WaitForSeconds(cooldown);
+        offCooldown = true;
+    }
     IEnumerator ShootEnemy()
     {
-
+        StartCoroutine(startCooldown());
         //if (!this.enabled) StopAllCoroutines() else;
 
         if (spellLevel > 5) spellLevel = 5;
-        yield return new WaitForSeconds(cooldown);
-            if (FindClosestEnemy())
-            {
                 switch (spellLevel)
                 {
                     case 0:
@@ -40,47 +51,49 @@ public class MagicWand : MonoBehaviour
                     {
                         SpawnMagicMissile();
                         yield return new WaitForSeconds(0.2f);
+                        
                     }
                     break;
                     case 2:
-                    cooldown = 1.3f;
                     for (int i = 0; i < 2; ++i)
                     {
                         SpawnMagicMissile();
                         yield return new WaitForSeconds(0.2f);
+                        
                     }
                     break;
                     case 3:
-                    cooldown = 1.3f;
                     for (int i = 0; i < 3; ++i)
                     {
                         SpawnMagicMissile();
                         yield return new WaitForSeconds(0.2f);
+                        
                     }
                     break;
                     case 4:
-                    cooldown = 1.3f;
                     minDamage = 19;
                     maxDamage = 21;
                     for (int i = 0; i < 3; ++i)
                     {
                         SpawnMagicMissile();
                         yield return new WaitForSeconds(0.2f);
+                      
                     }
                     break;
                     case 5:
-                    cooldown = 1.3f;
                     minDamage = 19;
                     maxDamage = 21;
                     for (int i = 0; i < 4; ++i)
                     {
                         SpawnMagicMissile();
                         yield return new WaitForSeconds(0.2f);
+                       
                     }
                     break;
-                }
             }
-        StartCoroutine(ShootEnemy());
+        //yield return new WaitForSeconds(cooldown);
+
+        //StartCoroutine(ShootEnemy());
     }
     public GameObject FindClosestEnemy()
     {
@@ -106,10 +119,23 @@ public class MagicWand : MonoBehaviour
     {
         spell = Instantiate(projectile, transform.position, Quaternion.identity);
 
-        direction = (FindClosestEnemy().transform.position - transform.position).normalized;
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = (mousePos - transform.position).normalized;
+
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         spell.GetComponent<Rigidbody2D>().rotation = angle;
         spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
+    }
+
+    private void Homing()
+    {
+        //if(FindClosestEnemy())
+        //{
+        //    direction = (FindClosestEnemy().transform.position - transform.position).normalized;
+        //    angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //    spell.GetComponent<Rigidbody2D>().rotation = angle;
+        //    spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce * 3f;
+        //}
     }
 }

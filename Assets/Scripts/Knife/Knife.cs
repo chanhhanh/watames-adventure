@@ -6,10 +6,11 @@ public class Knife : MonoBehaviour
 {
     public GameObject projectile;
 
-    private float minDamage = 9;
-    private float maxDamage = 12;
-    public float projectileForce = 8;
-    private float cooldown = 1.5f;
+    private float minDamage = 5;
+    private float maxDamage = 7;
+    public float projectileForce = 15f;
+    private bool offCooldown = true;
+    public float cooldown = 1f;
     public float spellLevel = 0;
 
     //Knife direction and angle
@@ -28,27 +29,36 @@ public class Knife : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        StartCoroutine(ShootEnemy());
+        //StartCoroutine(ShootEnemy());
     }
     void Update()
     {
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
-    }
-
-    void FixedUpdate()
-    {
-        if (inputHorizontal != 0 || inputVertical != 0)
+        if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
         {
-            direction = new Vector2(inputHorizontal, inputVertical);
+            StartCoroutine(ShootEnemy());
         }
     }
+    IEnumerator startCooldown()
+    {
+        offCooldown = false;
+        yield return new WaitForSeconds(cooldown);
+        offCooldown = true;
+    }
+
+    //void FixedUpdate()
+    //{
+    //    if (inputHorizontal != 0 || inputVertical != 0)
+    //    {
+    //        direction = new Vector2(inputHorizontal, inputVertical);
+    //    }
+    //}
 
     IEnumerator ShootEnemy()
     {
+        StartCoroutine(startCooldown());
         if (spellLevel > 5) spellLevel = 5;
 
-        yield return new WaitForSeconds(cooldown);
+        //yield return new WaitForSeconds(cooldown);
         switch (spellLevel)
         {
             case 0:
@@ -77,7 +87,6 @@ public class Knife : MonoBehaviour
             case 3:
                 minDamage = 14;
                 maxDamage = 17;
-                projectile.GetComponent<CollisionNonDestruct>().maxCollisionCount = 2;
                 for (int i = 0; i < 4; ++i)
                 {
                     SpawnKnife();
@@ -87,7 +96,6 @@ public class Knife : MonoBehaviour
             case 4:
                 minDamage = 14;
                 maxDamage = 17;
-                projectile.GetComponent<CollisionNonDestruct>().maxCollisionCount = 2;
                 for (int i = 0; i < 5; ++i)
                 {
                     SpawnKnife();
@@ -97,7 +105,6 @@ public class Knife : MonoBehaviour
             case 5:
                 minDamage = 14;
                 maxDamage = 17;
-                projectile.GetComponent<CollisionNonDestruct>().maxCollisionCount = 3;
                 for (int i = 0; i < 5; ++i)
                 {
                     SpawnKnife();
@@ -106,12 +113,15 @@ public class Knife : MonoBehaviour
                 break;
         }
 
-        StartCoroutine(ShootEnemy());
+        //StartCoroutine(ShootEnemy());
 
     }
 
     private void SpawnKnife()
     {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = (mousePos - transform.position).normalized;
+
         Vector2 currDirection = direction;
         float rand = Random.Range(-0.4f, 0.4f);
         Vector2 knifePos = new Vector2(transform.position.x, transform.position.y);
@@ -126,11 +136,13 @@ public class Knife : MonoBehaviour
         
         angle = Mathf.Atan2(currDirection.y, currDirection.x) * Mathf.Rad2Deg;
         spell.GetComponent<Rigidbody2D>().rotation = angle;
+        spell.GetComponent<Rigidbody2D>().velocity = currDirection * projectileForce;
+        Debug.Log(currDirection * projectileForce);
         //Limits projectile speed if it's travelling diagonally
-        if (currDirection.x != 0 && currDirection.y != 0) 
-            spell.GetComponent<Rigidbody2D>().velocity = projectileForce * speedLimiter * currDirection;
-        else 
-            spell.GetComponent<Rigidbody2D>().velocity = currDirection * projectileForce;
-        spell.GetComponent<CollisionNonDestruct>().damage = Random.Range(minDamage, maxDamage);
+        //if (currDirection.x != 0 && currDirection.y != 0) 
+        //    spell.GetComponent<Rigidbody2D>().velocity = projectileForce * speedLimiter * currDirection;
+        //else 
+        //    spell.GetComponent<Rigidbody2D>().velocity = currDirection * projectileForce;
+        spell.GetComponent<ProjectileCollision>().damage = Random.Range(minDamage, maxDamage);
     }
 }

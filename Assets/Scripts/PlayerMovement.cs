@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_WALK_LEFTUP = "Walk_leftup";
     const string PLAYER_WALK_RIGHTUP = "Walk_rightup";
 
+    public float DashForce = 3000f;
+    private bool CanIDash = true;
+    public float cooldown = 1.5f;
+
     //Start is called at the first frame
     void Start()
     {
@@ -50,7 +54,32 @@ public class PlayerMovement : MonoBehaviour
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CanIDash)
+        {
+            Dash();
+            Debug.Log("shift pressed");
+        }
 
+    }
+    private void Dash()
+    {
+        //if (inputHorizontal != 0 || inputVertical != 0)
+        //{
+        //    if (inputHorizontal != 0 && inputVertical != 0)
+        //    {
+        //        rb.velocity = new Vector2(inputHorizontal * moveSpeed * speedLimiter, inputVertical * moveSpeed * 3f * speedLimiter);
+        //    }
+        //    rb.velocity = new Vector2(inputHorizontal * moveSpeed, inputVertical * moveSpeed * 3f);
+        //}
+        rb.AddForce(new Vector2 (inputHorizontal* moveSpeed * 300f, inputVertical * moveSpeed * 300f));
+        StartCoroutine(CountCooldown());
+    }
+
+    IEnumerator CountCooldown()
+    {
+        CanIDash = false;
+        yield return new WaitForSeconds(cooldown);
+        CanIDash = true;
     }
     void FixedUpdate()
     {

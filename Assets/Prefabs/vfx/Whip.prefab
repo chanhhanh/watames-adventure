@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6198566548650015059, guid: 8daec5ff23af371418ccc956bfb42dc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  maxCollisionCount: -1
 --- !u!114 &8766824591652122679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,5 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060635e1d600d049b0d419274d87402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSize: 3.5
+  sizeMultiplier: 1.1
   growFactor: 1.2
   shrinkFactor: 0.6
