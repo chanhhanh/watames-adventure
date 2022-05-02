@@ -124,12 +124,15 @@ public class Whip : MonoBehaviour
 
     private void SpawnWhip(float currentFacing)
     {
-        if (currentFacing == RIGHT)
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePos - transform.position).normalized;
+
+        if (direction.x > 0)
         {
             whipPos = new Vector2(transform.position.x + 1.5f, transform.position.y + whipOffsetY);
             whipRog = Quaternion.Euler(180f, 0f, 0f);
         }
-        else if (currentFacing == LEFT)
+        else if (direction.x < 0)
         {
             whipPos = new Vector2(transform.position.x - 1.5f, transform.position.y + whipOffsetY);
             whipRog = Quaternion.Euler(0f, -180f, 0f);

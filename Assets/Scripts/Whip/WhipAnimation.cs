@@ -15,16 +15,6 @@ public class WhipAnimation : MonoBehaviour
         StartCoroutine(ScaleWhip());
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.name != "Player")
-        {
-            if (collision.GetComponent<EnemyMovement>() != null)
-            {
-                collision.GetComponent<EnemyMovement>().PushBack(collision.transform.position - transform.position);
-            }
-        }
-    }
     IEnumerator ScaleWhip()
     {
         while(transform.localScale.x < maxSize * sizeMultiplier)

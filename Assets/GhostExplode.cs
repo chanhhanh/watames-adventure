@@ -40,5 +40,6 @@ public class GhostExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Spawner>().enemyCount -= 1;
     }
 }

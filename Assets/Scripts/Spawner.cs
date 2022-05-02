@@ -8,18 +8,21 @@ public class Spawner : MonoBehaviour
     public GameObject bat;
     public GameObject ghost;
     public Text enemyCounter;
+    public Text timer;
 
     Vector3 whereToSpawn;
     public float spawnCooldown = 10f;
     public float timeToNextSpawn = 1f;
+    int countTimer = 60;
 
     bool allEnemiesSpawned = false;
     int currentWave = 1;
     public int enemyCount;
-    const int WAVE_1_COUNT = 7;
+    int[] WAVES_COUNT = { 0, 7, 14, 21, 36, 48, 64 };
     void Start()
     {
-        enemyCount = WAVE_1_COUNT;
+        timer.enabled = false;
+        enemyCount = WAVES_COUNT[1];
     }
 
     // Update is called once per frame
@@ -83,19 +86,33 @@ public class Spawner : MonoBehaviour
     private void ChangeWave()
     {
         currentWave += 1;
+        Debug.Log(currentWave);
         allEnemiesSpawned = true;
     }
 
     private void checkForWaveFinish()
     {
-        if(enemyCount == 0)
+        if (enemyCount == 0 && enemyCounter.enabled)
         {
-            StartCoroutine(WaitForNextWave());
+            enemyCounter.enabled = false;
+            timer.enabled = true;
+            StartCoroutine(CountdownTime());
         }
     }
-    IEnumerator WaitForNextWave()
+
+    IEnumerator CountdownTime()
     {
-        yield return new WaitForSeconds(60f);
+        int localTimer = countTimer;
+        timer.text = localTimer.ToString();
+        for (int i = 0; i < countTimer; ++i)
+        {
+            localTimer -= 1;
+            timer.text = localTimer.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+        timer.enabled = false;
+        enemyCount = WAVES_COUNT[currentWave];
+        enemyCounter.enabled = true;
         allEnemiesSpawned = false;
     }
 }

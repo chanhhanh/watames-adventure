@@ -10,10 +10,9 @@ public class ProjectileCollision : MonoBehaviour
     {
         if (collision.name != "Player")
         {
-            if (collision.GetComponent<EnemyReceiveDamage>() != null && collision.GetComponent<EnemyMovement>() != null)
+            if (collision.GetComponent<EnemyReceiveDamage>() != null)
             {
                 collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
-                collision.GetComponent<EnemyMovement>().PushBack(GetComponent<Rigidbody2D>().velocity);
             }
             if (collision.tag == "Debris" || collision.tag =="Enemy") Destroy(gameObject);
         }
