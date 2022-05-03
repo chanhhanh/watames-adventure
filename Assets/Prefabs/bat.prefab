@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 128734221728897494}
   - component: {fileID: 5368822361858658784}
   - component: {fileID: 2658816885032208749}
-  - component: {fileID: 962634332210035113}
+  - component: {fileID: -1725954640202845414}
   m_Layer: 0
   m_Name: bat
   m_TagString: Enemy
@@ -175,7 +175,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.04}
   serializedVersion: 2
   m_Radius: 0.075
---- !u!114 &962634332210035113
+--- !u!114 &-1725954640202845414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

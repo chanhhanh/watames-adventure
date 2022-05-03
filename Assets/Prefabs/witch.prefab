@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1952102453239021991}
   - component: {fileID: -9161424318672241078}
   m_Layer: 0
-  m_Name: bat 1
+  m_Name: witch
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

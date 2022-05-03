@@ -59,6 +59,7 @@ public class EnemyMovement : MonoBehaviour
     private void Move()
 
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        Vector3 direction = player.position - transform.position;
+        GetComponent<Rigidbody2D>().MovePosition(transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }

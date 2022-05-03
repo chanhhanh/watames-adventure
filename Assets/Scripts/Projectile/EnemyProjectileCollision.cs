@@ -15,7 +15,11 @@ public class EnemyProjectileCollision : MonoBehaviour
         if (collision.name == "Player")
         {
             gameManager.GetComponent<PlayerStats>().DealDamage(damage);
-            if (collision.tag == "Debris" || collision.name =="Player") Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Debris")
+        {
+            Destroy(gameObject);
         }
     }
 }

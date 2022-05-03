@@ -11,7 +11,7 @@ public class Shotgun : MonoBehaviour
     private float maxDamage = 7;
     public float projectileForce = 15f;
     private bool offCooldown = true;
-    public float cooldown = 0.5f;
+    public float cooldown = 1f;
     public float spellLevel = 0;
     GameObject spell;
 
