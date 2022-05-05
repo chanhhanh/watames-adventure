@@ -15,11 +15,20 @@ public class Tommy : MonoBehaviour
     public float spellLevel = 0;
     GameObject spell;
 
+    //Audio
+    public AudioSource aus;
+
+    public AudioClip bulletSound;
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
         {
             SpawnBullet();
+            if (aus && bulletSound)
+            {
+                aus.PlayOneShot(bulletSound);
+            }
             StartCoroutine(startCooldown());
         }
     }

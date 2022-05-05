@@ -15,11 +15,21 @@ public class Handgun : MonoBehaviour
     public float spellLevel = 0;
     GameObject spell;
 
+    //Audio
+    public AudioSource aus;
+
+    public AudioClip bulletSound;
+    
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SpawnBullet();
+            if(aus && bulletSound)
+            {
+                aus.PlayOneShot(bulletSound);
+            }
         }
     }
 
@@ -84,7 +94,8 @@ public class Handgun : MonoBehaviour
                        
                     }
                     break;
-            }
+                }
+
         //yield return new WaitForSeconds(cooldown);
 
         //StartCoroutine(ShootEnemy());
