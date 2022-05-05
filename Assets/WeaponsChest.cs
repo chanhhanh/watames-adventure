@@ -9,6 +9,25 @@ public class WeaponsChest : MonoBehaviour
     public GameObject[] availableWeapons;
     bool taken = false;
     // Start is called before the first frame update
+    private GameObject chest;
+    private void Awake()
+    {
+        chest = gameObject;
+        chest.SetActive(true);
+    }
+    private void OnDestroy()
+    {
+        Instantiate(chest, FindRandomSpawnPoint().position, Quaternion.identity);
+    }
+
+    Transform FindRandomSpawnPoint()
+    {
+        GameObject[] spawnpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        int rand = Random.Range(0, spawnpoints.Length);
+
+        return spawnpoints[rand].transform;
+    }
+
     void Start()
     {
         int index = 0;
@@ -25,7 +44,6 @@ public class WeaponsChest : MonoBehaviour
             {
                 availableWeapons[index] = weapon;
                 index++;
-                Debug.Log(availableWeapons);
             }
         }
     }

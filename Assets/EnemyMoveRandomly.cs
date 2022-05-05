@@ -28,6 +28,10 @@ public class EnemyMoveRandomly : MonoBehaviour
             previousPosition = transform.position;
         }       
     }
+    private void Awake()
+    {
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
     void FixedUpdate()
     {
         if (currentMovementDirection.x > 0)

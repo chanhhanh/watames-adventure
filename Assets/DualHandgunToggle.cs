@@ -37,7 +37,5 @@ public class DualHandgunToggle : MonoBehaviour
             //transform.SetPositionAndRotation(new Vector3(-0.35f, 0f, 0f), Quaternion.Euler(0f, -180f, 0f));
         }
         handgunToggle = !handgunToggle;
-        Debug.Log(transform.position);
-        Debug.Log(transform.rotation);
     }
 }
