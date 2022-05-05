@@ -207,3 +207,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   currentWeapon: {fileID: 0}
+  availableWeapons: []

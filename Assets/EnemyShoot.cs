@@ -34,6 +34,6 @@ public class EnemyShoot : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         spell.GetComponent<Rigidbody2D>().rotation = angle;
         spell.GetComponent<Rigidbody2D>().velocity = direction * 5f;
-        spell.GetComponent<EnemyProjectileCollision>().damage = Random.Range(23, 25);
+        spell.GetComponent<EnemyProjectileCollision>().damage = Random.Range(15, 20);
     }
 }
