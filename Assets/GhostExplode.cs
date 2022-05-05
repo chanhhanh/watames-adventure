@@ -36,10 +36,11 @@ public class GhostExplode : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
         StartCoroutine(TickRed());
     }
+    public GameObject Explosion;
     IEnumerator WaitForExplode()
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Spawner>().enemyCount -= 1;
+        Instantiate(Explosion, transform.position, Quaternion.identity);
     }
 }

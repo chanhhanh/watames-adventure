@@ -13,7 +13,7 @@ public class GunRotateToCursor : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float y;
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -44,11 +44,13 @@ public class GunRotateToCursor : MonoBehaviour
     {
         if (gameObject.name == "handgun")
         {
+            float currDir = (int)(direction.x * 2);
+
             Vector2 handgunPosLeft = new Vector2(-Mathf.Abs(transform.localPosition.x), transform.localPosition.y);
             Vector2 handgunPosRight = new Vector2(Mathf.Abs(transform.localPosition.x), transform.localPosition.y);
-            if (direction.x < 0)
+            if (currDir == -1)
                 GetComponent<Transform>().localPosition = handgunPosLeft;
-            else if (direction.x >= 0)
+            else if (currDir == 1)
                 GetComponent<Transform>().localPosition = handgunPosRight;
         }
     }

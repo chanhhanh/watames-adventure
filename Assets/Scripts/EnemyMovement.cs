@@ -18,8 +18,10 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
-
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
     void Update()
     {
         if (previousPosition != transform.position)
@@ -27,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
             currentMovementDirection = (previousPosition - transform.position).normalized;
             previousPosition = transform.position;
         }
-        if(player)
+        if (player)
             Move();
     }
 
@@ -57,9 +59,19 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void Move()
-
     {
-        Vector3 direction = player.position - transform.position;
-        GetComponent<Rigidbody2D>().MovePosition(transform.position + (direction * moveSpeed * Time.deltaTime));
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Vector3 direction = (player.position - transform.position);
+        float DirX = -1f, DirY = -1f;
+        if (direction.x > 0) DirX = 1f;
+        if (direction.y > 0) DirY = 1f;
+        Vector2 Dir = new Vector2(DirX, DirY);
+        
+        rb.velocity = Dir * moveSpeed;
+        //if (direction.magnitude < 1) rb.velocity = Vector2.zero;
+        //GetComponent<Rigidbody2D>().MovePosition(transform.position + (moveSpeed * Time.fixedDeltaTime * direction));
+
+        //rb.AddForce();
+
     }
 }

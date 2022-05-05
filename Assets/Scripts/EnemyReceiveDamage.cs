@@ -21,7 +21,10 @@ public class EnemyReceiveDamage : MonoBehaviour
         StartCoroutine(FlashDamage());
         CheckDeath();
     }
-    
+    private void OnDestroy()
+    {
+        EnemySpawner.instance.maxSpawn--;
+    }
     IEnumerator FlashDamage()
     {
         GetComponent<SpriteRenderer>().color = Color.red;
@@ -59,7 +62,6 @@ public class EnemyReceiveDamage : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         Destroy(gameObject);
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<Spawner>().enemyCount -= 1;
         SpawnDrop();
     }
 }

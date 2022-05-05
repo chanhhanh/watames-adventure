@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    #region
+    public Player Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
+
     //Components
     Rigidbody2D rb;
 
@@ -12,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public float speedLimiter = 0.7f;
     float inputVertical;
     float inputHorizontal;
-
 
     //Animations and states
     Animator animator;
@@ -39,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     const string PLAYER_WALK_RIGHTUP = "Walk_rightup";
 
     public float DashForce = 3000f;
-    private bool CanIDash = true;
+    //private bool CanIDash = true;
     public float cooldown = 1.5f;
     //Start is called at the first frame
     void Start()
@@ -69,12 +76,12 @@ public class PlayerMovement : MonoBehaviour
     //    yield return new WaitForSeconds(1f);
     //}
 
-    IEnumerator CountCooldown()
-    {
-        CanIDash = false;
-        yield return new WaitForSeconds(cooldown);
-        CanIDash = true;
-    }
+    //IEnumerator CountCooldown()
+    //{
+    //    CanIDash = false;
+    //    yield return new WaitForSeconds(cooldown);
+    //    CanIDash = true;
+    //}
     void FixedUpdate()
     {
         if(inputHorizontal != 0 || inputVertical != 0)
