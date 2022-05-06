@@ -24,6 +24,7 @@ public class EnemyReceiveDamage : MonoBehaviour
     private void OnDestroy()
     {
         EnemySpawner.instance.maxSpawn--;
+        SpawnDrop();
     }
     IEnumerator FlashDamage()
     {
@@ -56,12 +57,14 @@ public class EnemyReceiveDamage : MonoBehaviour
     IEnumerator KillEnemy()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
-        while (transform.localScale.x > 0f)
-        {
-            transform.localScale -= new Vector3(1f, 1f, 1f) * 0.3f;
-            yield return new WaitForSeconds(0.01f);
-        }
+        //while (transform.localScale.x > 0f)
+        //{
+        //    transform.localScale -= new Vector3(1f, 1f, 1f) * 0.3f;
+        //    yield return new WaitForSeconds(0.01f);
+        //}
+
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
-        SpawnDrop();
+     
     }
 }

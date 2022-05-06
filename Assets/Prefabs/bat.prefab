@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 50
+  maxHealth: 25
   drop: {fileID: 6118564621387113281, guid: d202ff2b2a1fa494596dac4dc120c706, type: 3}
   dropRate: 0.8
 --- !u!114 &128734221728897494
