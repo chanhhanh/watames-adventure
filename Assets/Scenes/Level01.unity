@@ -3485,7 +3485,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletSound
       value: 
-      objectReference: {fileID: 8300000, guid: af63539a5e39c99489395bdea2471f60, type: 3}
+      objectReference: {fileID: 8300000, guid: d4226b8c168232d41b75369019068706, type: 3}
     - target: {fileID: 3709040893444635336, guid: ebf33e52eda28fa42846bd9592357eed,
         type: 3}
       propertyPath: projectileForce
@@ -3497,6 +3497,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 678253889}
     - target: {fileID: 3837234281239176907, guid: ebf33e52eda28fa42846bd9592357eed,
+        type: 3}
+      propertyPath: bulletSound
+      value: 
+      objectReference: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
+    - target: {fileID: 4068729883531761451, guid: ebf33e52eda28fa42846bd9592357eed,
+        type: 3}
+      propertyPath: aus
+      value: 
+      objectReference: {fileID: 678253889}
+    - target: {fileID: 4068729883531761451, guid: ebf33e52eda28fa42846bd9592357eed,
         type: 3}
       propertyPath: bulletSound
       value: 
@@ -3651,6 +3661,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022641054083519889, guid: ebf33e52eda28fa42846bd9592357eed,
+        type: 3}
+      propertyPath: aus
+      value: 
+      objectReference: {fileID: 678253889}
+    - target: {fileID: 9022641054083519889, guid: ebf33e52eda28fa42846bd9592357eed,
+        type: 3}
+      propertyPath: bulletSound
+      value: 
+      objectReference: {fileID: 8300000, guid: be64544bade297e4d872dd74c66256d2, type: 3}
     m_RemovedComponents:
     - {fileID: 1192460504173282347, guid: ebf33e52eda28fa42846bd9592357eed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebf33e52eda28fa42846bd9592357eed, type: 3}
