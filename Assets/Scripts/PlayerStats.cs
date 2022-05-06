@@ -60,8 +60,6 @@ public class PlayerStats : MonoBehaviour
             playerLevel.text = "LVL " + level;
             maxExperience += maxExperience*0.5f;
             experience = 0;
-            Upgrade(MagicWand);
-            Upgrade(Whip);
         }
     }
     private void CheckDeath()
@@ -78,17 +76,5 @@ public class PlayerStats : MonoBehaviour
     float CalculateExpPercentage()
     {
         return experience / maxExperience;
-    }
-    private void Upgrade(string toUpgrade)
-    {
-        switch (toUpgrade)
-        {
-            case MagicWand:
-                player.GetComponent<MagicWand>().spellLevel += 1;
-                break;
-            case Whip:
-                player.GetComponent<Whip>().spellLevel += 1;
-                break;
-        }
     }
 }

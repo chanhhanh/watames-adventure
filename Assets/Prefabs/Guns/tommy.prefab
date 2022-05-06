@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6497727734674352253, guid: 25a7eb3ca1b1d0e449b25345d0c7b53c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -111,8 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8393928581870883615, guid: 3c8db54fd30bbf14fbcae47d07c2673d,
     type: 3}
-  player: {fileID: 4244762750014090950, guid: ebf33e52eda28fa42846bd9592357eed, type: 3}
-  gun: {fileID: 4216432658273359300}
   projectileForce: 15
   cooldown: 0.5
   spellLevel: 0
+  aus: {fileID: 0}
+  bulletSound: {fileID: 0}

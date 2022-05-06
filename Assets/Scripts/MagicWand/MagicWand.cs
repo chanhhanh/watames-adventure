@@ -9,23 +9,16 @@ public class MagicWand : MonoBehaviour
     
     private float minDamage = 9;
     private float maxDamage = 12;
-    public float projectileForce = 7f;
+    public float projectileForce = 6f;
     private bool offCooldown = true;
-    public float cooldown = 0.5f;
-    public float spellLevel = 0;
-    private Vector2 direction;
-    private float angle;
+    public float cooldown = 0.2f;
     GameObject spell;
 
-    void Start()
-    {
-        //StartCoroutine(ShootEnemy());
-    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
         {
-          StartCoroutine(ShootEnemy());
+          ShootEnemy();
         }
     }
 
@@ -35,107 +28,37 @@ public class MagicWand : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         offCooldown = true;
     }
-    IEnumerator ShootEnemy()
+    void ShootEnemy()
     {
+        StartCoroutine(spinItem());
+        SpawnMagicMissile();
         StartCoroutine(startCooldown());
-        //if (!this.enabled) StopAllCoroutines() else;
-
-        if (spellLevel > 5) spellLevel = 5;
-                switch (spellLevel)
-                {
-                    case 0:
-                    SpawnMagicMissile();
-                    break;
-                    case 1:
-                    for(int i =0; i< 2; ++i)
-                    {
-                        SpawnMagicMissile();
-                        yield return new WaitForSeconds(0.2f);
-                        
-                    }
-                    break;
-                    case 2:
-                    for (int i = 0; i < 2; ++i)
-                    {
-                        SpawnMagicMissile();
-                        yield return new WaitForSeconds(0.2f);
-                        
-                    }
-                    break;
-                    case 3:
-                    for (int i = 0; i < 3; ++i)
-                    {
-                        SpawnMagicMissile();
-                        yield return new WaitForSeconds(0.2f);
-                        
-                    }
-                    break;
-                    case 4:
-                    minDamage = 19;
-                    maxDamage = 21;
-                    for (int i = 0; i < 3; ++i)
-                    {
-                        SpawnMagicMissile();
-                        yield return new WaitForSeconds(0.2f);
-                      
-                    }
-                    break;
-                    case 5:
-                    minDamage = 19;
-                    maxDamage = 21;
-                    for (int i = 0; i < 4; ++i)
-                    {
-                        SpawnMagicMissile();
-                        yield return new WaitForSeconds(0.2f);
-                       
-                    }
-                    break;
-            }
-        //yield return new WaitForSeconds(cooldown);
-
-        //StartCoroutine(ShootEnemy());
     }
-    public GameObject FindClosestEnemy()
+   
+    IEnumerator spinItem()
     {
-        GameObject[] gos;
-        gos = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject closest = null;
-        float distance = Mathf.Infinity;
-        Vector3 position = transform.position;
-        foreach (GameObject go in gos)
+        float z = 0f;
+        Quaternion target = Quaternion.Euler(0f, 0f, z);
+        while (z >= -360f)
         {
-            Vector3 diff = go.transform.position - position;
-            float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
-            {
-                closest = go;
-                distance = curDistance;
-            }
+            GetComponent<Transform>().localRotation = target;
+            yield return new WaitForSeconds(0.1f);
+            z--;
         }
-        return closest;
+        target = Quaternion.Euler(0f, 0f, 0f);
+        GetComponent<Transform>().rotation = target;
     }
-
     private void SpawnMagicMissile()
     {
         spell = Instantiate(projectile, transform.position, Quaternion.identity);
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = (mousePos - transform.position).normalized;
-
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Vector2 direction = (mousePos - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         spell.GetComponent<Rigidbody2D>().rotation = angle;
-        spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+        spell.GetComponent<Rigidbody2D>().AddForce(direction * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
     }
 
-    private void Homing()
-    {
-        //if(FindClosestEnemy())
-        //{
-        //    direction = (FindClosestEnemy().transform.position - transform.position).normalized;
-        //    angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //    spell.GetComponent<Rigidbody2D>().rotation = angle;
-        //    spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce * 3f;
-        //}
-    }
+   
 }
