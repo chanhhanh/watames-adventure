@@ -4,61 +4,61 @@ using UnityEngine;
 
 public class WeaponsChest : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject currentWeapon;
-    public GameObject[] availableWeapons;
-    bool taken = false;
+    [SerializeField]
+    private GameObject player, currentWeapon;
+
+    [System.Serializable]
+    public class Weapons
+    {
+        public string tag;
+        public GameObject prefab;
+    }
+
+    [SerializeField]
+
+    public List<Weapons> weapons;
+
     // Start is called before the first frame update
-    private GameObject chest;
-    private void Awake()
-    {
-        chest = gameObject;
-        chest.SetActive(true);
-    }
-    private void OnDestroy()
-    {
-        Instantiate(chest, FindRandomSpawnPoint().position, Quaternion.identity);
-    }
-
-    Transform FindRandomSpawnPoint()
-    {
-        GameObject[] spawnpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        int rand = Random.Range(0, spawnpoints.Length);
-
-        return spawnpoints[rand].transform;
-    }
-
+    private int rand;
     void Start()
     {
-        int index = 0;
         player = GameObject.FindGameObjectWithTag("Player");
-        availableWeapons = new GameObject[player.transform.childCount-1];
-        for (int i = 0; i < player.transform.childCount; ++i)
+        currentWeapon = player.transform.GetChild(0).gameObject;
+        rand = Random.Range(0, weapons.Count);
+        Debug.Log(weapons[rand].prefab);
+        Debug.Log(ChestSpawner.instance.currentWeapon);
+
+        while (weapons[rand].prefab == ChestSpawner.instance.currentWeapon)
         {
-            GameObject weapon = player.transform.GetChild(i).gameObject;
-            if (weapon.activeSelf == true)
-            {
-                currentWeapon = weapon;
-            }
-            else if (weapon.activeSelf == false && weapon.name != "handgun")
-            {
-                availableWeapons[index] = weapon;
-                index++;
-            }
+            rand = Random.Range(0, weapons.Count);
         }
     }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.name == "Player" && !taken)
+        if (collision.name == "Player")
         {
-            taken = true;
-            int rand = Random.Range(0, availableWeapons.Length);
-            availableWeapons[rand].SetActive(true);
-            currentWeapon.SetActive(false);
+            foreach (Transform child in player.transform)
+            {
+                Destroy(child.gameObject);
+            }
             Destroy(gameObject);
         }
+    }
+    private void OnDestroy()
+    {
+        GameObject weapon = Instantiate(weapons[rand].prefab, weapons[rand].prefab.transform.position, Quaternion.identity);
+        Transform local = weapons[rand].prefab.transform;
+        Debug.Log(weapons[rand].prefab.transform.position);
+        Debug.Log(weapons[rand].prefab.transform.rotation);
+        Debug.Log(local.lossyScale);
+        weapon.transform.SetParent(player.transform);
+        weapon.transform.localPosition = local.position;
+       
+        weapon.transform.localRotation = local.rotation;
+        weapon.transform.localScale = local.lossyScale;
+        ChestSpawner.instance.chestSpawned = false;
+        ChestSpawner.instance.currentWeapon = weapons[rand].prefab;
     }
 }

@@ -207,4 +207,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   currentWeapon: {fileID: 0}
-  availableWeapons: []
+  weapons:
+  - tag: shotgun
+    prefab: {fileID: 2509916455129776021, guid: e599385484b0d2345ae628f4018f5a98,
+      type: 3}
+  - tag: tommy
+    prefab: {fileID: 4216432658273359300, guid: 983a8ddf50ab8e44f92773cc42395edf,
+      type: 3}
+  - tag: dual handgun
+    prefab: {fileID: 1583930252598707649, guid: 801a0a43a02246f4a8b5739913e28ffa,
+      type: 3}
+  - tag: magic wand
+    prefab: {fileID: 709024565776011607, guid: df937e9e26b88b34e8d000c916a4ce8c, type: 3}

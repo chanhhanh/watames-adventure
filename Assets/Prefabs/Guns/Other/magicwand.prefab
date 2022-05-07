@@ -111,5 +111,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8393928581870883615, guid: 0a7b2835b251b9c45a814b0f7b516fda,
     type: 3}
-  projectileForce: 6
+  projectileForce: 7
   cooldown: 0.3
