@@ -7,6 +7,11 @@ public class Shotgun : MonoBehaviour
 {
     public GameObject projectile;
 
+    [SerializeField]
+    int numOfProjectiles = 6;
+    [SerializeField]
+    float projectileSpread = 60f;
+
     private float minDamage = 5;
     private float maxDamage = 7;
     public float projectileForce = 15f;
@@ -39,20 +44,22 @@ public class Shotgun : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
         offCooldown = true;
     }
-
+ 
     private void SpawnBullet()
     {
-        float spread = 0.5f;
-
-        for (int i=0; i< 6; ++i)
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+        float facingRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float startRotation = facingRotation + projectileSpread / 2;
+        float angleIncrease = projectileSpread / ((float)numOfProjectiles - 1f);
+        for (int i=0; i< numOfProjectiles; ++i)
         {
-            float ranVel = UnityEngine.Random.Range(0.8f, 1.1f);
-
-            spell = Instantiate(projectile, transform.position, transform.rotation);
-            spell.GetComponent<Rigidbody2D>().velocity = new Vector2(spread, spread);
-            spell.GetComponent<Rigidbody2D>().AddForce(transform.right * projectileForce * ranVel, ForceMode2D.Impulse);
+            float tempRot = startRotation - angleIncrease * i;
+            spell = Instantiate(projectile, transform.position, Quaternion.Euler(0,0,tempRot));
+           
+            Vector2 trajectory = new Vector2(Mathf.Cos(tempRot * Mathf.Deg2Rad) * projectileForce, Mathf.Sin(tempRot * Mathf.Deg2Rad) * projectileForce);
+            spell.GetComponent<Rigidbody2D>().velocity = trajectory;
             spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
-            spread += 0.2f;
         }
 
     }

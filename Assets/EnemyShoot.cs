@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
     public GameObject projectile;
     [SerializeField]
     private float bulletCount = 5, spacing = 0.3f;

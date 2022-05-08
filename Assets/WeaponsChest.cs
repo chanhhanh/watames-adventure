@@ -59,9 +59,7 @@ public class WeaponsChest : MonoBehaviour
     {
         GameObject weapon = Instantiate(weapons[rand].prefab, weapons[rand].prefab.transform.position, Quaternion.identity);
         Transform local = weapons[rand].prefab.transform;
-        Debug.Log(weapons[rand].prefab.transform.position);
-        Debug.Log(weapons[rand].prefab.transform.rotation);
-        Debug.Log(local.lossyScale);
+     
         weapon.transform.SetParent(player.transform);
         weapon.transform.localPosition = local.position;
        

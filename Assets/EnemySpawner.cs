@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Instantiate(pools[index].prefab, pos, Quaternion.identity);
                 maxSpawn++;
-                yield return new WaitForSeconds(0.5f);
+                yield return null;
             }   
         }
     }

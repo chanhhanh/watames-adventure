@@ -137,8 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54441526a0e8d7c458594b010ee9ebb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  forceMultiplier: 0
+  travelTime: 3
+  interval: 0.5
+  moveSpeed: 2
 --- !u!114 &-9161424318672241078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +155,8 @@ MonoBehaviour:
   player: {fileID: 0}
   projectile: {fileID: 8393928581870883615, guid: d0442ad64d4380849be24a56e6e4b947,
     type: 3}
+  bulletCount: 5
+  spacing: 0.3
 --- !u!61 &-3336228017125674157
 BoxCollider2D:
   m_ObjectHideFlags: 0

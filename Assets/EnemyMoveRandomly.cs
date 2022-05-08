@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyMoveRandomly : MonoBehaviour
 {
-    public float moveSpeed = 3f;
     Vector2 randomPos;
     Animator animator;
-
+    [SerializeField]
+    float travelTime = 1f, interval = 1f, moveSpeed = 3f;
 
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
@@ -41,19 +41,16 @@ public class EnemyMoveRandomly : MonoBehaviour
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
     }
 
-
-    public float forceMultiplier = 100f;
     IEnumerator MoveRandomly()
     {
-        int[] moveValue = { -3, 0, 3 };
+        float[] moveValue = { -moveSpeed, 0, moveSpeed };
         int randIndexX = Random.Range(0, moveValue.Length);
         int randIndexY = Random.Range(0, moveValue.Length);
         randomPos = new Vector2(moveValue[randIndexX], moveValue[randIndexY]);
-        Debug.Log(randomPos);
         GetComponent<Rigidbody2D>().velocity = randomPos;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(travelTime);
         GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(interval);
         StartCoroutine(MoveRandomly());
     }
 }

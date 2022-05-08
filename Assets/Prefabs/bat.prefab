@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5368822361858658784}
   - component: {fileID: 2658816885032208749}
   - component: {fileID: -1725954640202845414}
+  - component: {fileID: -1967906392916000895}
   m_Layer: 0
   m_Name: bat
   m_TagString: Enemy
@@ -171,9 +172,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04}
+  m_Offset: {x: 0.0143172145, y: -0.017017335}
   serializedVersion: 2
-  m_Radius: 0.075
+  m_Radius: 0.3611746
 --- !u!114 &-1725954640202845414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +187,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632c09c522b302e42a97660a26da480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1967906392916000895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609591182679170249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e9706d3d5b6f14fbd59abe661bdf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8393928581870883615, guid: d0442ad64d4380849be24a56e6e4b947,
+    type: 3}
+  bulletCount: 1
+  spacing: 0.3
