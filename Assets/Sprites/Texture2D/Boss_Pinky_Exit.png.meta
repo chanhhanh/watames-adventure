@@ -1,0 +1,1093 @@
+fileFormatVersion: 2
+guid: c47eee941779fd34894ad872c5d55821
+timeCreated: 1652014778
+licenseType: Free
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Boss_Pinky_Exit_6
+  - first:
+      213: 21300002
+    second: Boss_Pinky_Exit_3
+  - first:
+      213: 21300004
+    second: Boss_Pinky_Exit_4
+  - first:
+      213: 21300006
+    second: Boss_Pinky_Exit_0
+  - first:
+      213: 21300008
+    second: Boss_Pinky_Exit_2
+  - first:
+      213: 21300010
+    second: Boss_Pinky_Exit_7
+  - first:
+      213: 21300012
+    second: Boss_Pinky_Exit_1
+  - first:
+      213: 21300014
+    second: Boss_Pinky_Exit_5
+  externalObjects: {}
+  usedFileIDs: []
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 384
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_6
+      rect:
+        serializedVersion: 2
+        x: 304.02676
+        y: 16.02675
+        width: 15.946499
+        height: 15.946499
+      alignment: 9
+      pivot: {x: 0.49999917, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.0000134, y: -7}
+        - {x: -8.000013, y: -2}
+        - {x: -8.000013, y: 2}
+        - {x: -7.0000134, y: 5}
+        - {x: -2.0000134, y: 8}
+        - {x: 2.9999866, y: 8}
+        - {x: 7.9999866, y: 4}
+        - {x: 7.9999866, y: -3}
+        - {x: 2.9999866, y: -8}
+        - {x: -2.0000134, y: -8}
+      physicsShape:
+      - - {x: -2.0000134, y: 8}
+        - {x: -7.0000134, y: 5}
+        - {x: -8.000013, y: 2}
+        - {x: -8.000013, y: -2}
+        - {x: -5.0000134, y: -7}
+        - {x: -2.0000134, y: -8}
+        - {x: 2.9999866, y: -8}
+        - {x: 7.9999866, y: -3}
+        - {x: 7.9999866, y: 4}
+        - {x: 2.9999866, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16438328b0e342fca74b9cafd07e9fe6
+      internalID: 21300000
+      vertices:
+      - {x: 27, y: 32}
+      - {x: 32, y: 21}
+      - {x: 32, y: 28}
+      - {x: 27, y: 16}
+      - {x: 22, y: 32}
+      - {x: 22, y: 16}
+      - {x: 19, y: 17}
+      - {x: 17, y: 29}
+      - {x: 16, y: 26}
+      - {x: 16, y: 22}
+      indices: 090000000800000006000000070000000600000008000000040000000600000007000000050000000600000004000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: -24}
+        - {x: -24, y: -18}
+        - {x: -24, y: 15}
+        - {x: -21, y: 24}
+        - {x: 10, y: 24}
+        - {x: 16, y: 21}
+        - {x: 23, y: 13}
+        - {x: 24, y: 12}
+        - {x: 24, y: -14}
+        - {x: 13, y: -24}
+      physicsShape:
+      - - {x: 16, y: 21}
+        - {x: 10, y: 24}
+        - {x: -21, y: 24}
+        - {x: -24, y: 15}
+        - {x: -24, y: -18}
+        - {x: -17, y: -24}
+        - {x: 13, y: -24}
+        - {x: 24, y: -14}
+        - {x: 24, y: 12}
+        - {x: 23, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acd0efef01948ad898ffa303e6176d7
+      internalID: 21300002
+      vertices:
+      - {x: 47, y: 37}
+      - {x: 48, y: 10}
+      - {x: 48, y: 36}
+      - {x: 40, y: 45}
+      - {x: 37, y: 0}
+      - {x: 34, y: 48}
+      - {x: 7, y: 0}
+      - {x: 3, y: 48}
+      - {x: 0, y: 39}
+      - {x: 0, y: 6}
+      indices: 090000000800000006000000070000000600000008000000050000000600000007000000040000000600000005000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_4
+      rect:
+        serializedVersion: 2
+        x: 194.07613
+        y: 2.0761204
+        width: 43.847755
+        height: 43.847755
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.000004, y: -21.999998}
+        - {x: -22.000004, y: -13.999998}
+        - {x: -22.000004, y: 21.000002}
+        - {x: -20.000004, y: 22.000002}
+        - {x: 19.999996, y: 22.000002}
+        - {x: 21.999996, y: 19.000002}
+        - {x: 21.999996, y: -10.999998}
+        - {x: 17.999996, y: -21.999998}
+      physicsShape:
+      - - {x: -13.000004, y: 22.000002}
+        - {x: -22.000004, y: 8.000002}
+        - {x: -22.000004, y: -11.999998}
+        - {x: -12.000004, y: -21.999998}
+        - {x: 17.999996, y: -21.999998}
+        - {x: 21.999996, y: -10.999998}
+        - {x: 21.999996, y: 16.000002}
+        - {x: 12.999996, y: 22.000002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322a9c0d23964ef4a774b755e6e8f7a3
+      internalID: 21300004
+      vertices:
+      - {x: 44, y: 46}
+      - {x: 46, y: 13}
+      - {x: 46, y: 43}
+      - {x: 42, y: 2}
+      - {x: 7, y: 2}
+      - {x: 4, y: 46}
+      - {x: 2, y: 45}
+      - {x: 2, y: 10}
+      indices: 070000000600000004000000050000000400000006000000000000000400000005000000030000000400000000000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_0
+      rect:
+        serializedVersion: 2
+        x: 2.0761204
+        y: 2.0761204
+        width: 43.847755
+        height: 45.847755
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.47818872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11.999998, y: -22.999998}
+        - {x: -21.999998, y: -12.999998}
+        - {x: -21.999998, y: 16.000002}
+        - {x: -3.999998, y: 23.000002}
+        - {x: 18.000002, y: 23.000002}
+        - {x: 22.000002, y: 17.000002}
+        - {x: 22.000002, y: -13.999998}
+        - {x: 19.000002, y: -22.999998}
+      physicsShape:
+      - - {x: 15.000002, y: 23.000002}
+        - {x: -3.999998, y: 23.000002}
+        - {x: -21.999998, y: 16.000002}
+        - {x: -21.999998, y: -12.999998}
+        - {x: -11.999998, y: -22.999998}
+        - {x: 12.000002, y: -22.999998}
+        - {x: 13.000002, y: -21.999998}
+        - {x: 22.000002, y: -8.999998}
+        - {x: 22.000002, y: 7.000002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8737be34dfbf49128e1161b99df105b2
+      internalID: 21300006
+      vertices:
+      - {x: 46, y: 42}
+      - {x: 43, y: 2}
+      - {x: 46, y: 11}
+      - {x: 42, y: 48}
+      - {x: 20, y: 48}
+      - {x: 12, y: 2}
+      - {x: 2, y: 41}
+      - {x: 2, y: 12}
+      indices: 070000000600000005000000040000000500000006000000010000000500000004000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: -23}
+        - {x: -24, y: -16}
+        - {x: -24, y: 22}
+        - {x: -14, y: 24}
+        - {x: 16, y: 24}
+        - {x: 24, y: 17}
+        - {x: 24, y: -20}
+        - {x: 17, y: -24}
+        - {x: -13, y: -24}
+      physicsShape:
+      - - {x: 13, y: 24}
+        - {x: -12, y: 24}
+        - {x: -23, y: 20}
+        - {x: -24, y: 16}
+        - {x: -24, y: -16}
+        - {x: -19, y: -23}
+        - {x: -13, y: -24}
+        - {x: 14, y: -24}
+        - {x: 20, y: -17}
+        - {x: 24, y: -10}
+        - {x: 24, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8841342af242ba88ef58e5adc1e274
+      internalID: 21300008
+      vertices:
+      - {x: 48, y: 41}
+      - {x: 41, y: 0}
+      - {x: 48, y: 4}
+      - {x: 40, y: 48}
+      - {x: 11, y: 0}
+      - {x: 10, y: 48}
+      - {x: 5, y: 1}
+      - {x: 0, y: 46}
+      - {x: 0, y: 8}
+      indices: 080000000700000006000000050000000600000007000000040000000600000005000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_7
+      rect:
+        serializedVersion: 2
+        x: 356.0761
+        y: 20.07612
+        width: 7.8477592
+        height: 7.8477592
+      alignment: 9
+      pivot: {x: 0.5000012, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.9999907, y: -4}
+        - {x: -3.9999907, y: -1}
+        - {x: -3.9999907, y: 1}
+        - {x: -0.9999907, y: 4}
+        - {x: 1.0000093, y: 4}
+        - {x: 4.0000095, y: 1}
+        - {x: 4.0000095, y: -1}
+        - {x: 1.0000093, y: -4}
+      physicsShape:
+      - - {x: -0.9999907, y: 4}
+        - {x: -3.9999907, y: 1}
+        - {x: -3.9999907, y: -1}
+        - {x: -0.9999907, y: -4}
+        - {x: 1.0000093, y: -4}
+        - {x: 4.0000095, y: -1}
+        - {x: 4.0000095, y: 1}
+        - {x: 1.0000093, y: 4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173b91b721b04583b7dc9e6eb868e658
+      internalID: 21300010
+      vertices:
+      - {x: 25, y: 28}
+      - {x: 28, y: 23}
+      - {x: 28, y: 25}
+      - {x: 25, y: 20}
+      - {x: 23, y: 28}
+      - {x: 23, y: 20}
+      - {x: 20, y: 25}
+      - {x: 20, y: 23}
+      indices: 070000000600000005000000040000000500000006000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_1
+      rect:
+        serializedVersion: 2
+        x: 49.026752
+        y: 1.026751
+        width: 45.946495
+        height: 46.973248
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48907092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -20.513374}
+        - {x: -23, y: -12.513374}
+        - {x: -23, y: 4.4866257}
+        - {x: -20, y: 16.486626}
+        - {x: -8, y: 22.486626}
+        - {x: -2, y: 23.486626}
+        - {x: 12, y: 23.486626}
+        - {x: 23, y: 8.486626}
+        - {x: 23, y: -11.513374}
+        - {x: 11, y: -23.513374}
+        - {x: -9, y: -23.513374}
+      physicsShape:
+      - - {x: -2, y: 23.486626}
+        - {x: -8, y: 22.486626}
+        - {x: -20, y: 16.486626}
+        - {x: -23, y: 4.4866257}
+        - {x: -23, y: -12.513374}
+        - {x: -16, y: -20.513374}
+        - {x: -9, y: -23.513374}
+        - {x: 11, y: -23.513374}
+        - {x: 23, y: -11.513374}
+        - {x: 23, y: 8.486626}
+        - {x: 12, y: 23.486626}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d3d934123d4c269b29d140ce29575a
+      internalID: 21300012
+      vertices:
+      - {x: 36, y: 48}
+      - {x: 47, y: 13}
+      - {x: 47, y: 33}
+      - {x: 35, y: 1}
+      - {x: 22, y: 48}
+      - {x: 16, y: 47}
+      - {x: 15, y: 1}
+      - {x: 8, y: 4}
+      - {x: 4, y: 41}
+      - {x: 1, y: 29}
+      - {x: 1, y: 12}
+      indices: 0a0000000900000007000000080000000700000009000000050000000700000008000000060000000700000005000000030000000600000005000000040000000300000005000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Pinky_Exit_5
+      rect:
+        serializedVersion: 2
+        x: 248.02675
+        y: 8.026751
+        width: 31.946497
+        height: 31.946497
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.999996, y: -15.999998}
+        - {x: -15.999996, y: -7.999998}
+        - {x: -15.999996, y: 12.000002}
+        - {x: -5.999996, y: 16.000002}
+        - {x: 10.000004, y: 16.000002}
+        - {x: 16.000004, y: 11.000002}
+        - {x: 16.000004, y: -8.999998}
+        - {x: 15.000004, y: -11.999998}
+        - {x: 7.000004, y: -15.999998}
+      physicsShape:
+      - - {x: 10.000004, y: 16.000002}
+        - {x: -5.999996, y: 16.000002}
+        - {x: -15.999996, y: 12.000002}
+        - {x: -15.999996, y: -7.999998}
+        - {x: -5.999996, y: -15.999998}
+        - {x: 7.000004, y: -15.999998}
+        - {x: 15.000004, y: -11.999998}
+        - {x: 16.000004, y: -8.999998}
+        - {x: 16.000004, y: 11.000002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaf2da6765f44caa463d5c261805f16
+      internalID: 21300014
+      vertices:
+      - {x: 40, y: 35}
+      - {x: 39, y: 12}
+      - {x: 40, y: 15}
+      - {x: 34, y: 40}
+      - {x: 31, y: 8}
+      - {x: 18, y: 40}
+      - {x: 18, y: 8}
+      - {x: 8, y: 36}
+      - {x: 8, y: 16}
+      indices: 080000000700000006000000050000000600000007000000040000000600000005000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag:
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

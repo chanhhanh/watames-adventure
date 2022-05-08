@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     {
         public string tag;
         public GameObject prefab;
+        public int count;
     }
 
 
@@ -52,22 +53,24 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         int rand = Random.Range(0, pools.Count);
-        int count = Random.Range(1, 3);
-        while (rand == previousSpawn) rand = Random.Range(1, 3);
-        SpawnFromList(rand, count);
+        while (rand == previousSpawn) rand = Random.Range(0, pools.Count);
+        StartCoroutine(SpawnFromList(rand));
         previousSpawn = rand;
         StartCoroutine(Spawn());
     }
 
-    void SpawnFromList(int index, int count)
+    IEnumerator SpawnFromList(int index)
     {
         int rand = Random.Range(0, spawnpoints.Count);
         Vector2 pos = Center(rand) + new Vector2(Random.Range(-Size(rand).x / 2, Size(rand).x / 2), Random.Range(-Size(rand).y / 2, Size(rand).y / 2));
-        for (int i=0;i< count; ++i)
+        for (int i=0;i< pools[index].count; ++i)
         {
             if (maxSpawn < spawnLimit)
-            Instantiate(pools[index].prefab, pos, Quaternion.identity);
-            maxSpawn++;
+            {
+                Instantiate(pools[index].prefab, pos, Quaternion.identity);
+                maxSpawn++;
+                yield return new WaitForSeconds(0.5f);
+            }   
         }
     }
 

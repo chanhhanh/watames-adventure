@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: a25d6c2cf75e9fa4c854e898f463c265
+timeCreated: 1652014778
+licenseType: Free
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Enemy_Gomaking_Run_0
+  - first:
+      213: 21300002
+    second: Enemy_Gomaking_Run_2
+  - first:
+      213: 21300004
+    second: Enemy_Gomaking_Run_1
+  - first:
+      213: 21300006
+    second: Enemy_Gomaking_Run_4
+  - first:
+      213: 21300008
+    second: Enemy_Gomaking_Run_3
+  - first:
+      213: 21300010
+    second: Enemy_Gomaking_Run_5
+  externalObjects: {}
+  usedFileIDs: []
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_0
+      rect:
+        serializedVersion: 2
+        x: 5.036285
+        y: 2.0761204
+        width: 21.920807
+        height: 29.880972
+      alignment: 9
+      pivot: {x: 0.50015104, y: 0.46597815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.003311, y: -15.016606}
+        - {x: -10.996689, y: -15.016606}
+        - {x: -10.996689, y: 9.983394}
+        - {x: -9.996689, y: 14.983394}
+        - {x: 10.003311, y: 14.983394}
+        - {x: 11.003311, y: 9.983394}
+      physicsShape:
+      - - {x: -9.996689, y: 14.983394}
+        - {x: -10.996689, y: 9.983394}
+        - {x: -10.996689, y: -15.016606}
+        - {x: 11.003311, y: -15.016606}
+        - {x: 11.003311, y: 9.983394}
+        - {x: 10.003311, y: 14.983394}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72beae7f7fe94b278a2375d4721cce02
+      internalID: 21300000
+      vertices:
+      - {x: 26, y: 32}
+      - {x: 27, y: 2}
+      - {x: 27, y: 27}
+      - {x: 6, y: 32}
+      - {x: 5, y: 27}
+      - {x: 5, y: 2}
+      indices: 050000000400000001000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_2
+      rect:
+        serializedVersion: 2
+        x: 69.036285
+        y: 2.0761204
+        width: 21.936964
+        height: 27.880972
+      alignment: 9
+      pivot: {x: 0.49978268, y: 0.49940437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.004767, y: -14.016606}
+        - {x: -11.004767, y: -12.016606}
+        - {x: -11.004767, y: -1.0166063}
+        - {x: -6.0047674, y: 13.983394}
+        - {x: 8.995233, y: 13.983394}
+        - {x: 10.995233, y: 3.9833937}
+        - {x: 10.995233, y: -14.016606}
+      physicsShape:
+      - - {x: -6.0047674, y: 13.983394}
+        - {x: -11.004767, y: -1.0166063}
+        - {x: -11.004767, y: -12.016606}
+        - {x: -10.004767, y: -14.016606}
+        - {x: 10.995233, y: -14.016606}
+        - {x: 10.995233, y: 3.9833937}
+        - {x: 8.995233, y: 13.983394}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7b5f683b8241d5905efcaedf57dbbf
+      internalID: 21300002
+      vertices:
+      - {x: 25, y: 30}
+      - {x: 27, y: 2}
+      - {x: 27, y: 20}
+      - {x: 10, y: 30}
+      - {x: 6, y: 2}
+      - {x: 5, y: 15}
+      - {x: 5, y: 4}
+      indices: 060000000500000004000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_1
+      rect:
+        serializedVersion: 2
+        x: 36.07612
+        y: 2.026751
+        width: 23.923143
+        height: 28.930342
+      alignment: 9
+      pivot: {x: 0.49842453, y: 0.48299634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.96231, y: -14.491921}
+        - {x: -12.03769, y: -14.491921}
+        - {x: -12.03769, y: -2.4919214}
+        - {x: -6.03769, y: 14.508079}
+        - {x: 7.96231, y: 14.508079}
+        - {x: 10.96231, y: 11.508079}
+        - {x: 11.96231, y: -0.49192142}
+      physicsShape:
+      - - {x: 7.96231, y: 14.508079}
+        - {x: -6.03769, y: 14.508079}
+        - {x: -12.03769, y: -2.4919214}
+        - {x: -12.03769, y: -14.491921}
+        - {x: 11.96231, y: -14.491921}
+        - {x: 11.96231, y: -0.49192142}
+        - {x: 10.96231, y: 11.508079}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257ace744cc7426eb0c4bfd2cfb6ae2c
+      internalID: 21300004
+      vertices:
+      - {x: 27, y: 28}
+      - {x: 28, y: 2}
+      - {x: 28, y: 16}
+      - {x: 24, y: 31}
+      - {x: 10, y: 31}
+      - {x: 4, y: 14}
+      - {x: 4, y: 2}
+      indices: 060000000500000001000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_4
+      rect:
+        serializedVersion: 2
+        x: 132.07613
+        y: 2.026751
+        width: 23.923143
+        height: 28.930342
+      alignment: 9
+      pivot: {x: 0.4984242, y: 0.48299634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.962302, y: -14.491921}
+        - {x: -12.037698, y: -14.491921}
+        - {x: -12.037698, y: -2.4919214}
+        - {x: -6.037698, y: 14.508079}
+        - {x: 7.962302, y: 14.508079}
+        - {x: 10.962302, y: 11.508079}
+        - {x: 11.962302, y: -0.49192142}
+      physicsShape:
+      - - {x: 7.962302, y: 14.508079}
+        - {x: -6.037698, y: 14.508079}
+        - {x: -12.037698, y: -2.4919214}
+        - {x: -12.037698, y: -14.491921}
+        - {x: 11.962302, y: -14.491921}
+        - {x: 11.962302, y: -0.49192142}
+        - {x: 10.962302, y: 11.508079}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648f32ffebc74a54acb98a39943633b0
+      internalID: 21300006
+      vertices:
+      - {x: 27, y: 28}
+      - {x: 28, y: 2}
+      - {x: 28, y: 16}
+      - {x: 24, y: 31}
+      - {x: 10, y: 31}
+      - {x: 4, y: 14}
+      - {x: 4, y: 2}
+      indices: 060000000500000001000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_3
+      rect:
+        serializedVersion: 2
+        x: 101.036285
+        y: 2.026751
+        width: 21.920807
+        height: 29.930342
+      alignment: 9
+      pivot: {x: 0.50015104, y: 0.466859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.003311, y: -14.991921}
+        - {x: -10.996689, y: -14.991921}
+        - {x: -10.996689, y: 5.0080786}
+        - {x: -6.996689, y: 15.008079}
+        - {x: 9.003311, y: 15.008079}
+        - {x: 11.003311, y: 7.0080786}
+        - {x: 11.003311, y: -12.991921}
+      physicsShape:
+      - - {x: -6.996689, y: 15.008079}
+        - {x: -10.996689, y: 5.0080786}
+        - {x: -10.996689, y: -14.991921}
+        - {x: 10.003311, y: -14.991921}
+        - {x: 11.003311, y: -12.991921}
+        - {x: 11.003311, y: 7.0080786}
+        - {x: 9.003311, y: 15.008079}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafcc4a434674f2f94daa26d6c9f4087
+      internalID: 21300008
+      vertices:
+      - {x: 27, y: 24}
+      - {x: 26, y: 2}
+      - {x: 27, y: 4}
+      - {x: 25, y: 32}
+      - {x: 9, y: 32}
+      - {x: 5, y: 22}
+      - {x: 5, y: 2}
+      indices: 060000000500000001000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Gomaking_Run_5
+      rect:
+        serializedVersion: 2
+        x: 165.03629
+        y: 2.0761204
+        width: 21.936964
+        height: 27.880972
+      alignment: 9
+      pivot: {x: 0.49978268, y: 0.49940437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.004767, y: -14.016606}
+        - {x: -11.004767, y: -12.016606}
+        - {x: -11.004767, y: -1.0166063}
+        - {x: -6.0047674, y: 13.983394}
+        - {x: 8.995233, y: 13.983394}
+        - {x: 10.995233, y: 3.9833937}
+        - {x: 10.995233, y: -14.016606}
+      physicsShape:
+      - - {x: -6.0047674, y: 13.983394}
+        - {x: -11.004767, y: -1.0166063}
+        - {x: -11.004767, y: -12.016606}
+        - {x: -10.004767, y: -14.016606}
+        - {x: 10.995233, y: -14.016606}
+        - {x: 10.995233, y: 3.9833937}
+        - {x: 8.995233, y: 13.983394}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54460aeb07a4d46a57181d3ae53cbc8
+      internalID: 21300010
+      vertices:
+      - {x: 25, y: 30}
+      - {x: 27, y: 2}
+      - {x: 27, y: 20}
+      - {x: 10, y: 30}
+      - {x: 6, y: 2}
+      - {x: 5, y: 15}
+      - {x: 5, y: 4}
+      indices: 060000000500000004000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag:
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData:
+  assetBundleName:
+  assetBundleVariant:

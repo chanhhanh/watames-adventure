@@ -37,9 +37,9 @@ public class EnemyMovement : MonoBehaviour
     {
         if (currentMovementDirection.x > 0)
         {
-            animator.Play("Move_left");
+            GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
         }
-        else animator.Play("Move_right");
+        else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

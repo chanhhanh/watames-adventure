@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f492f1d2d5240a9459e59b347f6b2f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 8393928581870883615, guid: 3c8db54fd30bbf14fbcae47d07c2673d,
+  projectile: {fileID: 8393928581870883615, guid: f2cdc3998a88b3146a7c1845accb8ac8,
     type: 3}
   projectileForce: 15
   cooldown: 0.05

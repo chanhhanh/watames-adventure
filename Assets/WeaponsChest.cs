@@ -15,7 +15,8 @@ public class WeaponsChest : MonoBehaviour
     }
 
     [SerializeField]
-
+    float timeToStart = 5;
+    float interval = 5;
     public List<Weapons> weapons;
 
     // Start is called before the first frame update
@@ -31,6 +32,14 @@ public class WeaponsChest : MonoBehaviour
         while (weapons[rand].prefab == ChestSpawner.instance.currentWeapon)
         {
             rand = Random.Range(0, weapons.Count);
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (Time.time >= timeToStart)
+        {
+            timeToStart = interval + timeToStart;
+            GetComponent<Animator>().Play("Box_Animation");
         }
     }
 

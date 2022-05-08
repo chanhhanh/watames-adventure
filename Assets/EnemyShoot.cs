@@ -6,6 +6,8 @@ public class EnemyShoot : MonoBehaviour
 {
     public GameObject player;
     public GameObject projectile;
+    [SerializeField]
+    private float bulletCount = 5, spacing = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +17,10 @@ public class EnemyShoot : MonoBehaviour
 
     IEnumerator StartShooting()
     {
-        for (int i=0; i< 5; ++i)
+        for (int i=0; i< bulletCount; ++i)
         {
             ShootProjectile();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(spacing);
         }
         yield return new WaitForSeconds(3f);
         StartCoroutine(StartShooting());

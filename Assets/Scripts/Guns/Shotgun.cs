@@ -42,7 +42,7 @@ public class Shotgun : MonoBehaviour
 
     private void SpawnBullet()
     {
-        float spread = 0.6f;
+        float spread = 0.5f;
 
         for (int i=0; i< 6; ++i)
         {
@@ -52,7 +52,7 @@ public class Shotgun : MonoBehaviour
             spell.GetComponent<Rigidbody2D>().velocity = new Vector2(spread, spread);
             spell.GetComponent<Rigidbody2D>().AddForce(transform.right * projectileForce * ranVel, ForceMode2D.Impulse);
             spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
-            spread += 0.15f;
+            spread += 0.2f;
         }
 
     }
