@@ -25,8 +25,6 @@ public class GunRotateToCursor : MonoBehaviour
         {
             y = -180f;
             angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg * -1;
-            
-
         }
         else
         {

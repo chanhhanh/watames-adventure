@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 public class Shotgun : MonoBehaviour
 {
     public GameObject projectile;
@@ -24,6 +23,8 @@ public class Shotgun : MonoBehaviour
     public AudioSource aus;
 
     public AudioClip bulletSound;
+    [SerializeField]
+    GameObject source;
 
     private void Update()
     {
@@ -32,8 +33,9 @@ public class Shotgun : MonoBehaviour
             SpawnBullet();
             if (aus && bulletSound)
             {
-                aus.PlayOneShot(bulletSound);
+                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             }
+            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
             StartCoroutine(startCooldown());
         }
     }
@@ -55,8 +57,9 @@ public class Shotgun : MonoBehaviour
         for (int i=0; i< numOfProjectiles; ++i)
         {
             float tempRot = startRotation - angleIncrease * i;
-            spell = Instantiate(projectile, transform.position, Quaternion.Euler(0,0,tempRot));
-           
+            spell = Instantiate(projectile, source.transform.position, Quaternion.Euler(0,0,tempRot));
+            source.GetComponent<ParticleSystem>().Play();
+
             Vector2 trajectory = new Vector2(Mathf.Cos(tempRot * Mathf.Deg2Rad) * projectileForce, Mathf.Sin(tempRot * Mathf.Deg2Rad) * projectileForce);
             spell.GetComponent<Rigidbody2D>().velocity = trajectory;
             spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);

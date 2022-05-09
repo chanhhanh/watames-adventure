@@ -18,8 +18,10 @@ public class Handgun : MonoBehaviour
     public AudioSource aus;
 
     public AudioClip bulletSound;
+ 
+    [SerializeField]
+    GameObject source;
     
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -27,15 +29,19 @@ public class Handgun : MonoBehaviour
             SpawnBullet();
             if(aus && bulletSound)
             {
-                aus.PlayOneShot(bulletSound);
+                //aus.PlayOneShot(bulletSound);
+                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             }
+            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
         }
     }
 
     private void SpawnBullet()
     {
-        spell = Instantiate(projectile, transform.position, transform.rotation);
-        
+        spell = Instantiate(projectile, source.transform.position, transform.rotation);
+
+        source.GetComponent<ParticleSystem>().Play();
+
         spell.GetComponent<Rigidbody2D>().AddForce(transform.right * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
     }

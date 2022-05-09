@@ -23,7 +23,6 @@ public class GhostExplode : MonoBehaviour
         Vector3 diff = closest.transform.position - position;
         if ((diff.x <= 2.5f && diff.x >= -2.5f) && (diff.y <= 2.5f && diff.y >= -2.5f))
         {
-            Debug.Log(diff);
             StartCoroutine(TickRed());
             StartCoroutine(WaitForExplode());
         }

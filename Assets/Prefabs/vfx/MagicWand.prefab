@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  particle: {fileID: 0}
 --- !u!114 &-3856698561789523915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a43519700fa79a4ba5ec4a74606599b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decayTime: 10
+  decayTime: 5
 --- !u!114 &6246843790746456573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +164,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78650bb9838ec242958fa5ff0f03d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileForce: 14

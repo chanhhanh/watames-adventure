@@ -9,19 +9,37 @@ public class MagicWand : MonoBehaviour
     
     private float minDamage = 9;
     private float maxDamage = 12;
-    public float projectileForce = 6f;
+    public float projectileForce = 14f;
     private bool offCooldown = true;
     public float cooldown = 0.2f;
     GameObject spell;
+
+    Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
         {
-          ShootEnemy();
+            ShootEnemy();
+            SwingWeapon();
         }
     }
 
+    void SwingWeapon()
+    {
+        if (transform.localRotation.y == 0f)
+        {
+            animator.Play("Weapon_Swing_Right");
+        }
+        else if(transform.localRotation.y == -180f)
+        {
+            animator.Play("Weapon_Swing_Left");
+        }
+    }
     IEnumerator startCooldown()
     {
         offCooldown = false;
@@ -30,24 +48,10 @@ public class MagicWand : MonoBehaviour
     }
     void ShootEnemy()
     {
-        StartCoroutine(spinItem());
         SpawnMagicMissile();
         StartCoroutine(startCooldown());
     }
    
-    IEnumerator spinItem()
-    {
-        float z = 0f;
-        Quaternion target = Quaternion.Euler(0f, 0f, z);
-        while (z >= -360f)
-        {
-            GetComponent<Transform>().localRotation = target;
-            yield return new WaitForSeconds(0.1f);
-            z--;
-        }
-        target = Quaternion.Euler(0f, 0f, 0f);
-        GetComponent<Transform>().rotation = target;
-    }
     private void SpawnMagicMissile()
     {
         spell = Instantiate(projectile, transform.position, Quaternion.identity);

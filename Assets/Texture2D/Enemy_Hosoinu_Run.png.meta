@@ -1,0 +1,1004 @@
+fileFormatVersion: 2
+guid: 8d4de50303d8a6a4ebc69c0f026fa984
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Enemy_Hosoinu_Run_4
+  - first:
+      213: 21300002
+    second: Enemy_Hosoinu_Run_1
+  - first:
+      213: 21300004
+    second: Enemy_Hosoinu_Run_6
+  - first:
+      213: 21300006
+    second: Enemy_Hosoinu_Run_7
+  - first:
+      213: 21300008
+    second: Enemy_Hosoinu_Run_3
+  - first:
+      213: 21300010
+    second: Enemy_Hosoinu_Run_5
+  - first:
+      213: 21300012
+    second: Enemy_Hosoinu_Run_0
+  - first:
+      213: 21300014
+    second: Enemy_Hosoinu_Run_2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 256
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2.0761204
+        width: 32
+        height: 28.89713
+      alignment: 9
+      pivot: {x: 0.5, y: 0.481843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: -13.524685}
+        - {x: -16, y: -9.524685}
+        - {x: -16, y: -0.5246849}
+        - {x: -4, y: 14.475315}
+        - {x: 11, y: 14.475315}
+        - {x: 16, y: 10.475315}
+        - {x: 16, y: -9.524685}
+        - {x: 0, y: -14.524685}
+        - {x: -13, y: -14.524685}
+      physicsShape:
+      - - {x: -4, y: 14.475315}
+        - {x: -16, y: -0.5246849}
+        - {x: -16, y: -9.524685}
+        - {x: -14, y: -13.524685}
+        - {x: -13, y: -14.524685}
+        - {x: 0, y: -14.524685}
+        - {x: 16, y: -9.524685}
+        - {x: 16, y: 10.475315}
+        - {x: 11, y: 14.475315}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5248f4a565ce49bdad91534f410aa832
+      internalID: 21300000
+      vertices:
+      - {x: 27, y: 31}
+      - {x: 32, y: 7}
+      - {x: 32, y: 27}
+      - {x: 16, y: 2}
+      - {x: 12, y: 31}
+      - {x: 3, y: 2}
+      - {x: 2, y: 3}
+      - {x: 0, y: 16}
+      - {x: 0, y: 7}
+      indices: 080000000700000006000000040000000600000007000000050000000600000004000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 3.0761204
+        width: 32
+        height: 25.84776
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: -13}
+        - {x: -16, y: -7}
+        - {x: -16, y: 12}
+        - {x: -11, y: 13}
+        - {x: 16, y: 13}
+        - {x: 16, y: -2}
+        - {x: 5, y: -13}
+      physicsShape:
+      - - {x: -11, y: 13}
+        - {x: -16, y: 12}
+        - {x: -16, y: -7}
+        - {x: -12, y: -13}
+        - {x: 5, y: -13}
+        - {x: 16, y: -2}
+        - {x: 16, y: 13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f9218a6eff4cb9881cc0a68ef796d2
+      internalID: 21300002
+      vertices:
+      - {x: 32, y: 29}
+      - {x: 21, y: 3}
+      - {x: 32, y: 14}
+      - {x: 5, y: 29}
+      - {x: 4, y: 3}
+      - {x: 0, y: 28}
+      - {x: 0, y: 9}
+      indices: 060000000500000004000000030000000400000005000000010000000400000003000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2.0761204
+        width: 32
+        height: 28.89713
+      alignment: 9
+      pivot: {x: 0.5, y: 0.481843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: -14.524685}
+        - {x: -16, y: -8.524685}
+        - {x: -16, y: 8.475315}
+        - {x: -8, y: 14.475315}
+        - {x: 13, y: 14.475315}
+        - {x: 16, y: 13.475315}
+        - {x: 16, y: -14.524685}
+      physicsShape:
+      - - {x: -2, y: 14.475315}
+        - {x: -16, y: 7.475315}
+        - {x: -16, y: -8.524685}
+        - {x: -6, y: -14.524685}
+        - {x: 16, y: -14.524685}
+        - {x: 16, y: 11.475315}
+        - {x: 13, y: 14.475315}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36003425c323437e90a281939362b8f3
+      internalID: 21300004
+      vertices:
+      - {x: 29, y: 31}
+      - {x: 32, y: 2}
+      - {x: 32, y: 30}
+      - {x: 10, y: 2}
+      - {x: 8, y: 31}
+      - {x: 0, y: 25}
+      - {x: 0, y: 8}
+      indices: 060000000500000003000000040000000300000005000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2.0761204
+        width: 32
+        height: 27.84776
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: -14}
+        - {x: -16, y: -8}
+        - {x: -16, y: 9}
+        - {x: -4, y: 14}
+        - {x: 14, y: 14}
+        - {x: 16, y: 12}
+        - {x: 16, y: 1}
+        - {x: 10, y: -14}
+      physicsShape:
+      - - {x: -4, y: 14}
+        - {x: -16, y: 9}
+        - {x: -16, y: -8}
+        - {x: -5, y: -14}
+        - {x: 10, y: -14}
+        - {x: 16, y: 1}
+        - {x: 16, y: 12}
+        - {x: 14, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471aa8f0d9464c7c9196786fb52671b9
+      internalID: 21300006
+      vertices:
+      - {x: 30, y: 30}
+      - {x: 32, y: 17}
+      - {x: 32, y: 28}
+      - {x: 26, y: 2}
+      - {x: 12, y: 30}
+      - {x: 11, y: 2}
+      - {x: 0, y: 25}
+      - {x: 0, y: 8}
+      indices: 070000000600000005000000040000000500000006000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2.0761204
+        width: 32
+        height: 27.89713
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49911514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -14.024685}
+        - {x: -16, y: -12.024685}
+        - {x: -16, y: -0.024684906}
+        - {x: -5, y: 11.975315}
+        - {x: 1, y: 13.975315}
+        - {x: 14, y: 13.975315}
+        - {x: 16, y: 12.975315}
+        - {x: 16, y: -10.024685}
+        - {x: 15, y: -14.024685}
+      physicsShape:
+      - - {x: 1, y: 13.975315}
+        - {x: -5, y: 11.975315}
+        - {x: -16, y: -0.024684906}
+        - {x: -16, y: -12.024685}
+        - {x: -15, y: -14.024685}
+        - {x: 15, y: -14.024685}
+        - {x: 16, y: -10.024685}
+        - {x: 16, y: 12.975315}
+        - {x: 14, y: 13.975315}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc8c5ba8a8c43fe858d28452579b468
+      internalID: 21300008
+      vertices:
+      - {x: 32, y: 29}
+      - {x: 31, y: 2}
+      - {x: 32, y: 6}
+      - {x: 30, y: 30}
+      - {x: 17, y: 30}
+      - {x: 11, y: 28}
+      - {x: 1, y: 2}
+      - {x: 0, y: 16}
+      - {x: 0, y: 4}
+      indices: 080000000700000006000000050000000600000007000000010000000600000005000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 2.0761204
+        width: 32
+        height: 28.89713
+      alignment: 9
+      pivot: {x: 0.5, y: 0.481843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: -14.524685}
+        - {x: -16, y: -13.524685}
+        - {x: -16, y: 5.475315}
+        - {x: -4, y: 14.475315}
+        - {x: 15, y: 14.475315}
+        - {x: 16, y: 12.475315}
+        - {x: 16, y: -8.524685}
+        - {x: 13, y: -14.524685}
+      physicsShape:
+      - - {x: 15, y: 14.475315}
+        - {x: -4, y: 14.475315}
+        - {x: -16, y: 5.475315}
+        - {x: -16, y: -13.524685}
+        - {x: -13, y: -14.524685}
+        - {x: 13, y: -14.524685}
+        - {x: 16, y: -9.524685}
+        - {x: 16, y: 12.475315}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa21911f54704476801e12aac99ad976
+      internalID: 21300010
+      vertices:
+      - {x: 31, y: 31}
+      - {x: 32, y: 8}
+      - {x: 32, y: 29}
+      - {x: 29, y: 2}
+      - {x: 12, y: 31}
+      - {x: 3, y: 2}
+      - {x: 0, y: 22}
+      - {x: 0, y: 3}
+      indices: 070000000600000005000000040000000500000006000000030000000500000004000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.0761204
+        width: 32
+        height: 27.84776
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -14}
+        - {x: -16, y: -10}
+        - {x: -16, y: 13}
+        - {x: -13, y: 14}
+        - {x: 16, y: 14}
+        - {x: 16, y: 4}
+        - {x: 14, y: -2}
+        - {x: 7, y: -14}
+      physicsShape:
+      - - {x: -11, y: 14}
+        - {x: -15, y: 13}
+        - {x: -16, y: 12}
+        - {x: -16, y: -10}
+        - {x: -4, y: -14}
+        - {x: 7, y: -14}
+        - {x: 14, y: -2}
+        - {x: 16, y: 4}
+        - {x: 16, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9873c1299cb4966987498ef4d3b154d
+      internalID: 21300012
+      vertices:
+      - {x: 32, y: 30}
+      - {x: 30, y: 14}
+      - {x: 32, y: 20}
+      - {x: 23, y: 2}
+      - {x: 12, y: 2}
+      - {x: 3, y: 30}
+      - {x: 0, y: 29}
+      - {x: 0, y: 6}
+      indices: 070000000600000004000000050000000400000006000000000000000400000005000000030000000400000000000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Enemy_Hosoinu_Run_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2.026751
+        width: 32
+        height: 26.946499
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5185553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: -13.5}
+        - {x: -16, y: -7.5}
+        - {x: -16, y: 7.5}
+        - {x: -7, y: 13.5}
+        - {x: 15, y: 13.5}
+        - {x: 16, y: 10.5}
+        - {x: 16, y: -2.5}
+        - {x: 11, y: -10.5}
+        - {x: 7, y: -13.5}
+      physicsShape:
+      - - {x: 15, y: 13.5}
+        - {x: -7, y: 13.5}
+        - {x: -16, y: 7.5}
+        - {x: -16, y: -7.5}
+        - {x: -8, y: -13.5}
+        - {x: 7, y: -13.5}
+        - {x: 11, y: -10.5}
+        - {x: 16, y: -2.5}
+        - {x: 16, y: 10.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3639ef08b5c04d038d5f326e6575c82f
+      internalID: 21300014
+      vertices:
+      - {x: 31, y: 29}
+      - {x: 32, y: 13}
+      - {x: 32, y: 26}
+      - {x: 27, y: 5}
+      - {x: 23, y: 2}
+      - {x: 9, y: 29}
+      - {x: 8, y: 2}
+      - {x: 0, y: 23}
+      - {x: 0, y: 8}
+      indices: 080000000700000006000000050000000600000007000000040000000600000005000000000000000400000005000000030000000400000000000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

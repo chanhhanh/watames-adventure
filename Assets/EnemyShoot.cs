@@ -30,7 +30,6 @@ public class EnemyShoot : MonoBehaviour
     {
         GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = (player.transform.position - transform.position).normalized;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

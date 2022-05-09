@@ -1,0 +1,906 @@
+fileFormatVersion: 2
+guid: a713787358abe3a428e4970f65e0b4eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Boss_Umbrella_Attack_5
+  - first:
+      213: 21300002
+    second: Boss_Umbrella_Attack_4
+  - first:
+      213: 21300004
+    second: Boss_Umbrella_Attack_0
+  - first:
+      213: 21300006
+    second: Boss_Umbrella_Attack_2
+  - first:
+      213: 21300008
+    second: Boss_Umbrella_Attack_3
+  - first:
+      213: 21300010
+    second: Boss_Umbrella_Attack_1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 4
+  maxTextureSize: 288
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 251.05972
+        y: 1.0761205
+        width: 25.86415
+        height: 46.847755
+      alignment: 9
+      pivot: {x: 0.50031716, y: 0.48932716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.008203, y: -23.499998}
+        - {x: -12.991797, y: -23.499998}
+        - {x: -12.991797, y: 6.500002}
+        - {x: -11.991797, y: 11.500002}
+        - {x: -5.9917974, y: 23.500002}
+        - {x: 3.0082026, y: 23.500002}
+        - {x: 13.008203, y: 13.500002}
+        - {x: 13.008203, y: -22.499998}
+      physicsShape:
+      - - {x: 9.008203, y: 17.500002}
+        - {x: 1.0082026, y: 23.500002}
+        - {x: -3.9917974, y: 23.500002}
+        - {x: -11.991797, y: 11.500002}
+        - {x: -12.991797, y: -2.499998}
+        - {x: -12.991797, y: -20.499998}
+        - {x: -7.9917974, y: -23.499998}
+        - {x: 5.0082026, y: -23.499998}
+        - {x: 7.0082026, y: -22.499998}
+        - {x: 13.008203, y: -21.499998}
+        - {x: 13.008203, y: -9.499998}
+        - {x: 11.008203, y: 11.500002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9beaa4a1f7714306b0d9daf65b309718
+      internalID: 21300000
+      vertices:
+      - {x: 37, y: 38}
+      - {x: 36, y: 1}
+      - {x: 37, y: 2}
+      - {x: 27, y: 48}
+      - {x: 18, y: 48}
+      - {x: 12, y: 36}
+      - {x: 11, y: 31}
+      - {x: 11, y: 1}
+      indices: 070000000600000001000000050000000100000006000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 203.05972
+        y: 1.0761205
+        width: 25.86415
+        height: 46.847755
+      alignment: 9
+      pivot: {x: 0.50031716, y: 0.48932716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.9917974, y: -23.499998}
+        - {x: -12.991797, y: -19.499998}
+        - {x: -12.991797, y: -15.499998}
+        - {x: -9.991797, y: 10.500002}
+        - {x: -7.9917974, y: 16.500002}
+        - {x: -3.9917974, y: 23.500002}
+        - {x: 2.0082026, y: 23.500002}
+        - {x: 10.008203, y: 18.500002}
+        - {x: 13.008203, y: -3.499998}
+        - {x: 13.008203, y: -21.499998}
+        - {x: 4.0082026, y: -23.499998}
+      physicsShape:
+      - - {x: -3.9917974, y: 23.500002}
+        - {x: -7.9917974, y: 16.500002}
+        - {x: -9.991797, y: 10.500002}
+        - {x: -12.991797, y: -15.499998}
+        - {x: -12.991797, y: -19.499998}
+        - {x: -6.9917974, y: -23.499998}
+        - {x: 4.0082026, y: -23.499998}
+        - {x: 13.008203, y: -21.499998}
+        - {x: 13.008203, y: -6.499998}
+        - {x: 10.008203, y: 18.500002}
+        - {x: 2.0082026, y: 23.500002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551d843e1a5643b1bb95aebd9497693b
+      internalID: 21300002
+      vertices:
+      - {x: 34, y: 43}
+      - {x: 37, y: 3}
+      - {x: 37, y: 21}
+      - {x: 28, y: 1}
+      - {x: 26, y: 48}
+      - {x: 20, y: 48}
+      - {x: 17, y: 1}
+      - {x: 16, y: 41}
+      - {x: 14, y: 35}
+      - {x: 11, y: 9}
+      - {x: 11, y: 5}
+      indices: 0a0000000900000006000000080000000600000009000000070000000600000008000000050000000600000007000000030000000600000005000000040000000300000005000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 6.026751
+        y: 2.0761204
+        width: 35.941277
+        height: 43.847755
+      alignment: 9
+      pivot: {x: 0.50007266, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.997389, y: -21.999998}
+        - {x: -17.997389, y: -19.999998}
+        - {x: -17.997389, y: -2.999998}
+        - {x: -8.997389, y: 18.000002}
+        - {x: -0.99738884, y: 22.000002}
+        - {x: 5.002611, y: 22.000002}
+        - {x: 17.002611, y: 14.000002}
+        - {x: 18.002611, y: 5.000002}
+        - {x: 18.002611, y: -21.999998}
+      physicsShape:
+      - - {x: 11.002611, y: 11.000002}
+        - {x: 4.002611, y: 22.000002}
+        - {x: -0.99738884, y: 22.000002}
+        - {x: -8.997389, y: 18.000002}
+        - {x: -17.997389, y: -2.999998}
+        - {x: -17.997389, y: -19.999998}
+        - {x: -10.997389, y: -21.999998}
+        - {x: 12.002611, y: -21.999998}
+        - {x: 17.002611, y: -17.999998}
+        - {x: 18.002611, y: -16.999998}
+        - {x: 18.002611, y: -10.999998}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f191e85c30340c9a77436757dadf848
+      internalID: 21300004
+      vertices:
+      - {x: 41, y: 38}
+      - {x: 42, y: 2}
+      - {x: 42, y: 29}
+      - {x: 29, y: 46}
+      - {x: 23, y: 46}
+      - {x: 15, y: 42}
+      - {x: 13, y: 2}
+      - {x: 6, y: 21}
+      - {x: 6, y: 4}
+      indices: 080000000700000006000000050000000600000007000000010000000600000005000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 97.02675
+        y: 2.0761204
+        width: 45.897125
+        height: 39.847755
+      alignment: 9
+      pivot: {x: 0.50053793, y: 0.5501911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.024689, y: -19.999998}
+        - {x: -22.975311, y: -19.999998}
+        - {x: -22.975311, y: -14.999998}
+        - {x: -21.975311, y: -10.999998}
+        - {x: -10.975311, y: 11.000002}
+        - {x: -1.9753113, y: 20.000002}
+        - {x: 2.0246887, y: 20.000002}
+        - {x: 12.024689, y: 12.000002}
+        - {x: 23.024689, y: -8.999998}
+        - {x: 23.024689, y: -18.999998}
+      physicsShape:
+      - - {x: 2.0246887, y: 20.000002}
+        - {x: -1.9753113, y: 20.000002}
+        - {x: -10.975311, y: 11.000002}
+        - {x: -21.975311, y: -10.999998}
+        - {x: -22.975311, y: -14.999998}
+        - {x: -22.975311, y: -19.999998}
+        - {x: 21.024689, y: -19.999998}
+        - {x: 23.024689, y: -18.999998}
+        - {x: 23.024689, y: -8.999998}
+        - {x: 12.024689, y: 12.000002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f926a4c78924b3fb7e668be34d8e2fc
+      internalID: 21300006
+      vertices:
+      - {x: 47, y: 13}
+      - {x: 45, y: 2}
+      - {x: 47, y: 3}
+      - {x: 36, y: 34}
+      - {x: 26, y: 42}
+      - {x: 22, y: 42}
+      - {x: 13, y: 33}
+      - {x: 2, y: 11}
+      - {x: 1, y: 7}
+      - {x: 1, y: 2}
+      indices: 090000000800000001000000070000000100000008000000060000000100000007000000050000000100000006000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 145.02675
+        y: 2.0761204
+        width: 45.897125
+        height: 39.847755
+      alignment: 9
+      pivot: {x: 0.50053793, y: 0.5501911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.024689, y: -19.999998}
+        - {x: -22.975311, y: -19.999998}
+        - {x: -22.975311, y: -14.999998}
+        - {x: -21.975311, y: -10.999998}
+        - {x: -10.975311, y: 11.000002}
+        - {x: -1.9753113, y: 20.000002}
+        - {x: 2.0246887, y: 20.000002}
+        - {x: 12.024689, y: 12.000002}
+        - {x: 23.024689, y: -8.999998}
+        - {x: 23.024689, y: -18.999998}
+      physicsShape:
+      - - {x: 2.0246887, y: 20.000002}
+        - {x: -1.9753113, y: 20.000002}
+        - {x: -10.975311, y: 11.000002}
+        - {x: -21.975311, y: -10.999998}
+        - {x: -22.975311, y: -14.999998}
+        - {x: -22.975311, y: -19.999998}
+        - {x: 21.024689, y: -19.999998}
+        - {x: 23.024689, y: -18.999998}
+        - {x: 23.024689, y: -8.999998}
+        - {x: 12.024689, y: 12.000002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41d4eac5fcf432eacfa2be997684db7
+      internalID: 21300008
+      vertices:
+      - {x: 47, y: 13}
+      - {x: 45, y: 2}
+      - {x: 47, y: 3}
+      - {x: 36, y: 34}
+      - {x: 26, y: 42}
+      - {x: 22, y: 42}
+      - {x: 13, y: 33}
+      - {x: 2, y: 11}
+      - {x: 1, y: 7}
+      - {x: 1, y: 2}
+      indices: 090000000800000001000000070000000100000008000000060000000100000007000000050000000100000006000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    - serializedVersion: 2
+      name: Boss_Umbrella_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 52.012913
+        y: 2.0761204
+        width: 39.935772
+        height: 42.847755
+      alignment: 9
+      pivot: {x: 0.50048083, y: 0.5116693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.980797, y: -19.499998}
+        - {x: -19.980797, y: -15.499998}
+        - {x: -19.980797, y: -10.499998}
+        - {x: -10.980797, y: 10.500002}
+        - {x: -7.980797, y: 16.500002}
+        - {x: -0.9807968, y: 21.500002}
+        - {x: 4.019203, y: 21.500002}
+        - {x: 11.019203, y: 10.500002}
+        - {x: 20.019203, y: -12.499998}
+        - {x: 20.019203, y: -14.499998}
+        - {x: 9.019203, y: -21.499998}
+        - {x: -4.980797, y: -21.499998}
+      physicsShape:
+      - - {x: 4.019203, y: 21.500002}
+        - {x: -0.9807968, y: 21.500002}
+        - {x: -7.980797, y: 16.500002}
+        - {x: -10.980797, y: 10.500002}
+        - {x: -19.980797, y: -10.499998}
+        - {x: -19.980797, y: -15.499998}
+        - {x: -12.980797, y: -19.499998}
+        - {x: -4.980797, y: -21.499998}
+        - {x: 9.019203, y: -21.499998}
+        - {x: 20.019203, y: -14.499998}
+        - {x: 20.019203, y: -12.499998}
+        - {x: 11.019203, y: 10.500002}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8b64ec31314e11a783bbe33647e357
+      internalID: 21300010
+      vertices:
+      - {x: 35, y: 34}
+      - {x: 44, y: 9}
+      - {x: 44, y: 11}
+      - {x: 33, y: 2}
+      - {x: 28, y: 45}
+      - {x: 23, y: 45}
+      - {x: 19, y: 2}
+      - {x: 16, y: 40}
+      - {x: 13, y: 34}
+      - {x: 11, y: 4}
+      - {x: 4, y: 13}
+      - {x: 4, y: 8}
+      indices: 0b0000000a0000000900000008000000090000000a000000060000000900000008000000070000000600000008000000050000000600000007000000030000000600000005000000040000000300000005000000000000000300000004000000010000000300000000000000020000000100000000000000
+      edges: []
+      weights:
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+      - weight[0]: 1
+        weight[1]: 0
+        weight[2]: 0
+        weight[3]: 0
+        boneIndex[0]: 0
+        boneIndex[1]: 0
+        boneIndex[2]: 0
+        boneIndex[3]: 0
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

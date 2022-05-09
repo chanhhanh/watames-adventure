@@ -26,13 +26,13 @@ public class DualHandgunToggle : MonoBehaviour
         Debug.Log(transform.rotation);
         if (!handgunToggle)
         {
-            transform.localPosition = new Vector3(0.35f, 0.25f, 0f);
+            transform.localPosition = new Vector3(transform.localPosition.x * -1, 0.25f, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             //transform.SetPositionAndRotation(new Vector3(0.35f, 0.25f, 0f), Quaternion.Euler(0f, 0f,0f));
         }
         else if (handgunToggle)
         {
-            transform.localPosition = new Vector3(-0.35f, 0f, 0f);
+            transform.localPosition = new Vector3(transform.localPosition.x * -1, 0f, 0f);
             transform.localRotation = Quaternion.Euler(0f, -180f, 0f);
             //transform.SetPositionAndRotation(new Vector3(-0.35f, 0f, 0f), Quaternion.Euler(0f, -180f, 0f));
         }

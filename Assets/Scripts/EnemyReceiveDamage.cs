@@ -9,6 +9,8 @@ public class EnemyReceiveDamage : MonoBehaviour
     public float maxHealth;
     public GameObject drop;
     public float dropRate = 0.8f;
+    [SerializeField]
+    GameObject previousDamageSrc;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,5 @@ public class EnemyReceiveDamage : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         Destroy(gameObject);
-     
     }
 }

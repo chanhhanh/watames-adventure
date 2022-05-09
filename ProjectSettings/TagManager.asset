@@ -3,17 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Debris
+  - GameManager
+  - Enemy
+  - DamageableEntity
+  - Projectile
+  - Pickup
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Projectile
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Character
+  - Character Collision Blocker
+  - Shadow
   - 
   - 
   - 

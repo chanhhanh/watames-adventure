@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 public class Tommy : MonoBehaviour
 {
     public GameObject projectile;
@@ -19,6 +18,11 @@ public class Tommy : MonoBehaviour
     public AudioSource aus;
 
     public AudioClip bulletSound;
+    [SerializeField]
+    GameObject source;
+
+    [SerializeField]
+    float projectileSpread = 1f;
 
     private void Update()
     {
@@ -27,8 +31,9 @@ public class Tommy : MonoBehaviour
             SpawnBullet();
             if (aus && bulletSound)
             {
-                aus.PlayOneShot(bulletSound);
+                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             }
+            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
             StartCoroutine(startCooldown());
         }
     }
@@ -40,12 +45,16 @@ public class Tommy : MonoBehaviour
         offCooldown = true;
     }
 
+
     private void SpawnBullet()
     {
-        float recoil = UnityEngine.Random.Range(0.8f, 1.2f);
+        float recoil = UnityEngine.Random.Range(-projectileSpread/2, projectileSpread/2);
 
-        spell = Instantiate(projectile, transform.position, transform.rotation);
-        spell.GetComponent<Rigidbody2D>().velocity = new Vector2(recoil, recoil);
+        spell = Instantiate(projectile, source.transform.position, transform.rotation);
+
+        source.GetComponent<ParticleSystem>().Play();
+
+        spell.GetComponent<Rigidbody2D>().velocity = new Vector2(recoil, recoil).normalized;
         spell.GetComponent<Rigidbody2D>().AddForce(transform.right * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
     }

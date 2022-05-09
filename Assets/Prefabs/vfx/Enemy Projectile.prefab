@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5537215482294871451}
   - component: {fileID: -3856698561789523915}
   - component: {fileID: -4906881220708300022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,3 +149,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  particle: {fileID: 1525375358503166, guid: 18b8409bf23cdf945a8d94eca6b09263, type: 3}

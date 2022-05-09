@@ -50,7 +50,7 @@ public class WeaponsChest : MonoBehaviour
         {
             foreach (Transform child in player.transform)
             {
-                Destroy(child.gameObject);
+                if (child.gameObject.layer != 8 ) Destroy(child.gameObject);
             }
             Destroy(gameObject);
         }

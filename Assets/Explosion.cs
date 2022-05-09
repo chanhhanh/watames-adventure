@@ -5,33 +5,33 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     private GameObject gameManager;
-    public float damage = 20f;
-    Animator animator;
+    [SerializeField]
+    float explosionDuration = 1f, damage = 20f;
+    [SerializeField]
+    bool damageActive = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-    private void Awake()
-    {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-        animator = GetComponent<Animator>();
+        StartCoroutine(DealDamage());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator DealDamage()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) Destroy(gameObject);
+        yield return new WaitForSeconds(explosionDuration);
+        damageActive = false;
     }
 
-    bool damageDealt = false;
+    private void FixedUpdate()
+    {
+        if (transform.childCount == 0)
+            Destroy(gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Player" && !damageDealt)
+        if (collision.name == "Player" && damageActive)
         {
-            gameManager.GetComponent<PlayerStats>().DealDamage(damage);
-            damageDealt = true;
+            PlayerStats.Instance.DealDamage(damage);
+            damageActive = false;
         }
     }
 }

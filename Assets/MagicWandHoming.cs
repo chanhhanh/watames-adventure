@@ -6,6 +6,8 @@ public class MagicWandHoming : MonoBehaviour
 {
     Transform target;
     // Start is called before the first frame update
+    [SerializeField]
+    float projectileForce;
     void Awake()
     {
         if (FindClosestEnemy())
@@ -14,8 +16,7 @@ public class MagicWandHoming : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Homing();
     }
@@ -47,7 +48,7 @@ public class MagicWandHoming : MonoBehaviour
             Vector2 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             GetComponent<Rigidbody2D>().rotation = angle;
-            GetComponent<Rigidbody2D>().velocity = direction * 7f;
+            GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
         }
     }
 }

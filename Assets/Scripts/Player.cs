@@ -45,6 +45,9 @@ public class Player : MonoBehaviour
     const string PLAYER_WALK_LEFTUP = "Walk_leftup";
     const string PLAYER_WALK_RIGHTUP = "Walk_rightup";
 
+    const string IDLE = "Watane_Idle";
+    const string RUN = "Watame_Run";
+
     public float DashForce = 3000f;
     //private bool CanIDash = true;
     public float cooldown = 1.5f;
@@ -58,6 +61,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
         //if (Input.GetKeyDown(KeyCode.LeftShift) && CanIDash)
@@ -67,88 +71,89 @@ public class Player : MonoBehaviour
         //}
 
     }
-    //IEnumerator Dash()
-    //{
-    //    float dashSpeedX = (inputHorizontal * moveSpeed * 30f) * GetComponent<Rigidbody2D>().mass / Time.fixedDeltaTime;
-    //    float dashSpeedY = (inputVertical * moveSpeed * 30f) * GetComponent<Rigidbody2D>().mass / Time.fixedDeltaTime;
-    //    rb.AddForce(new Vector2 (dashSpeedX, dashSpeedY));
-    //    StartCoroutine(CountCooldown());
-    //    yield return new WaitForSeconds(1f);
-    //}
-
-    //IEnumerator CountCooldown()
-    //{
-    //    CanIDash = false;
-    //    yield return new WaitForSeconds(cooldown);
-    //    CanIDash = true;
-    //}
+  
     void FixedUpdate()
     {
-        if(inputHorizontal != 0 || inputVertical != 0)
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+        float y = 0f;
+        if (inputHorizontal != 0 || inputVertical != 0)
         {
-            if(inputHorizontal != 0 && inputVertical != 0)
+            if (inputHorizontal != 0 && inputVertical != 0)
             {
                 rb.velocity = new Vector2(inputHorizontal * moveSpeed * speedLimiter, inputVertical * moveSpeed * speedLimiter);
             }
             rb.velocity = new Vector2(inputHorizontal * moveSpeed, inputVertical * moveSpeed);
+            changeAnimationState(RUN);
 
-
-            if (inputHorizontal > 0)
-            {
-                if (inputVertical > 0)
-                    changeAnimationState(PLAYER_WALK_RIGHTUP);
-                else if (inputVertical < 0)
-                    changeAnimationState(PLAYER_WALK_DOWNRIGHT);
-                else changeAnimationState(PLAYER_WALK_RIGHT);
-            }
-            else if (inputHorizontal < 0)
-            {
-                if (inputVertical > 0)
-                    changeAnimationState(PLAYER_WALK_LEFTUP);
-                else if (inputVertical < 0)
-                    changeAnimationState(PLAYER_WALK_DOWNLEFT);
-                else changeAnimationState(PLAYER_WALK_LEFT);
-            }
-            else if (inputVertical > 0)
-            {
-                changeAnimationState(PLAYER_WALK_UP);
-            }
-            else if (inputVertical < 0)
-            {
-                changeAnimationState(PLAYER_WALK_DOWN);
-            }
+            //if (inputHorizontal > 0)
+            //{
+            //    if (inputVertical > 0)
+            //        changeAnimationState(PLAYER_WALK_RIGHTUP);
+            //    else if (inputVertical < 0)
+            //        changeAnimationState(PLAYER_WALK_DOWNRIGHT);
+            //    else changeAnimationState(PLAYER_WALK_RIGHT);
+            //}
+            //else if (inputHorizontal < 0)
+            //{
+            //    if (inputVertical > 0)
+            //        changeAnimationState(PLAYER_WALK_LEFTUP);
+            //    else if (inputVertical < 0)
+            //        changeAnimationState(PLAYER_WALK_DOWNLEFT);
+            //    else changeAnimationState(PLAYER_WALK_LEFT);
+            //}
+            //else if (inputVertical > 0)
+            //{
+            //    changeAnimationState(PLAYER_WALK_UP);
+            //}
+            //else if (inputVertical < 0)
+            //{
+            //    changeAnimationState(PLAYER_WALK_DOWN);
+            //}
+            //}
+            //else
+            //{
+            //    rb.velocity = new Vector2(0f, 0f);
+            //    switch (currentState)
+            //    {
+            //        case PLAYER_WALK_DOWNLEFT:
+            //            changeAnimationState(PLAYER_DOWNLEFT);
+            //            return;
+            //        case PLAYER_WALK_DOWNRIGHT:
+            //            changeAnimationState(PLAYER_DOWNRIGHT);
+            //            return;
+            //        case PLAYER_WALK_LEFTUP:
+            //            changeAnimationState(PLAYER_LEFTUP);
+            //            return;
+            //        case PLAYER_WALK_RIGHTUP:
+            //            changeAnimationState(PLAYER_RIGHTUP);
+            //            return;
+            //        case PLAYER_WALK_DOWN:
+            //            changeAnimationState(PLAYER_DOWN);
+            //            return;
+            //        case PLAYER_WALK_UP:
+            //            changeAnimationState(PLAYER_UP);
+            //            return;
+            //        case PLAYER_WALK_LEFT:
+            //            changeAnimationState(PLAYER_LEFT);
+            //            return;
+            //        case PLAYER_WALK_RIGHT:
+            //            changeAnimationState(PLAYER_RIGHT);
+            //            return;
+            //    }
+            //}
         }
         else
         {
             rb.velocity = new Vector2(0f, 0f);
-            switch (currentState)
-            {
-                case PLAYER_WALK_DOWNLEFT:
-                    changeAnimationState(PLAYER_DOWNLEFT);
-                    return;
-                case PLAYER_WALK_DOWNRIGHT:
-                    changeAnimationState(PLAYER_DOWNRIGHT);
-                    return;
-                case PLAYER_WALK_LEFTUP:
-                    changeAnimationState(PLAYER_LEFTUP);
-                    return;
-                case PLAYER_WALK_RIGHTUP:
-                    changeAnimationState(PLAYER_RIGHTUP);
-                    return;
-                case PLAYER_WALK_DOWN:
-                    changeAnimationState(PLAYER_DOWN);
-                    return;
-                case PLAYER_WALK_UP:
-                    changeAnimationState(PLAYER_UP);
-                    return;
-                case PLAYER_WALK_LEFT:
-                    changeAnimationState(PLAYER_LEFT);
-                    return;
-                case PLAYER_WALK_RIGHT:
-                    changeAnimationState(PLAYER_RIGHT);
-                    return;
-            }
+            changeAnimationState(IDLE);
         }
+        if (direction.x < 0)
+        {
+            y = -180f;
+        }
+        Quaternion target = Quaternion.Euler(0f, y, 0f);
+        GetComponent<Transform>().rotation = target;
     }
 
     //animation state changer

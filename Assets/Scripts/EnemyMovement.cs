@@ -42,19 +42,21 @@ public class EnemyMovement : MonoBehaviour
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.gameObject.name == "Character Collision Blocker")
         {
-            gameManager.GetComponent<PlayerStats>().DealDamage(damage);
+            PlayerStats.Instance.DealDamage(damage);
+            Debug.Log("damage dealt");
         }
+        Debug.Log(collision.gameObject.name);
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.name == "Player")
+        if (collision.gameObject.name == "Character Collision Blocker")
         {
-            gameManager.GetComponent<PlayerStats>().DealDamage(damage);
+            PlayerStats.Instance.DealDamage(damage);
+            Debug.Log("damage dealt");
         }
     }
 

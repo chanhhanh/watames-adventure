@@ -19,11 +19,14 @@ public class PlayerStats : MonoBehaviour
 
     public float experience;
     public float maxExperience;
-    private int level = 1;
-    //Upgrades
-    const string MagicWand = "MagicWand";
-    const string Whip = "Whip";
-    string[] upgrades = { "MagicWand", "Whip" };
+
+    #region Singleton
+    public static PlayerStats Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,14 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         gem.text = experience.ToString();
+        if (!player)
+        {
+            healthSlider.gameObject.SetActive(false);
+        }
+        else
+        {
+            healthSlider.gameObject.SetActive(true);
+        }
     }
 
     public void DealDamage(float damage)
@@ -52,16 +63,6 @@ public class PlayerStats : MonoBehaviour
         //experienceSlider.value = CalculateExpPercentage();
     }
 
-    private void CheckLevelUp()
-    {
-        if (experience >= maxExperience)
-        {
-            level += 1;
-            playerLevel.text = "LVL " + level;
-            maxExperience += maxExperience*0.5f;
-            experience = 0;
-        }
-    }
     private void CheckDeath()
     {
         if (health <= 0)
@@ -73,8 +74,5 @@ public class PlayerStats : MonoBehaviour
     {
         return health / maxHealth;
     }
-    float CalculateExpPercentage()
-    {
-        return experience / maxExperience;
-    }
+   
 }

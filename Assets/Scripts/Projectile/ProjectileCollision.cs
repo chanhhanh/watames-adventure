@@ -5,6 +5,8 @@ using UnityEngine;
 public class ProjectileCollision : MonoBehaviour
 {
     public float damage;
+    [SerializeField]
+    GameObject particle;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +17,13 @@ public class ProjectileCollision : MonoBehaviour
                 collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
             }
             if (collision.tag == "Debris" || collision.tag =="Enemy") Destroy(gameObject);
+        }
+    }
+    private void OnDestroy()
+    {
+        if (particle)
+        {
+            Instantiate(particle, transform.position, Quaternion.identity);
         }
     }
 }

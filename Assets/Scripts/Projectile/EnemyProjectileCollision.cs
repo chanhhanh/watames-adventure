@@ -5,21 +5,26 @@ using UnityEngine;
 public class EnemyProjectileCollision : MonoBehaviour
 {
     public float damage;
-    private GameObject gameManager;
-    private void Start()
-    {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
-    }
+    [SerializeField]
+    GameObject particle;
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Player")
         {
-            gameManager.GetComponent<PlayerStats>().DealDamage(damage);
+            PlayerStats.Instance.DealDamage(damage);
             Destroy(gameObject);
         }
         else if (collision.tag == "Debris")
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnDestroy()
+    {
+        if (particle)
+        {
+            Instantiate(particle, transform.position, Quaternion.identity);
         }
     }
 }
