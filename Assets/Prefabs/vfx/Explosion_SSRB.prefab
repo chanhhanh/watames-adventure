@@ -88,8 +88,8 @@ MonoBehaviour:
   explosionDuration: 1
   damage: 20
   damageActive: 1
-  screenShakeDuration: 0
-  screenShakeMagnitude: 0
+  screenShakeDuration: 0.5
+  screenShakeMagnitude: 0.2
   affected: Player
   aud: {fileID: 0}
 --- !u!1 &1072304029055896

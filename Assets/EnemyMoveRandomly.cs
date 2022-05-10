@@ -54,7 +54,7 @@ public class EnemyMoveRandomly : MonoBehaviour
 
     IEnumerator MoveRandomly()
     {
-        float[] moveValue = { -moveSpeed, 0, moveSpeed };
+        float[] moveValue = { -moveSpeed, moveSpeed };
         int randIndexX = Random.Range(0, moveValue.Length);
         int randIndexY = Random.Range(0, moveValue.Length);
         randomPos = new Vector2(moveValue[randIndexX], moveValue[randIndexY]);

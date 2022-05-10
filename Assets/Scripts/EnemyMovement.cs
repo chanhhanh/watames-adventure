@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float moveSpeed;
     public float damage;
     private Transform player;
 
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
+    private NavMeshAgent agent;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     void FixedUpdate()
@@ -22,13 +27,13 @@ public class EnemyMovement : MonoBehaviour
             currentMovementDirection = (previousPosition - transform.position).normalized;
             previousPosition = transform.position;
         }
-        if (player)
-            Move();
+
         if (currentMovementDirection.x > 0)
         {
             GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
         }
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
+        agent.SetDestination(player.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,22 +49,5 @@ public class EnemyMovement : MonoBehaviour
         {
             PlayerStats.Instance.DealDamage(damage);
         }
-    }
-
-    private void Move()
-    {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        Vector3 direction = (player.position - transform.position);
-        float DirX = -1f, DirY = -1f;
-        if (direction.x > 0) DirX = 1f;
-        if (direction.y > 0) DirY = 1f;
-        Vector2 Dir = new Vector2(DirX, DirY);
-        
-        rb.velocity = Dir * moveSpeed;
-        //if (direction.magnitude < 1) rb.velocity = Vector2.zero;
-        //GetComponent<Rigidbody2D>().MovePosition(transform.position + (moveSpeed * Time.fixedDeltaTime * direction));
-
-        //rb.AddForce();
-
     }
 }

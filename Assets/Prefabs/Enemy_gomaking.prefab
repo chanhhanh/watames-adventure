@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   travelTime: 3
-  interval: 0.5
+  interval: 0
   moveSpeed: 2
   damage: 0
 --- !u!114 &-9161424318672241078
