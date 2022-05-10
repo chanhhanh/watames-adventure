@@ -7,22 +7,15 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed;
     public float damage;
     private Transform player;
-    Animator animator;
-    private GameObject gameManager;
 
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
     void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
     }
-    private void OnEnable()
-    {
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    }
-    void Update()
+
+    void FixedUpdate()
     {
         if (previousPosition != transform.position)
         {
@@ -31,10 +24,6 @@ public class EnemyMovement : MonoBehaviour
         }
         if (player)
             Move();
-    }
-
-    void FixedUpdate()
-    {
         if (currentMovementDirection.x > 0)
         {
             GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
@@ -42,21 +31,18 @@ public class EnemyMovement : MonoBehaviour
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Character Collision Blocker")
+        if (collision.gameObject.CompareTag("Player"))
         {
             PlayerStats.Instance.DealDamage(damage);
-            Debug.Log("damage dealt");
         }
-        Debug.Log(collision.gameObject.name);
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Character Collision Blocker")
+        if (collision.gameObject.CompareTag("Player"))
         {
             PlayerStats.Instance.DealDamage(damage);
-            Debug.Log("damage dealt");
         }
     }
 

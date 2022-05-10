@@ -15,8 +15,6 @@ public class Handgun : MonoBehaviour
     GameObject spell;
 
     //Audio
-    public AudioSource aus;
-
     public AudioClip bulletSound;
  
     [SerializeField]
@@ -27,7 +25,7 @@ public class Handgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SpawnBullet();
-            if(aus && bulletSound)
+            if(bulletSound)
             {
                 //aus.PlayOneShot(bulletSound);
                 AudioSource.PlayClipAtPoint(bulletSound, transform.position);

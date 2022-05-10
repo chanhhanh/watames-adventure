@@ -20,8 +20,6 @@ public class Shotgun : MonoBehaviour
     GameObject spell;
 
     //Audio
-    public AudioSource aus;
-
     public AudioClip bulletSound;
     [SerializeField]
     GameObject source;
@@ -31,7 +29,7 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown)
         {
             SpawnBullet();
-            if (aus && bulletSound)
+            if (bulletSound)
             {
                 AudioSource.PlayClipAtPoint(bulletSound, transform.position);
             }
@@ -53,7 +51,7 @@ public class Shotgun : MonoBehaviour
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
         float facingRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float startRotation = facingRotation + projectileSpread / 2;
-        float angleIncrease = projectileSpread / ((float)numOfProjectiles - 1f);
+        float angleIncrease = projectileSpread / (numOfProjectiles - 1f);
         for (int i=0; i< numOfProjectiles; ++i)
         {
             float tempRot = startRotation - angleIncrease * i;

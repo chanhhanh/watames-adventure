@@ -9,10 +9,24 @@ public class Explosion : MonoBehaviour
     float explosionDuration = 1f, damage = 20f;
     [SerializeField]
     bool damageActive = true;
+    [SerializeField]
+    float screenShakeDuration, screenShakeMagnitude;
+    [SerializeField]
+    string affected;
+    [SerializeField]
+    AudioClip aud;
 
     private void Start()
     {
         StartCoroutine(DealDamage());
+        if (screenShakeDuration != 0f && screenShakeMagnitude != 0f)
+        {
+            StartCoroutine(PlayerCamera.Instance.ShakeOnce(screenShakeMagnitude, screenShakeDuration));
+        }
+        if(aud)
+        {
+            AudioSource.PlayClipAtPoint(aud, transform.position);
+        }
     }
 
     IEnumerator DealDamage()
@@ -28,10 +42,18 @@ public class Explosion : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Player" && damageActive)
+        if (collision.CompareTag(affected) && damageActive)
         {
-            PlayerStats.Instance.DealDamage(damage);
-            damageActive = false;
+            switch (affected)
+            {
+                case "Player":
+                    PlayerStats.Instance.DealDamage(damage);
+                    damageActive = false;
+                    break;
+                case "Enemy":
+                    collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
+                    break;
+            }
         }
     }
 }

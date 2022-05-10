@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 95847898578741674}
   - component: {fileID: 6041245611131524870}
   - component: {fileID: -7975798107333065870}
-  - component: {fileID: -6239049895892586526}
-  m_Layer: 14
+  - component: {fileID: -60356865162871370}
+  m_Layer: 3
   m_Name: Projectile_Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decayTime: 0.25
---- !u!114 &-6239049895892586526
+--- !u!114 &-60356865162871370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

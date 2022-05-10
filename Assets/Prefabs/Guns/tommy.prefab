@@ -2668,9 +2668,10 @@ MonoBehaviour:
   projectileForce: 15
   cooldown: 0.05
   spellLevel: 0
-  aus: {fileID: 1264815478380735942}
   bulletSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
   source: {fileID: 3926573791964942342}
+  projectileSpread: 1
+  knockbackMultiplier: 100000
 --- !u!1 &5455896928766871006
 GameObject:
   m_ObjectHideFlags: 0

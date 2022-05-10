@@ -7,6 +7,9 @@ public class CollisionNonDestruct : MonoBehaviour
     public float damage;
     public float maxCollisionCount = -1;
     private float numOfCollisions = 0;
+    [SerializeField]
+    GameObject particle;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
@@ -27,5 +30,11 @@ public class CollisionNonDestruct : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    private void OnDestroy()
+    {
+        if(particle)
+        {
+            Instantiate(particle, transform.position, Quaternion.identity);
+        }
+    }
 }

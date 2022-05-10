@@ -67,7 +67,8 @@ public class EnemySpawner : MonoBehaviour
         {
             if (maxSpawn < spawnLimit)
             {
-                Instantiate(pools[index].prefab, pos, Quaternion.identity);
+                float rp = Random.Range(0.9f, 1.1f);
+                Instantiate(pools[index].prefab, pos * rp, Quaternion.identity);
                 maxSpawn++;
                 yield return null;
             }   

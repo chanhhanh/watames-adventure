@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - Pickup
   - SpawnPoint
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - Water
   - UI
   - Character
-  - Character Collision Blocker
+  - IgnoreCollision
   - Shadow
-  - 
+  - ProjectileCollider
   - 
   - 
   - 

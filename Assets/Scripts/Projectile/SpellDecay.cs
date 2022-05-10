@@ -8,18 +8,6 @@ public class SpellDecay : MonoBehaviour
     public float decayTime = 10;
     void Start()
     {
-        StartCoroutine(DestroySpell());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    IEnumerator DestroySpell()
-    {
-        yield return new WaitForSeconds(decayTime);
-        Destroy(gameObject);
+        Destroy(gameObject, decayTime);
     }
 }

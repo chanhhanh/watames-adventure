@@ -18,17 +18,6 @@ public class EnemyMoveRandomly : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(MoveRandomly());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (previousPosition != transform.position)
-        {
-            currentMovementDirection = (previousPosition - transform.position).normalized;
-            previousPosition = transform.position;
-        }       
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name == "Player")
@@ -42,11 +31,25 @@ public class EnemyMoveRandomly : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (previousPosition != transform.position)
+        {
+            currentMovementDirection = (previousPosition - transform.position).normalized;
+            previousPosition = transform.position;
+        }
         if (currentMovementDirection.x > 0)
         {
             GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
         }
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Debris"))
+        {
+            randomPos *= -1;
+            GetComponent<Rigidbody2D>().velocity = randomPos;
+        }
     }
 
     IEnumerator MoveRandomly()

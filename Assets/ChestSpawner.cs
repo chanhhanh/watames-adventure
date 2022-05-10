@@ -32,12 +32,6 @@ public class ChestSpawner : MonoBehaviour
         currentWeapon = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator Spawn()
     {
         if(!chestSpawned)
@@ -47,8 +41,7 @@ public class ChestSpawner : MonoBehaviour
             Instantiate(chest, pos, Quaternion.identity);
             chestSpawned = true;
         }
-        //Debug.Log("chest spawned " + Center(rand) + " " + Size(rand));
-        yield return new WaitForSeconds(5f);
+        yield return null;
         StartCoroutine(Spawn());
     }
 

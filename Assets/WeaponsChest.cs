@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponsChest : MonoBehaviour
 {
     [SerializeField]
-    private GameObject player, currentWeapon;
+    private GameObject player;
 
     [System.Serializable]
     public class Weapons
@@ -15,8 +15,8 @@ public class WeaponsChest : MonoBehaviour
     }
 
     [SerializeField]
-    float timeToStart = 5;
-    float interval = 5;
+    float timeToStart = 3;
+    float interval = 3;
     public List<Weapons> weapons;
 
     // Start is called before the first frame update
@@ -24,17 +24,14 @@ public class WeaponsChest : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        currentWeapon = player.transform.GetChild(0).gameObject;
         rand = Random.Range(0, weapons.Count);
-        Debug.Log(weapons[rand].prefab);
-        Debug.Log(ChestSpawner.instance.currentWeapon);
 
         while (weapons[rand].prefab == ChestSpawner.instance.currentWeapon)
         {
             rand = Random.Range(0, weapons.Count);
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (Time.time >= timeToStart)
         {
@@ -50,7 +47,7 @@ public class WeaponsChest : MonoBehaviour
         {
             foreach (Transform child in player.transform)
             {
-                if (child.gameObject.layer != 8 ) Destroy(child.gameObject);
+                if (child.gameObject.layer != 8 && child.gameObject.layer != 7 ) Destroy(child.gameObject);
             }
             Destroy(gameObject);
         }
@@ -67,5 +64,7 @@ public class WeaponsChest : MonoBehaviour
         weapon.transform.localScale = local.lossyScale;
         ChestSpawner.instance.chestSpawned = false;
         ChestSpawner.instance.currentWeapon = weapons[rand].prefab;
+        PlayerStats.Instance.boxCount += 1;
+        PlayerStats.Instance.UpdateBoxCount();
     }
 }

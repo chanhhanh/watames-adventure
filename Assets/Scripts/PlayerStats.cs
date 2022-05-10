@@ -8,17 +8,14 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats playerStats;
 
     public GameObject player;
-    public Text playerLevel;
     public Slider healthSlider;
-    public Text gem;
-    public Slider experienceSlider;
+    public Text box;
     
 
     public float health;
     public float maxHealth;
 
-    public float experience;
-    public float maxExperience;
+    public float boxCount;
 
     #region Singleton
     public static PlayerStats Instance;
@@ -28,6 +25,7 @@ public class PlayerStats : MonoBehaviour
     }
     #endregion
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +36,6 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gem.text = experience.ToString();
         if (!player)
         {
             healthSlider.gameObject.SetActive(false);
@@ -49,6 +46,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void UpdateBoxCount()
+    {
+        box.text = boxCount.ToString();
+    }
+
     public void DealDamage(float damage)
     {
         health -= damage;
@@ -56,18 +58,14 @@ public class PlayerStats : MonoBehaviour
         healthSlider.value = CalculateHealthPercentage();
     }
 
-    public void IncreaseExp(float exp)
-    {
-        experience += exp;
-        //CheckLevelUp();
-        //experienceSlider.value = CalculateExpPercentage();
-    }
-
     private void CheckDeath()
     {
         if (health <= 0)
         {
             Destroy(player);
+            GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectiles");
+            foreach (GameObject projectile in projectiles)
+                Destroy(projectile);
         }
     }
     float CalculateHealthPercentage()

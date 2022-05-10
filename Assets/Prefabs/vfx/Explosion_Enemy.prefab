@@ -2640,6 +2640,10 @@ MonoBehaviour:
   explosionDuration: 1
   damage: 20
   damageActive: 1
+  screenShakeDuration: 0
+  screenShakeMagnitude: 0
+  affected: Player
+  aud: {fileID: 0}
 --- !u!1 &1457552834463879
 GameObject:
   m_ObjectHideFlags: 0

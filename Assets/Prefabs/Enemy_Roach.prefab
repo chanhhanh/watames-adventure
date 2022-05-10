@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 4609591182679170262}
   - component: {fileID: 365042228854785801}
   - component: {fileID: 5368822361858658784}
-  - component: {fileID: 2858953970745851602}
   - component: {fileID: 8668232073991038479}
-  - component: {fileID: 5425713019672012918}
+  - component: {fileID: -4217654835773791556}
   m_Layer: 6
   m_Name: Enemy_Roach
   m_TagString: Enemy
@@ -121,8 +120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 5
-  drop: {fileID: 6118564621387113281, guid: d202ff2b2a1fa494596dac4dc120c706, type: 3}
-  dropRate: 0.8
+  drop: {fileID: 1243270824648357, guid: 25aac0d0b81695a4a8ab9b435d857e5a, type: 3}
+  previousDamageSrc: {fileID: 0}
 --- !u!50 &5368822361858658784
 Rigidbody2D:
   serializedVersion: 4
@@ -144,22 +143,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &2858953970745851602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4609591182679170249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54441526a0e8d7c458594b010ee9ebb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  travelTime: 1
-  interval: 0
-  moveSpeed: 5
-  damage: 0
 --- !u!58 &8668232073991038479
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +159,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &5425713019672012918
+--- !u!114 &-4217654835773791556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,9 +168,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4609591182679170249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 461ce91aa8de51b49820286f574e826c, type: 3}
+  m_Script: {fileID: 11500000, guid: 281cb547150221b4c986a284946ff386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterCollider: {fileID: 8668232073991038479}
-  characterBlockerCollider: {fileID: 2391328790013809810, guid: ebf33e52eda28fa42846bd9592357eed,
-    type: 3}
+  moveSpeed: 3
+  damage: 0.5

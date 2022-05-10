@@ -64,7 +64,6 @@ public class Hammer : MonoBehaviour
     private void SpawnBullet()
     {
         spell = Instantiate(projectile, source.transform.position, transform.rotation);
-        Debug.Log(transform.parent.right);
         spell.GetComponent<Rigidbody2D>().AddForce(transform.parent.right * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<CollisionNonDestruct>().damage = Random.Range(minDamage, maxDamage);
     }

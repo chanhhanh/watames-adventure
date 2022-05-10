@@ -92,12 +92,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7605053323321980897}
   - component: {fileID: 7605053323321980902}
-  - component: {fileID: 7605053323321980896}
   - component: {fileID: 8435139976478392807}
   - component: {fileID: 1224113768268701108}
+  - component: {fileID: 345736273206030195}
   m_Layer: 20
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,32 +168,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!61 &7605053323321980896
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7605053323321980903}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0020719767, y: 0.0007214546}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1, y: 0.96875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4616841, y: 1.4666128}
-  m_EdgeRadius: 0
 --- !u!114 &8435139976478392807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +181,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  currentWeapon: {fileID: 0}
   timeToStart: 3
   weapons:
   - tag: shotgun
@@ -223,6 +196,10 @@ MonoBehaviour:
     prefab: {fileID: 709024565776011607, guid: df937e9e26b88b34e8d000c916a4ce8c, type: 3}
   - tag: bonk hammer
     prefab: {fileID: 709024565776011607, guid: 2736b7f37950aa9489b5867215364fe2, type: 3}
+  - tag: frisbee
+    prefab: {fileID: 709024565776011607, guid: f3bf65b72ea9c934f980f22cc21d1cfc, type: 3}
+  - tag: BLT
+    prefab: {fileID: 1618363171715176, guid: 02aedcd7b8c98af438dcb2ebce3ea4de, type: 3}
 --- !u!95 &1224113768268701108
 Animator:
   serializedVersion: 3
@@ -242,3 +219,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &345736273206030195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605053323321980903}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1, y: 0.96875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5}
+  m_EdgeRadius: 0

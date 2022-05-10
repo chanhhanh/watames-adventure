@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7214701568453120021}
   - component: {fileID: 6488157303963704054}
   m_Layer: 0
-  m_Name: Weapon_Hammer
+  m_Name: Weapon_Frisbee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: -44025399
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a515a1baa3a474e4ca5e75c7fdf0b034, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dea5bf4d61f007b408a3e96b2262e344, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f93b29c124d89f45924b738da8ed601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1626702139210231, guid: 7afb1678b8683cf499b410624a29e35d, type: 3}
-  minDamage: 49
-  maxDamage: 51
-  cooldown: 1
-  projectileForce: 2
+  projectile: {fileID: 1916223178148438, guid: 801f636a6d0127348884e91d9b039247, type: 3}
+  minDamage: 19
+  maxDamage: 21
+  cooldown: 0.5
+  projectileForce: 14
   bulletSound: {fileID: 8300000, guid: 3f58b1465657b064a81d348c90b43981, type: 3}
   source: {fileID: 2035622094132053834}
