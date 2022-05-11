@@ -10,6 +10,10 @@ public class BulletHose : MonoBehaviour
     private float bulletCount = 100, spacing = 0.1f, cooldown = 5f, projectileForce = 7f, angleOffset = 7f;
     [SerializeField]
     bool inverseShooting = false;
+    [SerializeField]
+    AudioClip auc;
+    [SerializeField]
+    ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +45,8 @@ public class BulletHose : MonoBehaviour
 
     private void ShootProjectile(float tempRot, float i = 1)
     {
+        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position);
+        if (particle) particle.Play();
         float inverseRot = 0f;
         if (i == -1) inverseRot = 180f;
         GameObject spell = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, tempRot + inverseRot));

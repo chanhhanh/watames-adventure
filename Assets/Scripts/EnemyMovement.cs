@@ -11,6 +11,10 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
     private NavMeshAgent agent;
+    [SerializeField]
+    float moveDuration = 0f, stopDuration = 0f;
+
+    private bool isStopped = false;
 
     void Start()
     {
@@ -18,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
         agent = gameObject.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        StartCoroutine(StopMoving());
     }
 
     void FixedUpdate()
@@ -33,7 +38,20 @@ public class EnemyMovement : MonoBehaviour
             GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
         }
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
-        agent.SetDestination(player.position);
+        if(!isStopped) agent.SetDestination(player.position);
+    }
+
+    IEnumerator StopMoving()
+    {
+        if(moveDuration != 0 && stopDuration !=0)
+        {
+            yield return new WaitForSeconds(moveDuration);
+            isStopped = true;
+            yield return new WaitForSeconds(stopDuration);
+            isStopped = false;
+            StartCoroutine(StopMoving());
+        }
+        yield return null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

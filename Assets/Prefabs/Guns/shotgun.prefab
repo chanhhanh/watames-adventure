@@ -244,8 +244,6 @@ MonoBehaviour:
   projectileSpread: 30
   projectileForce: 15
   cooldown: 0.5
-  spellLevel: 0
-  aus: {fileID: 1083564844422605993}
   bulletSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
   source: {fileID: 2866121739865407004}
 --- !u!1 &2866121739865407004
@@ -2772,8 +2770,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_RenderMode: 0
   m_SortMode: 0

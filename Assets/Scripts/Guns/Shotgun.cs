@@ -16,7 +16,6 @@ public class Shotgun : MonoBehaviour
     public float projectileForce = 15f;
     private bool offCooldown = true;
     public float cooldown = 1f;
-    public float spellLevel = 0;
     GameObject spell;
 
     //Audio

@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GhostExplode : MonoBehaviour
+public class Explode : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -18,10 +12,12 @@ public class GhostExplode : MonoBehaviour
 
     public void DetectPlayerInRange()
     {
-        GameObject closest = GameObject.FindGameObjectWithTag("Player");
-        Vector3 position = transform.position;
-        Vector3 diff = closest.transform.position - position;
-        if ((diff.x <= 2.5f && diff.x >= -2.5f) && (diff.y <= 2.5f && diff.y >= -2.5f))
+        Transform closest = GameObject.FindGameObjectWithTag("Player").transform;
+        Vector3 pointA = transform.position;
+        Vector3 pointB = closest.position;
+        float dist = 2.5f;
+      
+        if ((pointA - pointB).sqrMagnitude < dist * dist)
         {
             StartCoroutine(TickRed());
             StartCoroutine(WaitForExplode());

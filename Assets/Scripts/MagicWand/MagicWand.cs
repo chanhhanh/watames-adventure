@@ -31,14 +31,7 @@ public class MagicWand : MonoBehaviour
 
     void SwingWeapon()
     {
-        if (transform.localRotation.y == 0f)
-        {
-            animator.Play("Weapon_Swing_Right");
-        }
-        else if(transform.localRotation.y == -180f)
-        {
-            animator.Play("Weapon_Swing_Left");
-        }
+        animator.Play("Weapon_Swing_Right");
     }
     IEnumerator startCooldown()
     {
@@ -60,7 +53,7 @@ public class MagicWand : MonoBehaviour
         Vector2 direction = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         spell.GetComponent<Rigidbody2D>().rotation = angle;
-        spell.GetComponent<Rigidbody2D>().AddForce(direction * projectileForce, ForceMode2D.Impulse);
+        spell.GetComponent<Rigidbody2D>().AddForce(transform.parent.right * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
     }
 

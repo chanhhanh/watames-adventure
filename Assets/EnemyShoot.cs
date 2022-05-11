@@ -7,7 +7,13 @@ public class EnemyShoot : MonoBehaviour
     GameObject player;
     public GameObject projectile;
     [SerializeField]
-    private float bulletCount = 5, spacing = 0.3f;
+    private float bulletCount = 5, spacing = 0.3f, minDamage = 15f, maxDamage = 20f, projectileForce = 5f;
+    [SerializeField]
+    bool fromSource = false;
+    [SerializeField]
+    AudioClip auc;
+    [SerializeField]
+    ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +34,25 @@ public class EnemyShoot : MonoBehaviour
 
     private void ShootProjectile()
     {
+        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position);
+        if (particle) particle.Play();
         GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
 
-        Vector3 direction = (player.transform.position - transform.position).normalized;
+        switch (fromSource)
+        {
+            case false:
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        spell.GetComponent<Rigidbody2D>().rotation = angle;
-        spell.GetComponent<Rigidbody2D>().velocity = direction * 5f;
-        spell.GetComponent<EnemyProjectileCollision>().damage = Random.Range(15, 20);
+                Vector3 direction = (player.transform.position - transform.position).normalized;
+
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                spell.GetComponent<Rigidbody2D>().rotation = angle;
+                spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+                break;
+            case true:
+                spell.GetComponent<Rigidbody2D>().velocity = transform.right * projectileForce;
+                break;
+        }
+        spell.GetComponent<EnemyProjectileCollision>().damage = Random.Range(minDamage, maxDamage);
+
     }
 }

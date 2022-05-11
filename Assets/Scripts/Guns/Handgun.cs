@@ -11,7 +11,6 @@ public class Handgun : MonoBehaviour
     private float maxDamage = 7;
     public float projectileForce = 15f;
     public float cooldown = 0.5f;
-    public float spellLevel = 0;
     GameObject spell;
 
     //Audio
