@@ -193,7 +193,7 @@ MonoBehaviour:
   projectile: {fileID: 1916223178148438, guid: 801f636a6d0127348884e91d9b039247, type: 3}
   minDamage: 19
   maxDamage: 21
-  cooldown: 0.5
+  cooldown: 1
   projectileForce: 14
   bulletSound: {fileID: 8300000, guid: 3f58b1465657b064a81d348c90b43981, type: 3}
   source: {fileID: 2035622094132053834}

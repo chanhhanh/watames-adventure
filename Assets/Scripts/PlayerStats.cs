@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
 
     public float boxCount;
 
+    public Image cooldownIndicator;
     #region Singleton
     public static PlayerStats Instance;
     private void Awake()
@@ -31,6 +32,7 @@ public class PlayerStats : MonoBehaviour
     {
         health = maxHealth;
         healthSlider.value = 1;
+        cooldownIndicator.fillAmount = 0;
     }
 
     // Update is called once per frame
@@ -49,6 +51,7 @@ public class PlayerStats : MonoBehaviour
     public void UpdateBoxCount()
     {
         box.text = boxCount.ToString();
+        cooldownIndicator.fillAmount = 0;
     }
 
     public void DealDamage(float damage)
@@ -73,4 +76,16 @@ public class PlayerStats : MonoBehaviour
         return health / maxHealth;
     }
    
+    public IEnumerator VisualizeCooldown(float cooldown)
+    {
+        float elapsed = 0f;
+        while (elapsed < cooldown)
+        {
+            elapsed += Time.deltaTime;
+
+            cooldownIndicator.fillAmount = elapsed / cooldown;
+            yield return null;
+        }
+        cooldownIndicator.fillAmount = 0f;
+    }
 }

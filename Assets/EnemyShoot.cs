@@ -23,10 +23,13 @@ public class EnemyShoot : MonoBehaviour
 
     IEnumerator StartShooting()
     {
-        for (int i=0; i< bulletCount; ++i)
+        if (player)
         {
-            ShootProjectile();
-            yield return new WaitForSeconds(spacing);
+            for (int i = 0; i < bulletCount; ++i)
+            {
+                ShootProjectile();
+                yield return new WaitForSeconds(spacing);
+            }
         }
         yield return new WaitForSeconds(3f);
         StartCoroutine(StartShooting());
