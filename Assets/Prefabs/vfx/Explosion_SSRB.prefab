@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 50910490096650368}
   - component: {fileID: 58100652523375725}
   - component: {fileID: -996321982958751043}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Explosion_SSRB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4981550075147640}
   - component: {fileID: 198727197195200047}
   - component: {fileID: 199525133188746624}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Burst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 4098868363913130}
   - component: {fileID: 198753120074772699}
   - component: {fileID: 199763887848393808}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Burst (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5207,7 +5207,7 @@ GameObject:
   - component: {fileID: 4443510367113147}
   - component: {fileID: 198832802815724048}
   - component: {fileID: 199979879330577873}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}

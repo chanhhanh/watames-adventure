@@ -15,7 +15,7 @@ public class EnemyProjectileCollision : MonoBehaviour
             PlayerStats.Instance.DealDamage(damage);
             Destroy(gameObject);
         }
-        else if (collision.tag == "Debris")
+        else if (collision.CompareTag("Debris"))
         {
             Destroy(gameObject);
         }

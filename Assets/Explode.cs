@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
+    public GameObject Explosion;
+    private Transform player;
+    private void Awake()
+    {
+       player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     // Update is called once per frame
     void Update()
     {
-        DetectPlayerInRange();
-    }
-
-    public void DetectPlayerInRange()
-    {
-        Transform closest = GameObject.FindGameObjectWithTag("Player").transform;
-        Vector3 pointA = transform.position;
-        Vector3 pointB = closest.position;
-        float dist = 2.5f;
-      
-        if ((pointA - pointB).sqrMagnitude < dist * dist)
+        if (PlayerInRange(2.5f))
         {
             StartCoroutine(TickRed());
             StartCoroutine(WaitForExplode());
         }
     }
+
+    bool PlayerInRange(float dist)
+    {
+        if (!player) return false;
+        if ((transform.position - player.position).sqrMagnitude < dist * dist)
+        {
+            return true;
+        }
+        return false;
+    }
+
     IEnumerator TickRed()
     {
         yield return new WaitForSeconds(0.1f);
@@ -31,7 +38,6 @@ public class Explode : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
         StartCoroutine(TickRed());
     }
-    public GameObject Explosion;
     IEnumerator WaitForExplode()
     {
         yield return new WaitForSeconds(2f);

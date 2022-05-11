@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4906571170724046}
   - component: {fileID: 198958150196260457}
   - component: {fileID: 199626556702937405}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2564,7 +2564,7 @@ GameObject:
   - component: {fileID: 50584994340852516}
   - component: {fileID: 58086096992929908}
   - component: {fileID: 4935538894853842437}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Explosion_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 4890173154951493}
   - component: {fileID: 198700862115974249}
   - component: {fileID: 199961446929830281}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Burst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5207,7 +5207,7 @@ GameObject:
   - component: {fileID: 4057963729910783}
   - component: {fileID: 198423373858158515}
   - component: {fileID: 199847904375627503}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: Burst (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

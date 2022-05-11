@@ -47,7 +47,7 @@ public class Shotgun : MonoBehaviour
  
     private void SpawnBullet()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos = PlayerStats.Instance.m_uiCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
         float facingRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float startRotation = facingRotation + projectileSpread / 2;

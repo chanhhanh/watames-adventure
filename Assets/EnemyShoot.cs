@@ -15,9 +15,12 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField]
     ParticleSystem particle;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+    private void Start()
+    {
         StartCoroutine(StartShooting());
     }
 

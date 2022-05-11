@@ -64,7 +64,7 @@ public class WeaponsChest : MonoBehaviour
         weapon.transform.localScale = local.lossyScale;
         ChestSpawner.instance.chestSpawned = false;
         ChestSpawner.instance.currentWeapon = weapons[rand].prefab;
-        PlayerStats.Instance.boxCount += 1;
+        PlayerStats.Instance.m_box.boxCount += 1;
         PlayerStats.Instance.UpdateBoxCount();
     }
 }

@@ -13430,4 +13430,6 @@ MonoBehaviour:
   health: 0
   maxHealth: 1000
   drop: {fileID: 1858228091466379, guid: b8ea860d3d3f2f54dbfc240e1be5bad7, type: 3}
-  previousDamageSrc: {fileID: 0}
+  sprite: {fileID: 212258937173604978}
+  isBoss: 1
+  bossName: JOSHI

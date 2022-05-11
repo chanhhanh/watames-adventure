@@ -16,12 +16,15 @@ public class EnemyMovement : MonoBehaviour
 
     private bool isStopped = false;
 
-    void Start()
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         agent = gameObject.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+    }
+    void Start()
+    {
         StartCoroutine(StopMoving());
     }
 
@@ -38,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
             GetComponent<Transform>().rotation = Quaternion.Euler(0, 180f, 0);
         }
         else GetComponent<Transform>().rotation = Quaternion.Euler(0, 0f, 0);
-        if(!isStopped) agent.SetDestination(player.position);
+        if(!isStopped && player) agent.SetDestination(player.position);
     }
 
     IEnumerator StopMoving()

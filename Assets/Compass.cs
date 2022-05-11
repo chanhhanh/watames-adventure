@@ -5,21 +5,15 @@ using UnityEngine;
 public class Compass : MonoBehaviour
 {
     Transform player;
-    #region Singleton
-    public static Compass Instance;
-    private void Awake()
-    {
-        Instance = this;
-    }
-    #endregion;
+    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;   
     }
     void FixedUpdate()
     {
-        if(FindBox())
+        if(FindBox() && player)
         {
             Vector2 direction = (FindBox().position - player.transform.position).normalized;
             float facingDirection = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

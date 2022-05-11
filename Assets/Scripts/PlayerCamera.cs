@@ -5,7 +5,6 @@ public class PlayerCamera : MonoBehaviour
 {
 
     public Transform Player;
-    public float smoothing;
     public Vector3 offset;
 
     #region Singleton
@@ -21,8 +20,7 @@ public class PlayerCamera : MonoBehaviour
     {
         if(Player)
         {
-            Vector3 newPos = Vector3.Lerp(transform.position, Player.transform.position + offset, smoothing);
-            transform.position = newPos;
+            transform.position = Player.transform.position + offset;
         }
     }
 

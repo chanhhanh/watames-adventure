@@ -9,29 +9,50 @@ public class EnemyReceiveDamage : MonoBehaviour
     public float maxHealth;
     public GameObject drop;
     [SerializeField]
-    GameObject previousDamageSrc;
+    SpriteRenderer sprite;
+    [Header("Boss Settings")]
+    [SerializeField]
+    bool isBoss = false;
+    public string bossName;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        if (isBoss)
+            PlayerStats.Instance.InitBoss(bossName, gameObject);
     }
 
     public void DealDamage(float damage)
     {
         health -= damage;
         StartCoroutine(FlashDamage());
+        if(isBoss) StartCoroutine(PlayerStats.Instance.UpdateBossHealth(health, maxHealth));
         CheckDeath();
     }
     private void OnDestroy()
     {
-        EnemySpawner.instance.maxSpawn--;
+        if (!isBoss)
+        {
+            EnemySpawner.instance.maxSpawn--;
+        }
+        else PlayerStats.Instance.HideBossBar();
         SpawnDrop();
     }
     IEnumerator FlashDamage()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().color = Color.white;
+        if(!sprite)
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        else
+        {
+            sprite.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            sprite.color = Color.white;
+        } 
+            
     }
 
     //checkOverheal is not really useful for now

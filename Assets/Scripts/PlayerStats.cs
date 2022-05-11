@@ -7,75 +7,128 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
 
-    public GameObject player;
-    public Slider healthSlider;
-    public Text box;
-    
+    [System.Serializable]
+    public struct Player
+    {
+        public GameObject player;
+        public float health;
+        public float maxHealth;
+        public Slider healthSlider;
+        public Image cooldownIndicator;
+    }
 
-    public float health;
-    public float maxHealth;
+    [System.Serializable]
+    public struct Box
+    {
+        public Text box;
+        public float boxCount;
+    }
 
-    public float boxCount;
+    [System.Serializable]
+    public struct Boss
+    {
+        public Text m_bossName;
 
-    public Image cooldownIndicator;
-    #region Singleton
+        public Image m_bar;
+
+        public Image m_damageBar;
+
+        public float m_damageBarDepleteRate;
+
+        public GameObject m_boss;
+    }
+
+    public Camera m_uiCamera;
+    public Transform m_crosshair;
+    public GameObject m_bossBar;
     public static PlayerStats Instance;
+    public AudioClip m_BossSFX;
+    public AudioSource m_audioSource;
+    public Player m_player;
+    public Box m_box;
+    public Boss m_boss;
+
+    #region Singleton
+
+
     private void Awake()
     {
         Instance = this;
+        m_player.health = m_player.maxHealth;
+        m_player.healthSlider.value = 1;
+        m_player.cooldownIndicator.fillAmount = 0;
+        HideBossBar();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     #endregion
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
-        healthSlider.value = 1;
-        cooldownIndicator.fillAmount = 0;
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (!player)
+        MoveCrosshair();
+    }
+    public void InitBoss(string name, GameObject go)
+    {
+        m_boss.m_bossName.text = name;
+        m_boss.m_boss = go;
+        m_boss.m_bar.fillAmount = 1;
+        m_bossBar.SetActive(true);
+        m_audioSource.clip = m_BossSFX;
+        m_audioSource.Play();
+    }
+    public void HideBossBar()
+    {
+        m_bossBar.SetActive(false);
+    }
+    public void MoveCrosshair()
+    {
+        Vector2 mousePos = m_uiCamera.ScreenToWorldPoint(Input.mousePosition);
+        m_crosshair.position = mousePos;
+    }
+    public IEnumerator UpdateBossHealth(float m_health, float m_currentMaxHealth)
+    {
+        m_boss.m_bar.fillAmount = m_health / m_currentMaxHealth;
+        while (m_boss.m_bar.fillAmount != m_boss.m_damageBar.fillAmount)
         {
-            healthSlider.gameObject.SetActive(false);
-        }
-        else
-        {
-            healthSlider.gameObject.SetActive(true);
+            m_boss.m_damageBar.fillAmount = Mathf.Clamp(m_boss.m_damageBar.fillAmount - m_boss.m_damageBarDepleteRate * Time.deltaTime, m_boss.m_bar.fillAmount, 1f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
-
     public void UpdateBoxCount()
     {
-        box.text = boxCount.ToString();
-        cooldownIndicator.fillAmount = 0;
+        m_box.box.text = m_box.boxCount.ToString();
+        m_player.cooldownIndicator.fillAmount = 0;
     }
-
     public void DealDamage(float damage)
     {
-        health -= damage;
+        m_player.health -= damage;
         CheckDeath();
-        healthSlider.value = CalculateHealthPercentage();
+        m_player.healthSlider.value = CalculateHealthPercentage();
     }
-
     private void CheckDeath()
     {
-        if (health <= 0)
+        if (m_player.health <= 0)
         {
-            Destroy(player);
-            GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectiles");
+            Destroy(m_player.player);
+            m_player.healthSlider.gameObject.SetActive(false);
+            m_player.cooldownIndicator.fillAmount = 0;
+            GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
             foreach (GameObject projectile in projectiles)
                 Destroy(projectile);
         }
     }
     float CalculateHealthPercentage()
     {
-        return health / maxHealth;
+        return m_player.health / m_player.maxHealth;
     }
-   
     public IEnumerator VisualizeCooldown(float cooldown)
     {
         float elapsed = 0f;
@@ -83,9 +136,9 @@ public class PlayerStats : MonoBehaviour
         {
             elapsed += Time.deltaTime;
 
-            cooldownIndicator.fillAmount = elapsed / cooldown;
+            m_player.cooldownIndicator.fillAmount = elapsed / cooldown;
             yield return null;
         }
-        cooldownIndicator.fillAmount = 0f;
+        m_player.cooldownIndicator.fillAmount = 0f;
     }
 }

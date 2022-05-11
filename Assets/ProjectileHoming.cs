@@ -12,6 +12,8 @@ public class ProjectileHoming : MonoBehaviour
     string affected;
     [SerializeField]
     bool direct = true;
+    [SerializeField]
+    float turnSpeed;
     void Awake()
     {
         if (FindClosestEnemy())
@@ -43,8 +45,7 @@ public class ProjectileHoming : MonoBehaviour
         }
         return closest;
     }
-    [SerializeField]
-    float turnSpeed;
+   
     void Homing()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
