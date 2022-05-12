@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 67806316121893913}
   m_Layer: 0
   m_Name: dual handgun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +56,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: handgun front
+      objectReference: {fileID: 0}
+    - target: {fileID: 709024565776011607, guid: 82f7475072b723d4aae8c26e24850ee1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7214701568453120021, guid: 82f7475072b723d4aae8c26e24850ee1,
         type: 3}
@@ -147,6 +152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: handgun reverse
+      objectReference: {fileID: 0}
+    - target: {fileID: 709024565776011607, guid: 82f7475072b723d4aae8c26e24850ee1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7214701568453120021, guid: 82f7475072b723d4aae8c26e24850ee1,
         type: 3}

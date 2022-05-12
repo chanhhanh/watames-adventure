@@ -26,13 +26,9 @@ public class Tommy : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
         {
-            SpawnBullet();
-            if (bulletSound)
-            {
-                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
-            }
-            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
             StartCoroutine(startCooldown());
+            SpawnBullet();
+            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
         }
     }
 
@@ -48,6 +44,8 @@ public class Tommy : MonoBehaviour
     float knockbackMultiplier = 0.1f;
     private void SpawnBullet()
     {
+        AudioSource.PlayClipAtPoint(bulletSound, transform.position, 1f);
+
         float recoil = UnityEngine.Random.Range(-projectileSpread/2, projectileSpread/2);
 
         spell = Instantiate(projectile, source.transform.position, transform.rotation);

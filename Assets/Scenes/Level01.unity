@@ -78768,7 +78768,9 @@ MonoBehaviour:
     size: {x: 10, y: 20}
   chest: {fileID: 7605053323321980903, guid: 223c98172c47d6f48836c437060536a4, type: 3}
   chestSpawned: 0
-  currentWeapon: {fileID: 0}
+  m_weapon:
+    m_currentWeapon: {fileID: 0}
+    m_tag: 
 --- !u!114 &1863314317
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2596,7 +2596,7 @@ GameObject:
   - component: {fileID: 4120878239901097818}
   m_Layer: 3
   m_Name: Weapon_BLT
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2694,9 +2694,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1673302923542900, guid: 83f326e35fcb75942ab8376ef2887e1f, type: 3}
+  minDamage: 50
+  maxDamage: 50
   projectileForce: 4
   cooldown: 3
-  spellLevel: 0
   bulletSound: {fileID: 8300000, guid: f9ea432369b24fa42a553736b300216f, type: 3}
   source: {fileID: 1293434695431430}
   particles:

@@ -57,8 +57,8 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnBoss()
     {
-        int index = Random.Range(0, m_bossPool.Count-1);
-        int spawn = Random.Range(0, spawnpoints.Count-1);
+        int index = Random.Range(0, m_bossPool.Count);
+        int spawn = Random.Range(0, spawnpoints.Count);
         Vector2 pos = Center(spawn) 
             + new Vector2(Random.Range(-Size(spawn).x / 2, Size(spawn).x / 2), 
             Random.Range(-Size(spawn).y / 2, Size(spawn).y / 2));
@@ -68,8 +68,8 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(spawnFrequency);
-        int rand = Random.Range(0, pools.Count-1);
-        while (rand == previousSpawn) rand = Random.Range(0, pools.Count-1);
+        int rand = Random.Range(0, pools.Count);
+        while (rand == previousSpawn) rand = Random.Range(0, pools.Count);
         StartCoroutine(SpawnFromList(rand));
         previousSpawn = rand;
         StartCoroutine(Spawn());
@@ -77,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnFromList(int index)
     {
-        int rand = Random.Range(0, spawnpoints.Count-1);
+        int rand = Random.Range(0, spawnpoints.Count);
         Vector2 pos = Center(rand) + new Vector2(Random.Range(-Size(rand).x / 2, Size(rand).x / 2), Random.Range(-Size(rand).y / 2, Size(rand).y / 2));
         for (int i=0;i< pools[index].count; ++i)
         {

@@ -24,12 +24,19 @@ public class ChestSpawner : MonoBehaviour
     #endregion
 
     public bool chestSpawned = false;
-    public GameObject currentWeapon;
+    [System.Serializable]
+    public struct Weapon
+    {
+        public GameObject m_currentWeapon;
+        public string m_tag;
+    }
+    public Weapon m_weapon;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Spawn());
-        currentWeapon = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+        m_weapon.m_currentWeapon = GameObject.FindGameObjectWithTag("Weapon");
     }
 
     IEnumerator Spawn()

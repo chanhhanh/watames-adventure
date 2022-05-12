@@ -8,12 +8,12 @@ TagManager:
   - Debris
   - GameManager
   - Enemy
-  - DamageableEntity
   - Projectile
   - Pickup
   - SpawnPoint
   - Box
   - Boss
+  - Weapon
   layers:
   - Default
   - TransparentFX

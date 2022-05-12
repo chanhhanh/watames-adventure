@@ -27,7 +27,7 @@ public class WeaponsChest : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rand = Random.Range(0, weapons.Count);
 
-        while (weapons[rand].prefab == ChestSpawner.instance.currentWeapon)
+        while (weapons[rand].tag == ChestSpawner.instance.m_weapon.m_tag)
         {
             rand = Random.Range(0, weapons.Count);
         }
@@ -45,10 +45,7 @@ public class WeaponsChest : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            foreach (Transform child in player.transform)
-            {
-                if (child.gameObject.layer != 8 && child.gameObject.layer != 7 ) Destroy(child.gameObject);
-            }
+            Destroy(ChestSpawner.instance.m_weapon.m_currentWeapon);
             if (m_audioClip) AudioSource.PlayClipAtPoint(m_audioClip, transform.position,volume);
             Destroy(gameObject);
         }
@@ -64,7 +61,8 @@ public class WeaponsChest : MonoBehaviour
         weapon.transform.localRotation = local.rotation;
         weapon.transform.localScale = local.lossyScale;
         ChestSpawner.instance.chestSpawned = false;
-        ChestSpawner.instance.currentWeapon = weapons[rand].prefab;
+        ChestSpawner.instance.m_weapon.m_currentWeapon = weapon;
+        ChestSpawner.instance.m_weapon.m_tag = weapons[rand].tag;
         PlayerStats.Instance.m_box.boxCount += 1;
         PlayerStats.Instance.UpdateBoxCount();
     }
