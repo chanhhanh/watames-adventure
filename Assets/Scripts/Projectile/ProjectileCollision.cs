@@ -7,6 +7,7 @@ public class ProjectileCollision : MonoBehaviour
     public float damage;
     [SerializeField]
     GameObject particle;
+    [SerializeField]
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +15,7 @@ public class ProjectileCollision : MonoBehaviour
         {
             if (collision.GetComponent<EnemyReceiveDamage>() != null)
             {
-                collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
+                collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage, GetComponent<Rigidbody2D>().velocity);
             }
             if (collision.tag == "Debris" || collision.tag =="Enemy") Destroy(gameObject);
         }

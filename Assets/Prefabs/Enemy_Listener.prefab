@@ -205,7 +205,12 @@ MonoBehaviour:
   health: 0
   maxHealth: 25
   drop: {fileID: 1637185110989318, guid: 0e60766b0b38e90488d0c5125e5cf511, type: 3}
-  previousDamageSrc: {fileID: 0}
+  sprite: {fileID: 0}
+  isBoss: 0
+  bossName: 
+  previousDamage: 0
+  thrownEnemy: {fileID: 1451353076383195237, guid: 9d4dbdc70a8366a44844fd0b5e26f0f9,
+    type: 3}
 --- !u!50 &5368822361858658784
 Rigidbody2D:
   serializedVersion: 4
@@ -258,6 +263,12 @@ MonoBehaviour:
   projectile: {fileID: 1737014901145434, guid: c9432caf6f67eea4685219c4893a7784, type: 3}
   bulletCount: 1
   spacing: 0.3
+  minDamage: 15
+  maxDamage: 20
+  projectileForce: 5
+  fromSource: 0
+  auc: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!114 &3105507446896625422
 MonoBehaviour:
   m_ObjectHideFlags: 0

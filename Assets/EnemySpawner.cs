@@ -13,6 +13,12 @@ public class EnemySpawner : MonoBehaviour
         public GameObject prefab;
         public int count;
     }
+    [System.Serializable]
+    public class BossPool
+    {
+        public string tag;
+        public GameObject prefab;
+    }
 
 
     [System.Serializable]
@@ -21,12 +27,13 @@ public class EnemySpawner : MonoBehaviour
         public Vector2 center, size;
     }
 
-    public List<EnemySpawnPoint> spawnpoints;
 
     public int maxSpawn = 0;
 
     [SerializeField]
     private int spawnLimit = 30, previousSpawn = -1;
+    [SerializeField]
+    float spawnFrequency = 2.5f;
 
 
     #region Singleton
@@ -35,25 +42,34 @@ public class EnemySpawner : MonoBehaviour
     {
         instance = this;
     }
+
     #endregion
 
+    public List<EnemySpawnPoint> spawnpoints;
     public List<Pool> pools;
+    public List<BossPool> m_bossPool;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Spawn());
     }
 
-    // update is called once per frame
-    private void FixedUpdate()
+    public void SpawnBoss()
     {
-        
+        int index = Random.Range(0, m_bossPool.Count-1);
+        int spawn = Random.Range(0, spawnpoints.Count-1);
+        Vector2 pos = Center(spawn) 
+            + new Vector2(Random.Range(-Size(spawn).x / 2, Size(spawn).x / 2), 
+            Random.Range(-Size(spawn).y / 2, Size(spawn).y / 2));
+        float rp = Random.Range(0.9f, 1.1f);
+        Instantiate(m_bossPool[index].prefab, pos * rp, Quaternion.identity);
     }
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(3f);
-        int rand = Random.Range(0, pools.Count);
-        while (rand == previousSpawn) rand = Random.Range(0, pools.Count);
+        yield return new WaitForSeconds(spawnFrequency);
+        int rand = Random.Range(0, pools.Count-1);
+        while (rand == previousSpawn) rand = Random.Range(0, pools.Count-1);
         StartCoroutine(SpawnFromList(rand));
         previousSpawn = rand;
         StartCoroutine(Spawn());
@@ -61,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnFromList(int index)
     {
-        int rand = Random.Range(0, spawnpoints.Count);
+        int rand = Random.Range(0, spawnpoints.Count-1);
         Vector2 pos = Center(rand) + new Vector2(Random.Range(-Size(rand).x / 2, Size(rand).x / 2), Random.Range(-Size(rand).y / 2, Size(rand).y / 2));
         for (int i=0;i< pools[index].count; ++i)
         {

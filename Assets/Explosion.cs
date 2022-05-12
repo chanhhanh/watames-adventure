@@ -51,7 +51,8 @@ public class Explosion : MonoBehaviour
                     damageActive = false;
                     break;
                 case "Enemy":
-                    collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage);
+                    Vector2 direction = ((Vector2)collision.transform.position - (Vector2)transform.position);
+                    collision.GetComponent<EnemyReceiveDamage>().DealDamage(damage, direction);
                     break;
             }
         }

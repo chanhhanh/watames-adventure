@@ -1,29 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &100100000
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
 --- !u!1 &1845366154169616
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4314906298286747}
   - component: {fileID: 50769922097796549}
-  - component: {fileID: 114888176083639863}
   - component: {fileID: 58387204612748826}
   - component: {fileID: 95715686941414758}
   - component: {fileID: 212698601589252351}
-  m_Layer: 8
+  - component: {fileID: 6563622036882105394}
+  - component: {fileID: 4041968121222257795}
+  m_Layer: 3
   m_Name: Projectile_Mine
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -34,7 +26,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845366154169616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -49,7 +41,7 @@ Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845366154169616}
   m_BodyType: 0
@@ -65,44 +57,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &114888176083639863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845366154169616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3e5ad4c561543409ffbb7356860b2d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  m_autoDisable: 1
-  m_lifetime: 60
-  m_damage: 6
-  m_minStartSpeed: 0.0001
-  m_maxStartSpeed: 0.0001
-  m_minSpeed: 0
-  m_maxSpeed: 0.0001
-  m_acceleration: 0
-  m_turnSpeed: 0
-  m_bounces: 0
-  m_launch: 0
-  m_alignHitSourceWithDirection: 0
-  m_reflectable: 0
-  m_pierceInteraction: 0
-  m_spawnOnDeath:
-  - Explosion_Mine
-  m_faceVelocity: 0
-  m_bounceSfxName: General_Ricochet
-  m_rb: {fileID: 0}
-  m_armTime: 0.5
-  m_armSfxName: Weapon_Mine_Ready
 --- !u!58 &58387204612748826
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845366154169616}
   m_Enabled: 1
@@ -119,17 +78,17 @@ Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845366154169616}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 699d20416b189584bb48cc87918d9425, type: 2}
+  m_Controller: {fileID: 9100000, guid: 33facfceb47ffa7498a9c4d351a0ba1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -137,7 +96,7 @@ Animator:
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845366154169616}
   m_Enabled: 1
@@ -152,7 +111,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,22 +124,51 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -5
-  m_Sprite: {fileID: 21300004, guid: 29c973e4a081f9d4382d4b89631e05e5, type: 3}
+  m_SortingLayerID: -1869315837
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300004, guid: 58e860a5e44aeed44a3e7a57e987c00b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6563622036882105394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845366154169616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43912e2e742350d4fb31b0ab05b644d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  particle: {fileID: 1376787809901737, guid: a31c8dc579caf8a4188f09392d7255a9, type: 3}
+--- !u!114 &4041968121222257795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845366154169616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2231cb7b17349e2469ae514c73977fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armTime: 0.5
+  animator: {fileID: 95715686941414758}
+  m_audioClip: {fileID: 8300000, guid: 3e4e232951200e041801cc8d563c6b60, type: 3}

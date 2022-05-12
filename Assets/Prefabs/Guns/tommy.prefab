@@ -2669,5 +2669,5 @@ MonoBehaviour:
   spellLevel: 0
   bulletSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
   source: {fileID: 3926573791964942342}
-  projectileSpread: 1
+  projectileSpread: 0.1
   knockbackMultiplier: 100000

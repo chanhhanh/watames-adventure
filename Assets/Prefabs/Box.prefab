@@ -183,23 +183,29 @@ MonoBehaviour:
   player: {fileID: 0}
   timeToStart: 3
   weapons:
-  - tag: shotgun
+  - tag: Shotgun
     prefab: {fileID: 2509916455129776021, guid: e599385484b0d2345ae628f4018f5a98,
       type: 3}
-  - tag: tommy
+  - tag: Tommy
     prefab: {fileID: 4216432658273359300, guid: 983a8ddf50ab8e44f92773cc42395edf,
       type: 3}
-  - tag: dual handgun
+  - tag: Dual Handgun
     prefab: {fileID: 1583930252598707649, guid: 801a0a43a02246f4a8b5739913e28ffa,
       type: 3}
-  - tag: magic wand
+  - tag: Magic Wand
     prefab: {fileID: 709024565776011607, guid: df937e9e26b88b34e8d000c916a4ce8c, type: 3}
-  - tag: bonk hammer
+  - tag: Bonk Hammer
     prefab: {fileID: 709024565776011607, guid: 2736b7f37950aa9489b5867215364fe2, type: 3}
-  - tag: frisbee
+  - tag: Frisbee
     prefab: {fileID: 709024565776011607, guid: f3bf65b72ea9c934f980f22cc21d1cfc, type: 3}
   - tag: BLT
     prefab: {fileID: 1618363171715176, guid: 02aedcd7b8c98af438dcb2ebce3ea4de, type: 3}
+  - tag: X-Potato Cannon
+    prefab: {fileID: 1385635721313641, guid: 79151d7fddf97734ca8597b715d4742d, type: 3}
+  - tag: Handmine
+    prefab: {fileID: 1716217777567071, guid: 81e376d4d6f4641499f97f087465caff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0223f7649f9633e4c982b67eada1c99c, type: 3}
+  volume: 1
 --- !u!95 &1224113768268701108
 Animator:
   serializedVersion: 3

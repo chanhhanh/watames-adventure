@@ -106,6 +106,10 @@ public class PlayerStats : MonoBehaviour
     {
         m_box.box.text = m_box.boxCount.ToString();
         m_player.cooldownIndicator.fillAmount = 0;
+        if (m_box.boxCount == 11)
+        {
+            EnemySpawner.instance.SpawnBoss();
+        }
     }
     public void DealDamage(float damage)
     {

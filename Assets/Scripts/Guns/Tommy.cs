@@ -54,8 +54,8 @@ public class Tommy : MonoBehaviour
 
         source.GetComponent<ParticleSystem>().Play();
 
-        spell.GetComponent<Rigidbody2D>().velocity = new Vector2(recoil, recoil).normalized;
-        spell.GetComponent<Rigidbody2D>().AddForce(transform.right * projectileForce, ForceMode2D.Impulse);
+        Vector2 r = new Vector2(transform.right.x, transform.right.y + recoil).normalized;
+        spell.GetComponent<Rigidbody2D>().AddForce(r * projectileForce, ForceMode2D.Impulse);
         spell.GetComponent<ProjectileCollision>().damage = UnityEngine.Random.Range(minDamage, maxDamage);
         Vector2 knockback = spell.GetComponent<Rigidbody2D>().velocity.normalized * -1 * knockbackMultiplier;
         transform.parent.gameObject.GetComponent<Rigidbody2D>().AddForce(knockback);

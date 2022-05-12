@@ -287,63 +287,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -128, y: 28}
   m_Pivot: {x: 0.5, y: 0}
---- !u!1001 &431061667
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1963888937065687, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_Name
-      value: Boss_Joshi
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517340937630550, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}
 --- !u!1 &592052248
 GameObject:
   m_ObjectHideFlags: 0
@@ -78833,11 +78776,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863314313}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968a02f8c28004c43a5c5a09e996290c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpawn: 0
+  spawnLimit: 20
+  previousSpawn: -1
+  spawnFrequency: 1.5
   spawnpoints:
   - center: {x: 0, y: -8}
     size: {x: 45, y: 5}
@@ -78847,9 +78794,6 @@ MonoBehaviour:
     size: {x: 45, y: 5}
   - center: {x: 0, y: -22}
     size: {x: 45, y: 5}
-  maxSpawn: 0
-  spawnLimit: 20
-  previousSpawn: -1
   pools:
   - tag: bat
     prefab: {fileID: 4609591182679170249, guid: f6cf5f30397413849a84af6a17c2abc9,
@@ -78871,3 +78815,6 @@ MonoBehaviour:
     prefab: {fileID: 4609591182679170249, guid: 379bb856086bef34fbde0ddf768dee34,
       type: 3}
     count: 3
+  m_bossPool:
+  - tag: Joshi
+    prefab: {fileID: 1963888937065687, guid: e6287fef3923815468e9a1afd2a8efcb, type: 3}

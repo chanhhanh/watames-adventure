@@ -6,12 +6,11 @@ public class BLT : MonoBehaviour
 {
     public GameObject projectile;
 
-    private float minDamage = 50;
-    private float maxDamage = 50;
+    [SerializeField]
+    private float minDamage = 50, maxDamage = 50;
     public float projectileForce = 15f;
     private bool offCooldown = true;
     public float cooldown = 3f;
-    public float spellLevel = 0;
     GameObject spell;
 
     //Audio

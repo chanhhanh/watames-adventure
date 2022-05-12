@@ -191,9 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1626702139210231, guid: 7afb1678b8683cf499b410624a29e35d, type: 3}
-  minDamage: 49
-  maxDamage: 51
-  cooldown: 2
+  minDamage: 73
+  maxDamage: 76
+  cooldown: 1
   projectileForce: 2
   bulletSound: {fileID: 8300000, guid: 3f58b1465657b064a81d348c90b43981, type: 3}
   source: {fileID: 2035622094132053834}

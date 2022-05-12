@@ -91,7 +91,7 @@ MonoBehaviour:
   screenShakeDuration: 0.5
   screenShakeMagnitude: 0.2
   affected: Player
-  aud: {fileID: 0}
+  aud: {fileID: 8300000, guid: 56743ed47fd71f546beed4e10659077c, type: 3}
 --- !u!1 &1072304029055896
 GameObject:
   m_ObjectHideFlags: 0

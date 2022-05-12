@@ -9,11 +9,19 @@ public class EnemyReceiveDamage : MonoBehaviour
     public float maxHealth;
     public GameObject drop;
     [SerializeField]
+    GameObject thrownEnemy;
+
+    [SerializeField]
     SpriteRenderer sprite;
     [Header("Boss Settings")]
     [SerializeField]
     bool isBoss = false;
+    [SerializeField]
     public string bossName;
+    [SerializeField]
+    float previousDamage;
+
+    Vector2 projectileDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +30,11 @@ public class EnemyReceiveDamage : MonoBehaviour
             PlayerStats.Instance.InitBoss(bossName, gameObject);
     }
 
-    public void DealDamage(float damage)
+    public void DealDamage(float damage, Vector2 dir)
     {
         health -= damage;
+        previousDamage = damage;
+        projectileDirection = dir;
         StartCoroutine(FlashDamage());
         if(isBoss) StartCoroutine(PlayerStats.Instance.UpdateBossHealth(health, maxHealth));
         CheckDeath();
@@ -54,19 +64,24 @@ public class EnemyReceiveDamage : MonoBehaviour
         } 
             
     }
-
-    //checkOverheal is not really useful for now
-    private void checkOverheal()
-    {
-        if (health > maxHealth) health = maxHealth;
-    }
-
     private void CheckDeath()
     {
         if(health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        if (previousDamage >= 45 && thrownEnemy)
+        {
+            GameObject enemy = Instantiate(thrownEnemy, transform.position, Quaternion.identity);
+            enemy.GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            enemy.GetComponent<Rigidbody2D>().AddForce(previousDamage * projectileDirection.normalized);
+            enemy.GetComponent<Rigidbody2D>().AddTorque(360f);
+        }
+        Destroy(gameObject);
     }
     private void SpawnDrop()
     {

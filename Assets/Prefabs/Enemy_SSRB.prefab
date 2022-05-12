@@ -92,13 +92,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4609591182679170260}
   - component: {fileID: 4609591182679170263}
-  - component: {fileID: 365042228854785801}
-  - component: {fileID: 128734221728897494}
   - component: {fileID: 5368822361858658784}
-  - component: {fileID: -7722847350466817765}
   - component: {fileID: 8555067325908986714}
   - component: {fileID: 7181571141585305919}
   - component: {fileID: 8383374806446484987}
+  - component: {fileID: 365042228854785801}
+  - component: {fileID: 128734221728897494}
+  - component: {fileID: -7722847350466817765}
   m_Layer: 6
   m_Name: Enemy_SSRB
   m_TagString: Enemy
@@ -172,35 +172,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &365042228854785801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4609591182679170249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faad69b0ca2949d46a38f6d12dc396e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 25
-  drop: {fileID: 1637185110989318, guid: 0e60766b0b38e90488d0c5125e5cf511, type: 3}
-  previousDamageSrc: {fileID: 0}
---- !u!114 &128734221728897494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4609591182679170249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281cb547150221b4c986a284946ff386, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
 --- !u!50 &5368822361858658784
 Rigidbody2D:
   serializedVersion: 4
@@ -222,19 +193,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &-7722847350466817765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4609591182679170249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5410b885be85c0340b259ae89859df97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Explosion: {fileID: 1034401293120874, guid: 39dcfc786394712408b27d5edc1ae367, type: 3}
 --- !u!95 &8555067325908986714
 Animator:
   serializedVersion: 3
@@ -292,3 +250,52 @@ NavMeshAgent:
   m_BaseOffset: 0.75
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &365042228854785801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609591182679170249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faad69b0ca2949d46a38f6d12dc396e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 25
+  drop: {fileID: 1637185110989318, guid: 0e60766b0b38e90488d0c5125e5cf511, type: 3}
+  thrownEnemy: {fileID: 1451353076383195237, guid: 9d4dbdc70a8366a44844fd0b5e26f0f9,
+    type: 3}
+  sprite: {fileID: 0}
+  isBoss: 0
+  bossName: 
+  previousDamage: 0
+--- !u!114 &128734221728897494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609591182679170249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281cb547150221b4c986a284946ff386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  moveDuration: 0
+  stopDuration: 0
+--- !u!114 &-7722847350466817765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609591182679170249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5410b885be85c0340b259ae89859df97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 1034401293120874, guid: 39dcfc786394712408b27d5edc1ae367, type: 3}

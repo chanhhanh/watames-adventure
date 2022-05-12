@@ -16,8 +16,9 @@ public class WeaponsChest : MonoBehaviour
 
     [SerializeField]
     float timeToStart = 3;
-    float interval = 3;
     public List<Weapons> weapons;
+    public AudioClip m_audioClip;
+    public float volume = 1f;
 
     // Start is called before the first frame update
     private int rand;
@@ -30,16 +31,15 @@ public class WeaponsChest : MonoBehaviour
         {
             rand = Random.Range(0, weapons.Count);
         }
-    }
-    private void Update()
-    {
-        if (Time.time >= timeToStart)
-        {
-            timeToStart = interval + timeToStart;
-            GetComponent<Animator>().Play("Box_Animation");
-        }
+        StartCoroutine(BoxAnimation());
     }
 
+    IEnumerator BoxAnimation()
+    {
+        yield return new WaitForSeconds(timeToStart);
+        GetComponent<Animator>().Play("Box_Animation");
+        StartCoroutine(BoxAnimation());
+    }
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -49,6 +49,7 @@ public class WeaponsChest : MonoBehaviour
             {
                 if (child.gameObject.layer != 8 && child.gameObject.layer != 7 ) Destroy(child.gameObject);
             }
+            if (m_audioClip) AudioSource.PlayClipAtPoint(m_audioClip, transform.position,volume);
             Destroy(gameObject);
         }
     }

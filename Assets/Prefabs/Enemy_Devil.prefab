@@ -124,7 +124,12 @@ MonoBehaviour:
   health: 0
   maxHealth: 25
   drop: {fileID: 1637185110989318, guid: 0e60766b0b38e90488d0c5125e5cf511, type: 3}
-  previousDamageSrc: {fileID: 0}
+  sprite: {fileID: 0}
+  isBoss: 0
+  bossName: 
+  previousDamage: 0
+  thrownEnemy: {fileID: 1451353076383195237, guid: 9d4dbdc70a8366a44844fd0b5e26f0f9,
+    type: 3}
 --- !u!58 &7204568990893448868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -175,6 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  moveDuration: 0
+  stopDuration: 0
 --- !u!114 &-1967906392916000895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +197,12 @@ MonoBehaviour:
   projectile: {fileID: 1737014901145434, guid: c9432caf6f67eea4685219c4893a7784, type: 3}
   bulletCount: 1
   spacing: 0.3
+  minDamage: 15
+  maxDamage: 20
+  projectileForce: 5
+  fromSource: 0
+  auc: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!195 &4583412589590825054
 NavMeshAgent:
   m_ObjectHideFlags: 0
