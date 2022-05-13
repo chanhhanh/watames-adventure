@@ -11,8 +11,8 @@ public class Shotgun : MonoBehaviour
     [SerializeField]
     float projectileSpread = 60f;
 
-    private float minDamage = 5;
-    private float maxDamage = 7;
+    private float minDamage = 15;
+    private float maxDamage = 17;
     public float projectileForce = 15f;
     private bool offCooldown = true;
     public float cooldown = 1f;
@@ -25,7 +25,7 @@ public class Shotgun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             SpawnBullet();
             if (bulletSound)

@@ -21,7 +21,7 @@ public class Handgun : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !Menu.isPaused)
         {
             SpawnBullet();
             if(bulletSound)

@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats playerStats;
-
     [System.Serializable]
     public struct Player
     {
@@ -41,15 +39,14 @@ public class PlayerStats : MonoBehaviour
     public Camera m_uiCamera;
     public Transform m_crosshair;
     public GameObject m_bossBar;
-    public static PlayerStats Instance;
     public AudioClip m_BossSFX;
     public AudioSource m_audioSource;
     public Player m_player;
     public Box m_box;
     public Boss m_boss;
-
+    public static bool m_isDead = false;
     #region Singleton
-
+    public static PlayerStats Instance;
 
     private void Awake()
     {
@@ -121,6 +118,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (m_player.health <= 0)
         {
+            m_isDead = true;
             Destroy(m_player.player);
             m_player.healthSlider.gameObject.SetActive(false);
             m_player.cooldownIndicator.fillAmount = 0;

@@ -22,7 +22,7 @@ public class MagicWand : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
+        if (Input.GetKey(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             ShootEnemy();
             SwingWeapon();

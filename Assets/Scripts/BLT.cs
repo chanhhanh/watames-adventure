@@ -23,7 +23,7 @@ public class BLT : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             SpawnBullet();
             if (bulletSound)

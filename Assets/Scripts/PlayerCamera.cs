@@ -33,7 +33,7 @@ public class PlayerCamera : MonoBehaviour
             float y = Random.Range(-1f, 1f) * magnitude;
 
             transform.localPosition = new Vector3(transform.localPosition.x + x, transform.localPosition.y + y, transform.localPosition.z);
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
     }

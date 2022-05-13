@@ -194,6 +194,6 @@ MonoBehaviour:
   minDamage: 19
   maxDamage: 21
   cooldown: 1
-  projectileForce: 14
+  projectileForce: 20
   bulletSound: {fileID: 0}
   source: {fileID: 2035622094132053834}

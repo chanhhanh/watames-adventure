@@ -6,8 +6,8 @@ public class Tommy : MonoBehaviour
 {
     public GameObject projectile;
 
-    private float minDamage = 5;
-    private float maxDamage = 7;
+    private float minDamage = 15;
+    private float maxDamage = 17;
     public float projectileForce = 15f;
     private bool offCooldown = true;
     public float cooldown = 0.05f;
@@ -24,7 +24,7 @@ public class Tommy : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && offCooldown)
+        if (Input.GetKey(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             StartCoroutine(startCooldown());
             SpawnBullet();

@@ -52,18 +52,21 @@ public class WeaponsChest : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GameObject weapon = Instantiate(weapons[rand].prefab, weapons[rand].prefab.transform.position, Quaternion.identity);
-        Transform local = weapons[rand].prefab.transform;
-     
-        weapon.transform.SetParent(player.transform);
-        weapon.transform.localPosition = local.position;
-       
-        weapon.transform.localRotation = local.rotation;
-        weapon.transform.localScale = local.lossyScale;
-        ChestSpawner.instance.chestSpawned = false;
-        ChestSpawner.instance.m_weapon.m_currentWeapon = weapon;
-        ChestSpawner.instance.m_weapon.m_tag = weapons[rand].tag;
-        PlayerStats.Instance.m_box.boxCount += 1;
-        PlayerStats.Instance.UpdateBoxCount();
+        if (!Menu.isReloading)
+        {
+            GameObject weapon = Instantiate(weapons[rand].prefab, weapons[rand].prefab.transform.position, Quaternion.identity);
+            Transform local = weapons[rand].prefab.transform;
+
+            weapon.transform.SetParent(player.transform);
+            weapon.transform.localPosition = local.position;
+
+            weapon.transform.localRotation = local.rotation;
+            weapon.transform.localScale = local.lossyScale;
+            ChestSpawner.instance.chestSpawned = false;
+            ChestSpawner.instance.m_weapon.m_currentWeapon = weapon;
+            ChestSpawner.instance.m_weapon.m_tag = weapons[rand].tag;
+            PlayerStats.Instance.m_box.boxCount += 1;
+            PlayerStats.Instance.UpdateBoxCount();
+        }
     }
 }

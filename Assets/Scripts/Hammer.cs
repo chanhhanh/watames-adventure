@@ -28,7 +28,7 @@ public class Hammer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             SpawnBullet();
             SwingWeapon();

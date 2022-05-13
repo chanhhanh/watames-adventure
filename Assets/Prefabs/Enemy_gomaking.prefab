@@ -195,9 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1737014901145434, guid: c9432caf6f67eea4685219c4893a7784, type: 3}
-  bulletCount: 30
+  bulletCount: 15
   spacing: 0.1
-  cooldown: 5
+  cooldown: 10
   projectileForce: 7
   angleOffset: 7
   inverseShooting: 0

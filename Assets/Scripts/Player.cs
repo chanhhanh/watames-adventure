@@ -20,9 +20,6 @@ public class Player : MonoBehaviour
     const string IDLE = "Watane_Idle";
     const string RUN = "Watame_Run";
 
-    public float DashForce = 3000f;
-    //private bool CanIDash = true;
-    public float cooldown = 1.5f;
     //Start is called at the first frame
     void Start()
     {

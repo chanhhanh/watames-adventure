@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac83aaf8df5d73488bdb4d2e741118d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDuration: 1
+  explosionDuration: 0.5
   damage: 20
   damageActive: 1
   screenShakeDuration: 0.5

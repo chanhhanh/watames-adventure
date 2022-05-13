@@ -41,12 +41,15 @@ public class EnemyReceiveDamage : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (!isBoss)
+        if (!Menu.isReloading)
         {
-            EnemySpawner.instance.maxSpawn--;
+            if (!isBoss)
+            {
+                EnemySpawner.instance.maxSpawn--;
+            }
+            else PlayerStats.Instance.HideBossBar();
+            SpawnDrop();
         }
-        else PlayerStats.Instance.HideBossBar();
-        SpawnDrop();
     }
     IEnumerator FlashDamage()
     {
