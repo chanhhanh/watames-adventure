@@ -41,7 +41,7 @@ public class ChestSpawner : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        if(!chestSpawned)
+        if(!chestSpawned && !PlayerStats.Instance.m_boss.m_boss)
         {
             int rand = Random.Range(0, spawnpoints.Count);
             Vector2 pos = Center(rand) + new Vector2(Random.Range(-Size(rand).x / 2, Size(rand).x / 2), Random.Range(-Size(rand).y / 2, Size(rand).y / 2));
@@ -67,5 +67,10 @@ public class ChestSpawner : MonoBehaviour
     Vector2 Size(int idx)
     {
         return spawnpoints[idx].size;
+    }
+    public void SpawnChestAt(Transform transform)
+    {
+        Instantiate(chest, transform.position, Quaternion.identity);
+        chestSpawned = true;
     }
 }

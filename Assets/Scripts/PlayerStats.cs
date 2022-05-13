@@ -45,6 +45,7 @@ public class PlayerStats : MonoBehaviour
     public Box m_box;
     public Boss m_boss;
     public static bool m_isDead = false;
+    public int BossStartsAtBox = 11;
     #region Singleton
     public static PlayerStats Instance;
 
@@ -60,12 +61,6 @@ public class PlayerStats : MonoBehaviour
     }
     #endregion
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -103,8 +98,9 @@ public class PlayerStats : MonoBehaviour
     {
         m_box.box.text = m_box.boxCount.ToString();
         m_player.cooldownIndicator.fillAmount = 0;
-        if (m_box.boxCount == 11)
+        if (m_box.boxCount == BossStartsAtBox)
         {
+            BossStartsAtBox += 10;
             EnemySpawner.instance.SpawnBoss();
         }
     }

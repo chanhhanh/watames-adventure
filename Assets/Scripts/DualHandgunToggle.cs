@@ -5,12 +5,7 @@ using UnityEngine;
 public class DualHandgunToggle : MonoBehaviour
 {
     bool handgunToggle = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,8 +17,6 @@ public class DualHandgunToggle : MonoBehaviour
 
     void ToggleHandgun()
     {
-        Debug.Log(transform.position);
-        Debug.Log(transform.rotation);
         if (!handgunToggle)
         {
             transform.localPosition = new Vector3(transform.localPosition.x * -1, 0.25f, 0f);

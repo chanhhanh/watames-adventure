@@ -89,5 +89,9 @@ public class EnemyReceiveDamage : MonoBehaviour
     private void SpawnDrop()
     {
         Instantiate(drop, transform.position, Quaternion.identity);
+        if(isBoss)
+        {
+            ChestSpawner.instance.SpawnChestAt(transform);
+        }
     }
 }

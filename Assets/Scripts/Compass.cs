@@ -15,16 +15,29 @@ public class Compass : MonoBehaviour
     {
         if(FindBox() && player)
         {
-            Vector2 direction = (FindBox().position - player.transform.position).normalized;
-            float facingDirection = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Vector3 target = new Vector3(transform.rotation.x, transform.rotation.y, facingDirection);
-            gameObject.transform.eulerAngles = target;
+            PointTo(FindBox().transform);
+        }
+        else if (FindBoss() && player)
+        {
+            PointTo(FindBoss().transform);
         }
     }
     
-    Transform FindBox()
+    GameObject FindBox()
     {
-        Transform tr = GameObject.FindGameObjectWithTag("Box").transform;
+        GameObject tr = GameObject.FindGameObjectWithTag("Box");
         return tr;
+    }
+    GameObject FindBoss()
+    {
+        GameObject tr = PlayerStats.Instance.m_boss.m_boss;
+        return tr;
+    }
+    void PointTo(Transform transform)
+    {
+        Vector2 direction = (transform.position - player.transform.position).normalized;
+        float facingDirection = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Vector3 target = new Vector3(transform.rotation.x, transform.rotation.y, facingDirection);
+        gameObject.transform.eulerAngles = target;
     }
 }

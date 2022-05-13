@@ -22,7 +22,7 @@ public class ProjectileCollision : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (particle)
+        if (particle && !Menu.isReloading)
         {
             Instantiate(particle, transform.position, Quaternion.identity);
         }

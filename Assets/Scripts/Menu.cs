@@ -24,13 +24,17 @@ public class Menu : MonoBehaviour
     {
         isReloading = true;
     }
-    public void StartGame()
+    public void LoadScene(int scene)
     {
-        SceneManager.LoadScene(1);
+        isReloading = true;
+        isPaused = false;
+        PlayerStats.m_isDead = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(scene);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && m_pauseMenuUI)
         {
             if (isPaused) Resume();
             else Pause();

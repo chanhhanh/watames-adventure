@@ -11,14 +11,12 @@ public class Deflect : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.layer == 3 && collision.GetComponent<EnemyProjectileCollision>())
         {
             switch (DeflectType)
             {
                 case 0:
                     Destroy(collision.gameObject);
-                    Debug.Log(gameObject.name);
                     break;
                 case 1:
                     collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponentInParent<Rigidbody2D>().velocity * 2;
