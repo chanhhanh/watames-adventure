@@ -40,7 +40,7 @@ public class EnemyShoot : MonoBehaviour
 
     private void ShootProjectile()
     {
-        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position);
+        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position, Menu.m_SFXVolume);
         if (particle) particle.Play();
         GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
 

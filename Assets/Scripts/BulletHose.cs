@@ -45,7 +45,7 @@ public class BulletHose : MonoBehaviour
 
     private void ShootProjectile(float tempRot, float i = 1)
     {
-        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position);
+        if (auc) AudioSource.PlayClipAtPoint(auc, transform.position, Menu.m_SFXVolume);
         if (particle) particle.Play();
         float inverseRot = 0f;
         if (i == -1) inverseRot = 180f;

@@ -26,12 +26,7 @@ public class BLT : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             SpawnBullet();
-            if (bulletSound)
-            {
-                //aus.PlayOneShot(bulletSound);
-                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
-            }
-            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.2f, 0.04f));
+            
             StartCoroutine(startCooldown());
         }
     }
@@ -46,6 +41,12 @@ public class BLT : MonoBehaviour
 
     private void SpawnBullet()
     {
+        if (bulletSound)
+        {
+            AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
+        }
+        StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.2f, 0.04f));
+
         spell = Instantiate(projectile, source.transform.position, transform.rotation);
 
         foreach(GameObject particle in particles)

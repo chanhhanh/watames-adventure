@@ -28,11 +28,7 @@ public class Shotgun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
         {
             SpawnBullet();
-            if (bulletSound)
-            {
-                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
-            }
-            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
+            
             StartCoroutine(startCooldown());
         }
     }
@@ -47,6 +43,12 @@ public class Shotgun : MonoBehaviour
  
     private void SpawnBullet()
     {
+        if (bulletSound)
+        {
+            AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
+        }
+        StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
+
         Vector2 mousePos = PlayerStats.Instance.m_uiCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
         float facingRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

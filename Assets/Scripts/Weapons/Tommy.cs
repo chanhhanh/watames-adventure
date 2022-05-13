@@ -44,7 +44,7 @@ public class Tommy : MonoBehaviour
     float knockbackMultiplier = 0.1f;
     private void SpawnBullet()
     {
-        AudioSource.PlayClipAtPoint(bulletSound, transform.position, 1f);
+        AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
 
         float recoil = UnityEngine.Random.Range(-projectileSpread/2, projectileSpread/2);
 

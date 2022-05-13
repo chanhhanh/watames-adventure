@@ -18,7 +18,6 @@ public class WeaponsChest : MonoBehaviour
     float timeToStart = 3;
     public List<Weapons> weapons;
     public AudioClip m_audioClip;
-    public float volume = 1f;
 
     // Start is called before the first frame update
     private int rand;
@@ -40,13 +39,12 @@ public class WeaponsChest : MonoBehaviour
         GetComponent<Animator>().Play("Box_Animation");
         StartCoroutine(BoxAnimation());
     }
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "Player")
         {
             Destroy(ChestSpawner.instance.m_weapon.m_currentWeapon);
-            if (m_audioClip) AudioSource.PlayClipAtPoint(m_audioClip, transform.position,volume);
+            if (m_audioClip) AudioSource.PlayClipAtPoint(m_audioClip, transform.position, Menu.m_SFXVolume);
             Destroy(gameObject);
         }
     }

@@ -205,7 +205,11 @@ MonoBehaviour:
   health: 0
   maxHealth: 5
   drop: {fileID: 1243270824648357, guid: 25aac0d0b81695a4a8ab9b435d857e5a, type: 3}
-  previousDamageSrc: {fileID: 0}
+  thrownEnemy: {fileID: 0}
+  sprite: {fileID: 0}
+  isBoss: 0
+  bossName: 
+  previousDamage: 0
 --- !u!50 &5368822361858658784
 Rigidbody2D:
   serializedVersion: 4
@@ -256,6 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.5
+  moveDuration: 0
+  stopDuration: 0
 --- !u!195 &-6910394544757665039
 NavMeshAgent:
   m_ObjectHideFlags: 0

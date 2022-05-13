@@ -25,7 +25,7 @@ public class Mine : MonoBehaviour
     {
         yield return new WaitForSeconds(armTime);
         animator.Play("Projectile_Mine_Armed");
-        AudioSource.PlayClipAtPoint(m_audioClip, transform.position);
+        AudioSource.PlayClipAtPoint(m_audioClip, transform.position, Menu.m_SFXVolume);
         GetComponent<Collider2D>().enabled = true;
         
     }

@@ -34,7 +34,7 @@ public class Hammer : MonoBehaviour
             SwingWeapon();
             if (bulletSound)
             {
-                AudioSource.PlayClipAtPoint(bulletSound, transform.position);
+                AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
             }
             StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.2f, 0.04f));
             StartCoroutine(startCooldown());

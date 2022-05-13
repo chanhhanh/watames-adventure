@@ -25,7 +25,7 @@ public class Explosion : MonoBehaviour
         }
         if(aud)
         {
-            AudioSource.PlayClipAtPoint(aud, transform.position);
+            AudioSource.PlayClipAtPoint(aud, transform.position, Menu.m_SFXVolume);
         }
     }
 

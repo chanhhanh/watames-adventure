@@ -112,10 +112,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8393928581870883615, guid: f2cdc3998a88b3146a7c1845accb8ac8,
     type: 3}
+  minDamage: 5
+  maxDamage: 7
   projectileForce: 15
   cooldown: 0.5
   bulletSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
   source: {fileID: 5825992011953442534}
+  particles:
+  - {fileID: 5825992011953442534}
+  duration: 0.2
+  magnitude: 0.1
 --- !u!1 &5825992011953442534
 GameObject:
   m_ObjectHideFlags: 0
