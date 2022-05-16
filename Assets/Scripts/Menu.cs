@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    [Header ("Settings Menu Settings")]
+    [Header("Settings Menu Settings")]
     public GameObject m_settingsMenuUI;
+    public Toggle m_fullScreenToggle;
+
 
     [Header("Pause Menu Settings")]
     public static bool isPaused = false;
@@ -25,6 +27,8 @@ public class Menu : MonoBehaviour
     public Slider SFX_Slider;
     public static float m_BGMVolume = 1f;
     public static float m_SFXVolume = 1f;
+    public static bool fullscreen = true;
+
     [Header("Transitions")]
     public Animator m_transition;
     public float m_transitionTime;
@@ -32,6 +36,11 @@ public class Menu : MonoBehaviour
     {
         isPaused = false;
         isReloading = false;
+        BGM_Slider.value = m_BGMVolume;
+        SFX_Slider.value = m_SFXVolume;
+        Screen.fullScreen = fullscreen;
+        m_fullScreenToggle.isOn = fullscreen;
+        Debug.Log(m_fullScreenToggle.isOn);
     }
     void OnApplicationQuit()
     {
@@ -46,7 +55,7 @@ public class Menu : MonoBehaviour
     }
     IEnumerator LoadLevel(int scene)
     {
-        if(m_transition) m_transition.Play("Transition_Exit");
+        if (m_transition) m_transition.Play("Transition_Exit");
         yield return new WaitForSecondsRealtime(m_transitionTime);
         SceneManager.LoadSceneAsync(scene);
     }
@@ -57,12 +66,20 @@ public class Menu : MonoBehaviour
             if (isPaused) Resume();
             else Pause();
         }
-        if(PlayerStats.m_isDead)
+        if (PlayerStats.m_isDead)
         {
             StartCoroutine(GameOver());
         }
     }
 
+    public void AdjustBGMAudio(Slider audio)
+    {
+        m_BGMVolume = audio.value;
+    }
+    public void AdjustSFXAudio(Slider audio)
+    {
+        m_SFXVolume = audio.value;
+    }
     IEnumerator GameOver()
     {
         PlayerStats.m_isDead = false;
@@ -84,11 +101,13 @@ public class Menu : MonoBehaviour
     public void OpenSettings()
     {
         m_settingsMenuUI.SetActive(true);
+        m_fullScreenToggle.onValueChanged.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.RuntimeOnly);
     }
 
     public void CloseSettings()
     {
         m_settingsMenuUI.SetActive(false);
+        m_fullScreenToggle.onValueChanged.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.Off);
     }
 
     public void ExitGame()
@@ -102,6 +121,7 @@ public class Menu : MonoBehaviour
         m_pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        CloseSettings();
     }
     public void Pause()
     {
@@ -110,4 +130,20 @@ public class Menu : MonoBehaviour
         Time.timeScale = 0f;
         isPaused = true;
     }
+
+    public void SetFullscreen()
+    {
+        if (!fullscreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            fullscreen = true;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+            fullscreen = false;
+        }
+        Debug.Log(fullscreen);
+    }
 }
+
