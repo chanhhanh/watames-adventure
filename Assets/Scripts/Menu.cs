@@ -58,7 +58,7 @@ public class Menu : MonoBehaviour
     public static bool m_oneHealthMode = false;
     public List<LevelData> levels;
 
-    public static bool m_gamepad = false;
+    public static bool m_gamepad = true;
     public GameObject m_leftThumbstick;
     public GameObject m_rightThumbstick;
     private void Start()
