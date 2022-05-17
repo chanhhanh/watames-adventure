@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     const string IDLE = "Watane_Idle";
     const string RUN = "Watame_Run";
 
+    public Joystick joystick;
+
     //Start is called at the first frame
     void Start()
     {
@@ -30,9 +32,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
+        if (Menu.m_gamepad)
+        {
+            inputHorizontal = joystick.Horizontal;
+            inputVertical = joystick.Vertical;
+        }
+        else
+        {
+            inputHorizontal = Input.GetAxisRaw("Horizontal");
+            inputVertical = Input.GetAxisRaw("Vertical");
+        }
     }
   
     void FixedUpdate()
