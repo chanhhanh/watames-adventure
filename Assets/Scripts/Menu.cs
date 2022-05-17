@@ -58,7 +58,7 @@ public class Menu : MonoBehaviour
     public static bool m_oneHealthMode = false;
     public List<LevelData> levels;
 
-    public static bool m_gamepad = true;
+    public static bool m_gamepad = false;
     public GameObject m_leftThumbstick;
     public GameObject m_rightThumbstick;
     private void Start()
@@ -145,7 +145,7 @@ public class Menu : MonoBehaviour
             if (m_playMenuUI) ClosePlayMenu();
             if (m_settingsMenuUI) CloseSettings();
         }
-        if (PlayerStats.m_isDead)
+        if (GameManager.m_isDead)
         {
             StartCoroutine(GameOver());
         }
@@ -163,11 +163,11 @@ public class Menu : MonoBehaviour
     }
     IEnumerator GameOver()
     {
-        PlayerStats.m_isDead = false;
+        GameManager.m_isDead = false;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
         m_gameOverUI.SetActive(true);
-        m_score.text = PlayerStats.Instance.m_box.box.text;
+        m_score.text = GameManager.Instance.m_box.box.text;
         Cursor.visible = true;
     }
 

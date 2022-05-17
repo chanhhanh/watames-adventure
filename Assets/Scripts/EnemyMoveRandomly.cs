@@ -7,7 +7,7 @@ public class EnemyMoveRandomly : MonoBehaviour
     Vector2 randomPos;
     Animator animator;
     [SerializeField]
-    float travelTime = 1f, interval = 1f, moveSpeed = 3f, damage = 0f;
+    float travelTime = 1f, interval = 1f, moveSpeed = 3f, damage = 1f;
 
     private Vector3 previousPosition;
     private Vector3 currentMovementDirection;
@@ -22,9 +22,17 @@ public class EnemyMoveRandomly : MonoBehaviour
     {
         if(collision.name == "Player")
         {
-            PlayerStats.Instance.DealDamage(damage);
+            GameManager.Instance.DealDamage(damage);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.DealDamage(damage);
+        }
+    }
+
     private void Awake()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -51,6 +59,8 @@ public class EnemyMoveRandomly : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = randomPos;
         }
     }
+
+ 
 
     IEnumerator MoveRandomly()
     {

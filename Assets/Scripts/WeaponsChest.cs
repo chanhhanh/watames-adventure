@@ -63,8 +63,8 @@ public class WeaponsChest : MonoBehaviour
             ChestSpawner.instance.chestSpawned = false;
             ChestSpawner.instance.m_weapon.m_currentWeapon = weapon;
             ChestSpawner.instance.m_weapon.m_tag = weapons[rand].tag;
-            PlayerStats.Instance.m_box.boxCount += 1;
-            PlayerStats.Instance.UpdateBoxCount();
+            GameManager.Instance.m_box.boxCount += 1;
+            GameManager.Instance.UpdateBoxCount();
         }
     }
 }

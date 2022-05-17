@@ -61,14 +61,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerStats.Instance.DealDamage(damage);
+            GameManager.Instance.DealDamage(damage);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerStats.Instance.DealDamage(damage);
+            GameManager.Instance.DealDamage(damage);
         }
     }
 }

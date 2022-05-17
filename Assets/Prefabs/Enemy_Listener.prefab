@@ -205,12 +205,12 @@ MonoBehaviour:
   health: 0
   maxHealth: 25
   drop: {fileID: 1637185110989318, guid: 0e60766b0b38e90488d0c5125e5cf511, type: 3}
+  thrownEnemy: {fileID: 1451353076383195237, guid: 9d4dbdc70a8366a44844fd0b5e26f0f9,
+    type: 3}
   sprite: {fileID: 0}
   isBoss: 0
   bossName: 
   previousDamage: 0
-  thrownEnemy: {fileID: 1451353076383195237, guid: 9d4dbdc70a8366a44844fd0b5e26f0f9,
-    type: 3}
 --- !u!50 &5368822361858658784
 Rigidbody2D:
   serializedVersion: 4
@@ -284,4 +284,4 @@ MonoBehaviour:
   travelTime: 1
   interval: 0
   moveSpeed: 5
-  damage: 0
+  damage: 1

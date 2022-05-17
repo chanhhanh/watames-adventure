@@ -27,7 +27,7 @@ public class EnemyReceiveDamage : MonoBehaviour
     {
         health = maxHealth;
         if (isBoss)
-            PlayerStats.Instance.InitBoss(bossName, gameObject);
+            GameManager.Instance.InitBoss(bossName, gameObject);
     }
 
     public void DealDamage(float damage, Vector2 dir)
@@ -36,7 +36,7 @@ public class EnemyReceiveDamage : MonoBehaviour
         previousDamage = damage;
         projectileDirection = dir;
         StartCoroutine(FlashDamage());
-        if(isBoss) StartCoroutine(PlayerStats.Instance.UpdateBossHealth(health, maxHealth));
+        if(isBoss) StartCoroutine(GameManager.Instance.UpdateBossHealth(health, maxHealth));
         CheckDeath();
     }
     private void OnDestroy()
@@ -47,7 +47,7 @@ public class EnemyReceiveDamage : MonoBehaviour
             {
                 EnemySpawner.instance.maxSpawn--;
             }
-            else PlayerStats.Instance.HideBossBar();
+            else GameManager.Instance.HideBossBar();
             SpawnDrop();
         }
     }

@@ -115,8 +115,8 @@ MonoBehaviour:
   numOfProjectiles: 6
   projectileSpread: 30
   projectileForce: 15
-  cooldown: 0.5
-  bulletSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
+  cooldown: 1
+  bulletSound: {fileID: 8300000, guid: 1224e8e19ae1ae441a0d279a5d246914, type: 3}
   source: {fileID: 2866121739865407004}
 --- !u!1 &2866121739865407004
 GameObject:

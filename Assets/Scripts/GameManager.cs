@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerStats : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [System.Serializable]
     public struct Player
@@ -47,7 +47,7 @@ public class PlayerStats : MonoBehaviour
     public static bool m_isDead = false;
     public int BossStartsAtBox = 11;
     #region Singleton
-    public static PlayerStats Instance;
+    public static GameManager Instance;
     private void Awake()
     {
         Instance = this;
@@ -58,6 +58,7 @@ public class PlayerStats : MonoBehaviour
         HideBossBar();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+        if (Menu.m_gamepad) m_crosshair.gameObject.SetActive(false);
     }
     #endregion
     // Update is called once per frame

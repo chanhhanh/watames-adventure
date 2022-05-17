@@ -47,7 +47,7 @@ public class Explosion : MonoBehaviour
             switch (affected)
             {
                 case "Player":
-                    PlayerStats.Instance.DealDamage(damage);
+                    GameManager.Instance.DealDamage(damage);
                     damageActive = false;
                     break;
                 case "Enemy":

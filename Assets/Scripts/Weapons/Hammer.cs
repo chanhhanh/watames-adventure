@@ -69,7 +69,7 @@ public class Hammer : MonoBehaviour
     }
     IEnumerator StartCooldown()
     {
-        StartCoroutine(PlayerStats.Instance.VisualizeCooldown(cooldown));
+        StartCoroutine(GameManager.Instance.VisualizeCooldown(cooldown));
         offCooldown = false;
         yield return new WaitForSeconds(cooldown);
         offCooldown = true;

@@ -51,7 +51,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator StartCooldown()
     {
-        if (cooldown > 0.99f) StartCoroutine(PlayerStats.Instance.VisualizeCooldown(cooldown));
+        if (cooldown > 0.99f) StartCoroutine(GameManager.Instance.VisualizeCooldown(cooldown));
         offCooldown = false;
         yield return new WaitForSeconds(cooldown);
         offCooldown = true;

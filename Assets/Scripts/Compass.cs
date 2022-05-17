@@ -30,7 +30,7 @@ public class Compass : MonoBehaviour
     }
     GameObject FindBoss()
     {
-        GameObject tr = PlayerStats.Instance.m_boss.m_boss;
+        GameObject tr = GameManager.Instance.m_boss.m_boss;
         return tr;
     }
     void PointTo(Transform transform)

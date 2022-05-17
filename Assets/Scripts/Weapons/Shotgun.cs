@@ -15,7 +15,7 @@ public class Shotgun : MonoBehaviour
     private float maxDamage = 17;
     public float projectileForce = 15f;
     private bool offCooldown = true;
-    public float cooldown = 1f;
+    public float cooldown = 2f;
     GameObject spell;
 
     //Audio
@@ -25,7 +25,7 @@ public class Shotgun : MonoBehaviour
 
     private float inputHorizontal;
     private float inputVertical;
-    private void Update()
+    private void FixedUpdate()
     {
         if (!Menu.m_gamepad)
         {
@@ -40,7 +40,7 @@ public class Shotgun : MonoBehaviour
         {
             inputHorizontal = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Horizontal;
             inputVertical = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Vertical;
-            if (inputHorizontal != 0 || inputVertical != 0 && offCooldown && !Menu.isPaused)
+            if (inputHorizontal != 0 && inputVertical != 0 && offCooldown && !Menu.isPaused)
             {
                 SpawnBullet();
                 StartCoroutine(StartCooldown());
@@ -50,8 +50,8 @@ public class Shotgun : MonoBehaviour
 
     IEnumerator StartCooldown()
     {
-        StartCoroutine(PlayerStats.Instance.VisualizeCooldown(cooldown));
         offCooldown = false;
+        StartCoroutine(GameManager.Instance.VisualizeCooldown(cooldown));
         yield return new WaitForSeconds(cooldown);
         offCooldown = true;
     }
@@ -63,9 +63,15 @@ public class Shotgun : MonoBehaviour
             AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
         }
         StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
-
-        Vector2 mousePos = PlayerStats.Instance.m_uiCamera.ScreenToWorldPoint(Input.mousePosition);
+       
+        Vector2 mousePos = GameManager.Instance.m_uiCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+
+        if (Menu.m_gamepad)
+        {
+            direction = new Vector2(inputHorizontal, inputVertical);
+        }
+
         float facingRotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float startRotation = facingRotation + projectileSpread / 2;
         float angleIncrease = projectileSpread / (numOfProjectiles - 1f);

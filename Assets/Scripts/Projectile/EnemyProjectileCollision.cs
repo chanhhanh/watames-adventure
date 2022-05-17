@@ -12,7 +12,7 @@ public class EnemyProjectileCollision : MonoBehaviour
     {
         if (collision.name == "Player")
         {
-            PlayerStats.Instance.DealDamage(damage);
+            GameManager.Instance.DealDamage(damage);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Debris"))
