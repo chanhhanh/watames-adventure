@@ -34,8 +34,11 @@ public class Menu : MonoBehaviour
     public float m_transitionTime;
 
     [Header("Level Selection")]
-    private int m_levelIndex = 1;
-    private string m_levelName;
+    [SerializeField] private int m_levelIndex = 1;
+    public GameObject m_playMenuUI;
+    public Text m_levelLabel;
+    public Text m_difficultyLabel;
+    public static bool m_oneHealthMode = false;
     public List<LevelData> levels;
 
     private void Start()
@@ -46,17 +49,27 @@ public class Menu : MonoBehaviour
         SFX_Slider.value = m_SFXVolume;
         Screen.fullScreen = fullscreen;
         m_fullScreenToggle.isOn = fullscreen;
-        Debug.Log(m_fullScreenToggle.isOn);
+        m_levelLabel.text = levels[m_levelIndex-1].name;
     }
     void OnApplicationQuit()
     {
         isReloading = true;
     }
-    public void SwitchStage()
+    public void SwitchStage(int newIndex)
     {
-        m_levelIndex++;
+        m_levelIndex = m_levelIndex + newIndex;
         if (m_levelIndex > levels.Count) m_levelIndex = 1;
-        m_levelName = levels[m_levelIndex-1].name;
+        if (m_levelIndex < 1) m_levelIndex = levels.Count;
+        m_levelLabel.text = levels[m_levelIndex-1].name;
+    }
+    public void ChangeDifficulty()
+    {
+        if (m_oneHealthMode)
+        {
+            m_difficultyLabel.text = "Normal Mode";
+        }
+        else m_difficultyLabel.text = "One Health";
+        m_oneHealthMode = !m_oneHealthMode;
     }
     public void LoadScene()
     {
@@ -80,10 +93,12 @@ public class Menu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && m_pauseMenuUI)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused) Resume();
-            else Pause();
+            if (isPaused && m_pauseMenuUI) Resume();
+            else if (!isPaused && m_pauseMenuUI) Pause();
+            if (m_playMenuUI) ClosePlayMenu();
+            if (m_settingsMenuUI) CloseSettings();
         }
         if (PlayerStats.m_isDead)
         {
@@ -129,6 +144,17 @@ public class Menu : MonoBehaviour
         m_fullScreenToggle.onValueChanged.SetPersistentListenerState(0, UnityEngine.Events.UnityEventCallState.Off);
     }
 
+    public void OpenPlayMenu()
+    {
+        m_playMenuUI.SetActive(true);
+    }
+
+    public void ClosePlayMenu()
+    {
+        m_playMenuUI.SetActive(false);
+    }
+
+
     public void ExitGame()
     {
         Application.Quit();
@@ -140,7 +166,6 @@ public class Menu : MonoBehaviour
         m_pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        CloseSettings();
     }
     public void Pause()
     {
@@ -162,7 +187,6 @@ public class Menu : MonoBehaviour
             Screen.fullScreenMode = FullScreenMode.Windowed;
             fullscreen = false;
         }
-        Debug.Log(fullscreen);
     }
 }
 

@@ -52,6 +52,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        if (Menu.m_oneHealthMode) m_player.maxHealth = 1;
         m_player.health = m_player.maxHealth;
         m_player.healthSlider.value = 1;
         m_player.cooldownIndicator.fillAmount = 0;

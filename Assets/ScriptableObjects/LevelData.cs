@@ -10,6 +10,7 @@ public class LevelData : ScriptableObject
     {
         public string name;
         public int sceneIndex;
+        public Texture2D thumb;
     }
     public Level level;
 }
