@@ -48,6 +48,8 @@ public class Player : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+        if (Menu.m_gamepad) direction = new Vector2(Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Horizontal,
+             Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Vertical);
         float y = 0f;
         if (inputHorizontal != 0 || inputVertical != 0)
         {

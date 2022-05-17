@@ -89,11 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handleRange: 2.5
-  deadZone: 1
+  handleRange: 1.5
+  deadZone: 0
   axisOptions: 0
-  snapX: 0
-  snapY: 0
+  snapX: 1
+  snapY: 1
   background: {fileID: 3054559258541962875}
   handle: {fileID: 3054559259602329051}
 --- !u!1 &3054559259602329050
