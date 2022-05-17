@@ -6,6 +6,14 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    #region Singleton
+    public static Menu instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
     [Header("Settings Menu Settings")]
     public GameObject m_settingsMenuUI;
     public Toggle m_fullScreenToggle;
@@ -59,12 +67,23 @@ public class Menu : MonoBehaviour
     {
         isReloading = true;
     }
-    void PlayBGM()
+    public void PlayBGM()
     {
         BGM_Audio.loop = true;
         BGM_Audio.clip = m_BGMData.bgm.main;
         BGM_Audio.Play();
     }
+    public IEnumerator PlayBossBGM()
+    {
+        BGM_Audio.loop = false;
+        BGM_Audio.clip = m_BGMData.bgm.transition;
+        BGM_Audio.Play();
+        yield return new WaitForSeconds(BGM_Audio.clip.length);
+        BGM_Audio.clip = m_BGMData.bgm.boss;
+        BGM_Audio.Play();
+        BGM_Audio.loop = true;
+    }
+
     public void SwitchStage(int newIndex)
     {
         m_levelIndex = m_levelIndex + newIndex;

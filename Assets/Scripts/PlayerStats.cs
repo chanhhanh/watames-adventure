@@ -74,10 +74,12 @@ public class PlayerStats : MonoBehaviour
         m_bossBar.SetActive(true);
         m_audioSource.clip = m_BossSFX;
         m_audioSource.Play();
+        StartCoroutine(Menu.instance.PlayBossBGM());
     }
     public void HideBossBar()
     {
         m_bossBar.SetActive(false);
+        Menu.instance.PlayBGM();
     }
     public void MoveCrosshair()
     {
