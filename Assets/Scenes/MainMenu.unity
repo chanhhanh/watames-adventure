@@ -1857,6 +1857,7 @@ MonoBehaviour:
   SFX_Audio: {fileID: 1324513095}
   BGM_Slider: {fileID: 386152333}
   SFX_Slider: {fileID: 1746105372}
+  m_BGMData: {fileID: 11400000, guid: 9133e5420a873274fa8661bed8784d95, type: 2}
   m_transition: {fileID: 2126294420}
   m_transitionTime: 1
   m_levelIndex: 1

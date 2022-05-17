@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa52832552339e147ad6c9de3871c03b, type: 3}
+  m_Name: BGM_Stage_1
+  m_EditorClassIdentifier: 
+  bgm:
+    main: {fileID: 8300000, guid: 83f95db02f11bf541b8e35c77bdf7562, type: 3}
+    transition: {fileID: 8300000, guid: 528a7c4a5ae55ca4aa4b3a64778eebb6, type: 3}
+    boss: {fileID: 8300000, guid: 53d62854d5eba4549b7a7b45c3c2eb6f, type: 3}

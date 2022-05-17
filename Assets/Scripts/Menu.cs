@@ -28,6 +28,7 @@ public class Menu : MonoBehaviour
     public static float m_BGMVolume = 1f;
     public static float m_SFXVolume = 1f;
     public static bool fullscreen = true;
+    public BGMData m_BGMData;
 
     [Header("Transitions")]
     public Animator m_transition;
@@ -46,14 +47,23 @@ public class Menu : MonoBehaviour
         isPaused = false;
         isReloading = false;
         BGM_Slider.value = m_BGMVolume;
+        BGM_Audio.volume = m_BGMVolume;
         SFX_Slider.value = m_SFXVolume;
+        SFX_Audio.volume = m_SFXVolume;
         Screen.fullScreen = fullscreen;
         m_fullScreenToggle.isOn = fullscreen;
-        m_levelLabel.text = levels[m_levelIndex-1].name;
+        m_levelLabel.text = levels[m_levelIndex-1].level.name;
+        PlayBGM();
     }
     void OnApplicationQuit()
     {
         isReloading = true;
+    }
+    void PlayBGM()
+    {
+        BGM_Audio.loop = true;
+        BGM_Audio.clip = m_BGMData.bgm.main;
+        BGM_Audio.Play();
     }
     public void SwitchStage(int newIndex)
     {
@@ -109,10 +119,12 @@ public class Menu : MonoBehaviour
     public void AdjustBGMAudio(Slider audio)
     {
         m_BGMVolume = audio.value;
+        BGM_Audio.volume = m_BGMVolume;
     }
     public void AdjustSFXAudio(Slider audio)
     {
         m_SFXVolume = audio.value;
+        SFX_Audio.volume = m_SFXVolume;
     }
     IEnumerator GameOver()
     {
