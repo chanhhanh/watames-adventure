@@ -26,10 +26,12 @@ public class Handgun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !Menu.isPaused)
+        if (!Menu.m_gamepad)
         {
-            SpawnBullet();
-           
+            if (Input.GetKey(KeyCode.Mouse0) && !Menu.isPaused)
+            {
+                SpawnBullet();
+            }
         }
     }
 

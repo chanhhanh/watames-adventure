@@ -2564,6 +2564,7 @@ GameObject:
   - component: {fileID: 3455288669425715516}
   - component: {fileID: 7230530485818333766}
   - component: {fileID: 2853764212360922128}
+  - component: {fileID: 1647054597100373497}
   m_Layer: 0
   m_Name: Weapon_Tommy
   m_TagString: Weapon
@@ -2671,3 +2672,27 @@ MonoBehaviour:
   source: {fileID: 3926573791964942342}
   projectileSpread: 0.1
   knockbackMultiplier: 100000
+--- !u!114 &1647054597100373497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216432658273359300}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0077f28187ae58458466042b5a32d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  minDamage: 15
+  maxDamage: 17
+  projectileSpread: 0.1
+  projectileForce: 15
+  cooldown: 0.1
+  bulletSound: {fileID: 8300000, guid: 6ee2437227fdb1a42b4250b1484b14f3, type: 3}
+  source: {fileID: 3926573791964942342}
+  particles:
+  - {fileID: 3926573791964942342}
+  duration: 0.02
+  magnitude: 0.1

@@ -24,11 +24,14 @@ public class Tommy : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
+        if(!Menu.m_gamepad)
         {
-            StartCoroutine(startCooldown());
-            SpawnBullet();
-            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
+            if (Input.GetKey(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
+            {
+                StartCoroutine(startCooldown());
+                SpawnBullet();
+                StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.1f, 0.02f));
+            }
         }
     }
 

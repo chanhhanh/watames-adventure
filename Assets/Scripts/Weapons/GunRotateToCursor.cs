@@ -7,6 +7,9 @@ public class GunRotateToCursor : MonoBehaviour
     // Start is called before the first frame update
     Vector3 direction;
     Vector3 mousePos;
+    private float inputHorizontal;
+    private float inputVertical;
+
     void Start()
     {
         
@@ -16,26 +19,54 @@ public class GunRotateToCursor : MonoBehaviour
     void FixedUpdate()
     {
         float y;
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = (mousePos - transform.position).normalized;
-
         float angle;
 
-        if (direction.x < 0)
+        if (!Menu.m_gamepad)
         {
-            y = -180f;
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg * -1;
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            direction = (mousePos - transform.position).normalized;
+
+
+            if (direction.x < 0)
+            {
+                y = -180f;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg * -1;
+            }
+            else
+            {
+                y = 0f;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            }
+            Quaternion target = Quaternion.Euler(y, 0f, angle);
+
+            GetComponent<Transform>().rotation = target;
+            UpdateHangunPos();
         }
         else
         {
-            y = 0f;
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-           
+
+            inputHorizontal = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Horizontal;
+            inputVertical = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Vertical;
+            direction = new Vector2(inputHorizontal, inputVertical);
+
+            if (direction.x < 0)
+            {
+                y = -180f;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg * -1;
+            }
+            else
+            {
+                y = 0f;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            }
+            Quaternion target = Quaternion.Euler(y, 0f, angle);
+
+            GetComponent<Transform>().rotation = target;
+            UpdateHangunPos();
         }
-        Quaternion target = Quaternion.Euler(y, 0f, angle);
         
-        GetComponent<Transform>().rotation = target;
-        UpdateHangunPos();
     }
 
     void UpdateHangunPos()

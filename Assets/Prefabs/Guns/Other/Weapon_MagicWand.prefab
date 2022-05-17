@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 8134601911366013240}
   - component: {fileID: 5127856170334095780}
   - component: {fileID: 2136917369264513354}
+  - component: {fileID: 8279516193794009585}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -164,3 +165,27 @@ MonoBehaviour:
     type: 3}
   projectileForce: 14
   cooldown: 0.3
+--- !u!114 &8279516193794009585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921248042522111596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0077f28187ae58458466042b5a32d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 8393928581870883615, guid: 0a7b2835b251b9c45a814b0f7b516fda,
+    type: 3}
+  minDamage: 14
+  maxDamage: 0.3
+  projectileSpread: 0
+  projectileForce: 15
+  cooldown: 0.2
+  bulletSound: {fileID: 0}
+  source: {fileID: 0}
+  particles: []
+  duration: 0.02
+  magnitude: 0.1

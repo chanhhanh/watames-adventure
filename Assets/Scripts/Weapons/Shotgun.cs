@@ -23,17 +23,32 @@ public class Shotgun : MonoBehaviour
     [SerializeField]
     GameObject source;
 
+    private float inputHorizontal;
+    private float inputVertical;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
+        if (!Menu.m_gamepad)
         {
-            SpawnBullet();
-            
-            StartCoroutine(startCooldown());
+            if (Input.GetKey(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
+            {
+                SpawnBullet();
+
+                StartCoroutine(StartCooldown());
+            }
+        }
+        else
+        {
+            inputHorizontal = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Horizontal;
+            inputVertical = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Vertical;
+            if (inputHorizontal != 0 || inputVertical != 0 && offCooldown && !Menu.isPaused)
+            {
+                SpawnBullet();
+                StartCoroutine(StartCooldown());
+            }
         }
     }
 
-    IEnumerator startCooldown()
+    IEnumerator StartCooldown()
     {
         StartCoroutine(PlayerStats.Instance.VisualizeCooldown(cooldown));
         offCooldown = false;

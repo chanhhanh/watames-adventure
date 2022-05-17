@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 2710883783751825977}
   - component: {fileID: 1440253670211757630}
   - component: {fileID: 2369465731898132328}
+  - component: {fileID: 8206125718214042265}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -197,3 +198,28 @@ MonoBehaviour:
   projectileForce: 2
   bulletSound: {fileID: 8300000, guid: 3f58b1465657b064a81d348c90b43981, type: 3}
   source: {fileID: 2035622094132053834}
+  duration: 0.02
+  magnitude: 0.1
+--- !u!114 &8206125718214042265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5101318999786354915}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0077f28187ae58458466042b5a32d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1626702139210231, guid: 7afb1678b8683cf499b410624a29e35d, type: 3}
+  minDamage: 73
+  maxDamage: 76
+  projectileSpread: 0
+  projectileForce: 2
+  cooldown: 1
+  bulletSound: {fileID: 8300000, guid: 3f58b1465657b064a81d348c90b43981, type: 3}
+  source: {fileID: 2035622094132053834}
+  particles: []
+  duration: 0.02
+  magnitude: 0.1

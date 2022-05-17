@@ -48,7 +48,6 @@ public class PlayerStats : MonoBehaviour
     public int BossStartsAtBox = 11;
     #region Singleton
     public static PlayerStats Instance;
-
     private void Awake()
     {
         Instance = this;

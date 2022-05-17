@@ -19,6 +19,13 @@ public class Hammer : MonoBehaviour
 
     Animator animator;
 
+    [Header("Camera Shake Settings")]
+    public float duration = 0.02f;
+    public float magnitude = 0.1f;
+
+
+    private float inputHorizontal;
+    private float inputVertical;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,19 +35,39 @@ public class Hammer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
+        if (!Menu.m_gamepad)
         {
-            SpawnBullet();
-            SwingWeapon();
-            if (bulletSound)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && offCooldown && !Menu.isPaused)
             {
-                AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
+                SpawnBullet();
+                SwingWeapon();
+                if (bulletSound)
+                {
+                    AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
+                }
+                StartCoroutine(PlayerCamera.Instance.ShakeOnce(magnitude, duration));
+                StartCoroutine(StartCooldown());
             }
-            StartCoroutine(PlayerCamera.Instance.ShakeOnce(0.2f, 0.04f));
-            StartCoroutine(startCooldown());
+        }
+        else
+        {
+
+            inputHorizontal = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Horizontal;
+            inputVertical = Menu.instance.m_rightThumbstick.GetComponent<FixedJoystick>().Vertical;
+            if (inputHorizontal != 0 && inputVertical != 0 && offCooldown && !Menu.isPaused)
+            {
+                SpawnBullet();
+                SwingWeapon();
+                if (bulletSound)
+                {
+                    AudioSource.PlayClipAtPoint(bulletSound, transform.position, Menu.m_SFXVolume);
+                }
+                StartCoroutine(PlayerCamera.Instance.ShakeOnce(magnitude, duration));
+                StartCoroutine(StartCooldown());
+            }
         }
     }
-    IEnumerator startCooldown()
+    IEnumerator StartCooldown()
     {
         StartCoroutine(PlayerStats.Instance.VisualizeCooldown(cooldown));
         offCooldown = false;

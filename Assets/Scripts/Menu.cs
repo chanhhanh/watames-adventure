@@ -10,11 +10,15 @@ public class Menu : MonoBehaviour
     public static Menu instance;
     private void Awake()
     {
+        instance = this;
+    }
+    [RuntimeInitializeOnLoadMethod]
+    static void OnRuntimeMethodLoad()
+    {
         if (Application.platform == RuntimePlatform.Android)
         {
             m_gamepad = true;
         }
-        instance = this;
     }
     #endregion
 
@@ -55,7 +59,8 @@ public class Menu : MonoBehaviour
     public List<LevelData> levels;
 
     public static bool m_gamepad = false;
-    public GameObject m_gamepadUI;
+    public GameObject m_leftThumbstick;
+    public GameObject m_rightThumbstick;
     private void Start()
     {
         isPaused = false;
@@ -68,7 +73,11 @@ public class Menu : MonoBehaviour
         m_fullScreenToggle.isOn = fullscreen;
         if (m_levelLabel) m_levelLabel.text = levels[m_levelIndex-1].level.name;
         PlayBGM();
-        if (m_gamepad) if (m_gamepadUI) m_gamepadUI.SetActive(true);
+        if (m_gamepad)
+        {
+            m_leftThumbstick.SetActive(true);
+            m_rightThumbstick.SetActive(true);
+        }
     }
     void OnApplicationQuit()
     {

@@ -197,3 +197,5 @@ MonoBehaviour:
   projectileForce: 20
   bulletSound: {fileID: 0}
   source: {fileID: 2035622094132053834}
+  duration: 0.02
+  magnitude: 0.1
