@@ -32,6 +32,12 @@ public class Menu : MonoBehaviour
     [Header("Transitions")]
     public Animator m_transition;
     public float m_transitionTime;
+
+    [Header("Level Selection")]
+    private int m_levelIndex = 1;
+    private string m_levelName;
+    public List<LevelData> levels;
+
     private void Start()
     {
         isPaused = false;
@@ -46,12 +52,25 @@ public class Menu : MonoBehaviour
     {
         isReloading = true;
     }
-    public void LoadScene(int scene)
+    public void SwitchStage()
+    {
+        m_levelIndex++;
+        if (m_levelIndex > levels.Count) m_levelIndex = 1;
+        m_levelName = levels[m_levelIndex-1].name;
+    }
+    public void LoadScene()
     {
         isReloading = true;
         isPaused = false;
         Time.timeScale = 1f;
-        StartCoroutine(LoadLevel(scene));
+        StartCoroutine(LoadLevel(m_levelIndex));
+    }
+    public void ReturnToMenu()
+    {
+        isReloading = true;
+        isPaused = false;
+        Time.timeScale = 1f;
+        StartCoroutine(LoadLevel(0));
     }
     IEnumerator LoadLevel(int scene)
     {

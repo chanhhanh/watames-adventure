@@ -1137,6 +1137,10 @@ MonoBehaviour:
   SFX_Slider: {fileID: 1746105372}
   m_transition: {fileID: 2126294420}
   m_transitionTime: 1
+  levels:
+  - {fileID: 11400000, guid: b33b2f613d67d80428c2958f57b06559, type: 2}
+  - {fileID: 11400000, guid: 0c57c52386c91814680c93552fcbd533, type: 2}
+  - {fileID: 11400000, guid: 0899890ca1d5c8a43a58ec0aec59fed5, type: 2}
 --- !u!114 &818765916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2264,7 +2268,7 @@ MonoBehaviour:
       - m_Target: {fileID: 818765915}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
