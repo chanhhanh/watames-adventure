@@ -43835,10 +43835,11 @@ MonoBehaviour:
   m_pauseMenuUI: {fileID: 688766510}
   m_gameOverUI: {fileID: 1183221367}
   m_score: {fileID: 791182366}
-  BGM_Audio: {fileID: 0}
-  SFX_Audio: {fileID: 0}
+  BGM_Audio: {fileID: 201589146}
+  SFX_Audio: {fileID: 724009257}
   BGM_Slider: {fileID: 1061241498}
   SFX_Slider: {fileID: 1723823913}
+  m_BGMData: {fileID: 11400000, guid: 78812c3cf8a8fb44bbdfb20e0281814a, type: 2}
   m_transition: {fileID: 628395466}
   m_transitionTime: 1
   m_levelIndex: 1

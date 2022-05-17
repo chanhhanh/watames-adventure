@@ -52,7 +52,7 @@ public class Menu : MonoBehaviour
         SFX_Audio.volume = m_SFXVolume;
         Screen.fullScreen = fullscreen;
         m_fullScreenToggle.isOn = fullscreen;
-        m_levelLabel.text = levels[m_levelIndex-1].level.name;
+        if (m_levelLabel) m_levelLabel.text = levels[m_levelIndex-1].level.name;
         PlayBGM();
     }
     void OnApplicationQuit()
@@ -70,7 +70,7 @@ public class Menu : MonoBehaviour
         m_levelIndex = m_levelIndex + newIndex;
         if (m_levelIndex > levels.Count) m_levelIndex = 1;
         if (m_levelIndex < 1) m_levelIndex = levels.Count;
-        m_levelLabel.text = levels[m_levelIndex-1].name;
+        m_levelLabel.text = levels[m_levelIndex - 1].level.name;
     }
     public void ChangeDifficulty()
     {
