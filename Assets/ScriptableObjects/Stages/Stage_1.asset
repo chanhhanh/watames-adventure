@@ -15,3 +15,4 @@ MonoBehaviour:
   level:
     name: Stage 01
     sceneIndex: 1
+    thumb: {fileID: 21300000, guid: a6029dff767383d4580134fcd8980dab, type: 3}

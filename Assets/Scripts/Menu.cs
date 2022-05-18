@@ -57,10 +57,14 @@ public class Menu : MonoBehaviour
     public Text m_difficultyLabel;
     public static bool m_oneHealthMode = false;
     public List<LevelData> levels;
+    public Image m_thumbnail;
 
     public static bool m_gamepad = false;
     public GameObject m_leftThumbstick;
     public GameObject m_rightThumbstick;
+    [Header("Other")]
+    public GameObject m_instructionsUI;
+    public GameObject m_creditsUI;
     private void Start()
     {
         isPaused = false;
@@ -72,6 +76,7 @@ public class Menu : MonoBehaviour
         Screen.fullScreen = fullscreen;
         m_fullScreenToggle.isOn = fullscreen;
         if (m_levelLabel) m_levelLabel.text = levels[m_levelIndex-1].level.name;
+        if (m_thumbnail) m_thumbnail.sprite = levels[m_levelIndex - 1].level.thumb;
         PlayBGM();
         if (m_gamepad)
         {
@@ -106,6 +111,7 @@ public class Menu : MonoBehaviour
         if (m_levelIndex > levels.Count) m_levelIndex = 1;
         if (m_levelIndex < 1) m_levelIndex = levels.Count;
         m_levelLabel.text = levels[m_levelIndex - 1].level.name;
+        m_thumbnail.sprite = levels[m_levelIndex - 1].level.thumb;
     }
     public void ChangeDifficulty()
     {
@@ -144,6 +150,8 @@ public class Menu : MonoBehaviour
             else if (!isPaused && m_pauseMenuUI) Pause();
             if (m_playMenuUI) ClosePlayMenu();
             if (m_settingsMenuUI) CloseSettings();
+            if (m_creditsUI) CloseCreditsMenu();
+            if (m_instructionsUI) CloseInstructionsMenu();
         }
         if (GameManager.m_isDead)
         {
@@ -201,6 +209,25 @@ public class Menu : MonoBehaviour
         m_playMenuUI.SetActive(false);
     }
 
+    public void OpenCreditsMenu()
+    {
+        m_creditsUI.SetActive(true);
+    }
+
+    public void CloseCreditsMenu()
+    {
+        m_creditsUI.SetActive(false);
+    }
+
+    public void OpenInstuctionsMenu()
+    {
+        m_instructionsUI.SetActive(true);
+    }
+
+    public void CloseInstructionsMenu()
+    {
+        m_instructionsUI.SetActive(false);
+    }
 
     public void ExitGame()
     {

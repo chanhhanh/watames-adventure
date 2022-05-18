@@ -2563,7 +2563,6 @@ GameObject:
   - component: {fileID: 7652546466007662323}
   - component: {fileID: 3455288669425715516}
   - component: {fileID: 7230530485818333766}
-  - component: {fileID: 2853764212360922128}
   - component: {fileID: 1647054597100373497}
   m_Layer: 0
   m_Name: Weapon_Tommy
@@ -2651,27 +2650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed26fd931b1c2489e7e01b6f04d0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2853764212360922128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216432658273359300}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f492f1d2d5240a9459e59b347f6b2f46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 8393928581870883615, guid: f2cdc3998a88b3146a7c1845accb8ac8,
-    type: 3}
-  projectileForce: 15
-  cooldown: 0.1
-  spellLevel: 0
-  bulletSound: {fileID: 8300000, guid: 6ee2437227fdb1a42b4250b1484b14f3, type: 3}
-  source: {fileID: 3926573791964942342}
-  projectileSpread: 0.1
-  knockbackMultiplier: 100000
 --- !u!114 &1647054597100373497
 MonoBehaviour:
   m_ObjectHideFlags: 0

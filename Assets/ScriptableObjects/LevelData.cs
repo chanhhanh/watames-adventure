@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/Level")]
 public class LevelData : ScriptableObject
@@ -10,7 +9,7 @@ public class LevelData : ScriptableObject
     {
         public string name;
         public int sceneIndex;
-        public Texture2D thumb;
+        public Sprite thumb;
     }
     public Level level;
 }
