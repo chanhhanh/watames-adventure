@@ -43852,6 +43852,8 @@ MonoBehaviour:
   m_thumbnail: {fileID: 0}
   m_leftThumbstick: {fileID: 3054559258687492070}
   m_rightThumbstick: {fileID: 1789766412}
+  m_instructionsUI: {fileID: 0}
+  m_creditsUI: {fileID: 0}
 --- !u!1 &592938519
 GameObject:
   m_ObjectHideFlags: 0
@@ -46951,7 +46953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT
+  m_Text: BACK
 --- !u!222 &1232442041
 CanvasRenderer:
   m_ObjectHideFlags: 0
