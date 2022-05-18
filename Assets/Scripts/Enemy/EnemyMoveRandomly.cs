@@ -53,7 +53,7 @@ public class EnemyMoveRandomly : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Debris"))
+        if (collision.gameObject.CompareTag("Debris") || collision.gameObject.CompareTag("Untagged"))
         {
             randomPos *= -1;
             GetComponent<Rigidbody2D>().velocity = randomPos;
