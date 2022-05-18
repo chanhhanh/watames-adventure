@@ -41,7 +41,7 @@ public class Menu : MonoBehaviour
     public AudioSource SFX_Audio;
     public Slider BGM_Slider;
     public Slider SFX_Slider;
-    public static float m_BGMVolume = 1f;
+    public static float m_BGMVolume = 0.25f;
     public static float m_SFXVolume = 1f;
     public static bool fullscreen = true;
     public BGMData m_BGMData;
